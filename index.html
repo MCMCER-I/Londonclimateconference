@@ -1,0 +1,2370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>London Climate Resilience Roundtable 2026 | Policy Recommendations & Business Capability Roadmap</title>
+  <meta name="description" content="Official working policy roundtable convening 35 cross-sector leaders to formulate and deliver The London ESG & Heat Adaptation White Paper and Business Capability Roadmap. 21 October 2026, Central London.">
+  <meta name="keywords" content="London Climate Resilience Roundtable 2026, Heat Ready London, London ESG adaptation roadmap, urban resilience policy, commercial real estate retrofit, business capability, CSRD, GRI, IFRS S2, MCMCER, Global Advisory Alliance">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="London Climate Resilience Roundtable 2026 | Policy White Paper & Capability Roadmap">
+  <meta property="og:description" content="Convening 35 cross-sector leaders to draft and deliver The London ESG & Heat Adaptation Policy White Paper and Business Capability Roadmap. Central London · 21 October 2026.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="hero_london_skyline.jpg">
+
+  <!-- Institutional Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ═══════════════════════════════════════════════════════════════════════
+       INSTITUTIONAL MASTER DESIGN SYSTEM — WORDPRESS & ELEMENTOR COMPATIBLE
+       Aesthetic Standard: Royal Institute / Parliamentary Briefing Standard
+       All styles scoped to .inst-page-wrap to prevent WordPress theme bleeding
+       ═══════════════════════════════════════════════════════════════════════ */
+
+    :root, .inst-page-wrap {
+      /* Typography */
+      --inst-font-display: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+      --inst-font-serif: 'Cormorant Garamond', Georgia, serif;
+      --inst-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+      /* Primary Palette — British Institutional Dignity */
+      --inst-navy-deep: #050C14;
+      --inst-navy: #08131F;
+      --inst-navy-surface: #0E1D2D;
+      --inst-navy-card: #132438;
+      
+      --inst-ivory: #FCFAF6;
+      --inst-ivory-warm: #F8F5EE;
+      --inst-stone-tint: #F1EEE7;
+      --inst-stone-dark: #E6E1D5;
+      
+      --inst-gold: #9C7839;
+      --inst-gold-hover: #B88E44;
+      --inst-gold-pale: #F4ECE0;
+      --inst-gold-deep: #785A23;
+      --inst-gold-glow: rgba(156, 120, 57, 0.18);
+
+      --inst-racing-green: #0A1D18;
+      --inst-green-surface: #102B24;
+      --inst-green-accent: #1B5648;
+      --inst-green-pale: #E4EFEA;
+
+      --inst-text-dark: #0F172A;
+      --inst-text-body: #334155;
+      --inst-text-muted: #64748B;
+      --inst-text-light: #F8FAFC;
+
+      --inst-border-subtle: #E2DBD0;
+      --inst-border-dark: #D4CBBD;
+
+      /* Grid & Layout */
+      --inst-max-w: 1240px;
+      --inst-max-w-narrow: 920px;
+      --inst-radius-sm: 4px;
+      --inst-radius-md: 6px;
+      --inst-transition: all 0.25s ease-in-out;
+    }
+
+    /* ── Scoped Reset & WordPress Theme Shields ── */
+    .inst-page-wrap {
+      font-family: var(--inst-font-sans);
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--inst-text-body);
+      background-color: var(--inst-ivory);
+      width: 100%;
+      overflow-x: hidden;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .inst-page-wrap *,
+    .inst-page-wrap *::before,
+    .inst-page-wrap *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .inst-page-wrap a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--inst-transition);
+    }
+
+    .inst-page-wrap img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .inst-container {
+      max-width: var(--inst-max-w);
+      margin: 0 auto;
+      padding: 0 clamp(20px, 4vw, 40px);
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .inst-container--narrow {
+      max-width: var(--inst-max-w-narrow);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════
+       DISTINCT SECTION DIFFERENTIATION SYSTEM
+       Every section has a distinct background, chapter index, and divider
+       ═══════════════════════════════════════════════════════════════════════ */
+
+    /* Chapter Header Label */
+    .inst-chapter-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--inst-font-sans);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: var(--inst-radius-sm);
+      margin-bottom: 14px;
+    }
+
+    .inst-chapter-badge--gold {
+      color: var(--inst-gold-deep);
+      background: var(--inst-gold-pale);
+      border: 1px solid rgba(156, 120, 57, 0.35);
+    }
+
+    .inst-chapter-badge--dark {
+      color: #E2C792;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(226, 199, 146, 0.3);
+    }
+
+    .inst-chapter-badge--green {
+      color: #A3E635;
+      background: rgba(27, 86, 72, 0.25);
+      border: 1px solid rgba(163, 230, 53, 0.3);
+    }
+
+    .inst-chapter-sep {
+      opacity: 0.5;
+    }
+
+    .inst-section-heading {
+      margin-bottom: 48px;
+    }
+
+    .inst-section-heading--center {
+      text-align: center;
+    }
+
+    .inst-section-title {
+      font-family: var(--inst-font-display);
+      font-size: clamp(30px, 4vw, 44px);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      color: var(--inst-text-dark);
+    }
+
+    .inst-section-title em {
+      font-style: italic;
+      font-family: var(--inst-font-serif);
+      font-weight: 600;
+    }
+
+    .inst-section-title--light {
+      color: #FFFFFF;
+    }
+
+    .inst-section-title--light em {
+      color: #E2C792;
+    }
+
+    .inst-section-title--dark em {
+      color: var(--inst-gold-deep);
+    }
+
+    .inst-section-lead {
+      font-family: var(--inst-font-sans);
+      font-size: 16.5px;
+      line-height: 1.65;
+      color: var(--inst-text-muted);
+      max-width: 820px;
+      margin-top: 14px;
+    }
+
+    .inst-section-lead--light {
+      color: #CBD5E1;
+    }
+
+    .inst-section-heading--center .inst-section-lead {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════
+       SECTION 1: HERO / CONVENING PROCLAMATION (DEEP NAVY #08131F)
+       ═══════════════════════════════════════════════════════════════════════ */
+    .inst-section-hero {
+      position: relative;
+      background-color: var(--inst-navy);
+      color: var(--inst-ivory);
+      padding: 100px 0 88px;
+      border-bottom: 3px solid var(--inst-gold);
+      overflow: hidden;
+    }
+
+    .inst-hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      opacity: 0.22;
+      filter: grayscale(85%) contrast(120%);
+    }
+
+    .inst-hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .inst-hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background: linear-gradient(180deg, 
+        rgba(5, 12, 20, 0.96) 0%,
+        rgba(8, 19, 31, 0.92) 50%,
+        rgba(5, 12, 20, 0.98) 100%
+      );
+    }
+
+    .inst-hero-content {
+      position: relative;
+      z-index: 3;
+    }
+
+    .inst-hero-title {
+      font-family: var(--inst-font-display);
+      font-size: clamp(34px, 4.8vw, 56px);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      color: #FFFFFF;
+      margin-bottom: 22px;
+      max-width: 980px;
+    }
+
+    .inst-hero-title em {
+      font-style: italic;
+      font-family: var(--inst-font-serif);
+      font-weight: 500;
+      color: #E2C792;
+    }
+
+    .inst-hero-lead {
+      font-family: var(--inst-font-sans);
+      font-size: 19px;
+      line-height: 1.6;
+      color: #CBD5E1;
+      max-width: 860px;
+      margin-bottom: 40px;
+      font-weight: 300;
+    }
+
+    .inst-hero-lead strong {
+      color: #FFFFFF;
+      font-weight: 600;
+    }
+
+    /* Metadata Panel */
+    .inst-hero-dossier {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--inst-radius-sm);
+      margin-bottom: 44px;
+      overflow: hidden;
+    }
+
+    .inst-dossier-cell {
+      background: rgba(14, 29, 45, 0.88);
+      padding: 18px 20px;
+    }
+
+    .inst-dossier-lbl {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #94A3B8;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .inst-dossier-val {
+      font-size: 15px;
+      font-weight: 600;
+      color: #FFFFFF;
+      line-height: 1.35;
+    }
+
+    .inst-dossier-sub {
+      font-size: 11.5px;
+      color: #E2C792;
+      display: block;
+      margin-top: 3px;
+    }
+
+    .inst-btn-group {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .inst-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--inst-font-sans);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 13px 26px;
+      border-radius: var(--inst-radius-sm);
+      cursor: pointer;
+    }
+
+    .inst-btn--gold {
+      background: var(--inst-gold);
+      color: #FFFFFF;
+      border: 1px solid var(--inst-gold);
+    }
+
+    .inst-btn--gold:hover {
+      background: var(--inst-gold-hover);
+      border-color: var(--inst-gold-hover);
+    }
+
+    .inst-btn--outline-light {
+      background: transparent;
+      color: #E2E8F0;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .inst-btn--outline-light:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: #FFFFFF;
+      color: #FFFFFF;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════
+       SECTION 2: THE OUTCOME — POLICY WHITE PAPER & CAPABILITY ROADMAP
+       BACKGROUND: WARM IVORY (#FCFAF6)
+       ═══════════════════════════════════════════════════════════════════════ */
+    .inst-section-deliverables {
+      background-color: var(--inst-ivory);
+      padding: 104px 0;
+      border-bottom: 1px solid var(--inst-border-subtle);
+    }
+
+    .deliverable-master-card {
+      background: #FFFFFF;
+      border: 1px solid var(--inst-border-subtle);
+      border-left: 5px solid var(--inst-gold);
+      border-radius: var(--inst-radius-sm);
+      box-shadow: 0 6px 24px rgba(15, 23, 42, 0.04);
+      margin-bottom: 56px;
+      overflow: hidden;
+    }
+
+    .deliverable-master-grid {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+    }
+
+    .deliverable-master-visual {
+      background: var(--inst-ivory-warm);
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-right: 1px solid var(--inst-border-subtle);
+      text-align: center;
+    }
+
+    .deliverable-doc-img {
+      max-width: 250px;
+      box-shadow: 0 10px 32px rgba(8, 19, 31, 0.18);
+      border: 1px solid var(--inst-border-dark);
+      margin-bottom: 18px;
+    }
+
+    .deliverable-doc-caption {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--inst-text-muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .deliverable-master-text {
+      padding: 44px 48px;
+    }
+
+    .deliverable-master-kicker {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--inst-gold-deep);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .deliverable-master-heading {
+      font-family: var(--inst-font-display);
+      font-size: 29px;
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--inst-navy);
+      margin-bottom: 16px;
+    }
+
+    .deliverable-master-p {
+      font-size: 15.5px;
+      line-height: 1.7;
+      color: var(--inst-text-body);
+      margin-bottom: 24px;
+    }
+
+    .deliverable-meta-specs {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      padding-top: 20px;
+      border-top: 1px solid var(--inst-border-subtle);
+    }
+
+    .deliverable-spec-item {
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .deliverable-spec-item strong {
+      display: block;
+      color: var(--inst-navy);
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .deliverable-spec-item span {
+      color: var(--inst-text-muted);
+    }
+
+    /* The 5 Strategic Pillars */
+    .deliverable-pillars-header {
+      font-family: var(--inst-font-display);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--inst-navy);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--inst-border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .deliverable-pillars-header span {
+      font-family: var(--inst-font-sans);
+      font-size: 11.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--inst-gold-deep);
+    }
+
+    .deliverable-pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 56px;
+    }
+
+    .pillar-card {
+      background: #FFFFFF;
+      border: 1px solid var(--inst-border-subtle);
+      border-radius: var(--inst-radius-sm);
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: var(--inst-transition);
+    }
+
+    .pillar-card:hover {
+      border-color: var(--inst-gold);
+      box-shadow: 0 6px 20px rgba(156, 120, 57, 0.08);
+    }
+
+    .pillar-card--span2 {
+      grid-column: span 2;
+    }
+
+    .pillar-card-num {
+      font-family: var(--inst-font-serif);
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--inst-gold);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .pillar-card-title {
+      font-family: var(--inst-font-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--inst-navy);
+      line-height: 1.35;
+      margin-bottom: 10px;
+    }
+
+    .pillar-card-desc {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--inst-text-body);
+      margin-bottom: 18px;
+      flex-grow: 1;
+    }
+
+    .pillar-card-footer {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--inst-text-muted);
+      border-top: 1px solid var(--inst-ivory-warm);
+      padding-top: 12px;
+      letter-spacing: 0.02em;
+    }
+
+    .pillar-card-footer strong {
+      color: var(--inst-green-accent);
+    }
+
+    /* Dark Inset Roadmap Block */
+    .deliverable-roadmap-box {
+      background: var(--inst-navy-surface);
+      color: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--inst-radius-sm);
+      padding: 44px;
+    }
+
+    .deliverable-roadmap-header {
+      margin-bottom: 32px;
+    }
+
+    .deliverable-roadmap-title {
+      font-family: var(--inst-font-display);
+      font-size: 24px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 6px;
+    }
+
+    .deliverable-roadmap-sub {
+      font-size: 14.5px;
+      color: #94A3B8;
+      max-width: 760px;
+    }
+
+    .deliverable-roadmap-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .roadmap-step-item {
+      border-top: 2px solid var(--inst-gold);
+      padding-top: 20px;
+    }
+
+    .roadmap-step-phase {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #E2C792;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .roadmap-step-name {
+      font-family: var(--inst-font-display);
+      font-size: 18px;
+      font-weight: 600;
+      color: #FFFFFF;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .roadmap-step-body {
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: #CBD5E1;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════
+       SECTION 3: THE CAPABILITY GAP & DIAGNOSTIC (STONE TINT #F1EEE7)
+       ═══════════════════════════════════════════════════════════════════════ */
+    .inst-section-imperative {
+      background-color: var(--inst-stone-tint);
+      padding: 104px 0;
+      border-bottom: 1px solid var(--inst-border-subtle);
+    }
+
+    .imperative-lead-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+
+    .imperative-pullquote {
+      font-family: var(--inst-font-serif);
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 1.35;
+      color: var(--inst-navy);
+      border-left: 3px solid var(--inst-gold);
+      padding-left: 20px;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+
+    .imperative-prose p {
+      font-size: 15.5px;
+      line-height: 1.7;
+      color: var(--inst-text-body);
+      margin-bottom: 18px;
+    }
+
+    .imperative-visual img {
+      border-radius: var(--inst-radius-sm);
+      border: 1px solid var(--inst-border-dark);
+      box-shadow: 0 6px 24px rgba(15, 23, 42, 0.08);
+      width: 100%;
+    }
+
+    .imperative-visual-caption {
+      font-size: 12px;
+      color: var(--inst-text-muted);
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    /* Analytical Diagnostic Table */
+    .diagnostic-matrix {
+      background: #FFFFFF;
+      border: 1px solid var(--inst-border-dark);
+      border-radius: var(--inst-radius-sm);
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+    }
+
+    .diagnostic-matrix-header {
+      padding: 24px 32px;
+      background: var(--inst-navy);
+      color: #FFFFFF;
+    }
+
+    .diagnostic-matrix-title {
+      font-family: var(--inst-font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 4px;
+    }
+
+    .diagnostic-matrix-desc {
+      font-size: 13.5px;
+      color: #94A3B8;
+    }
+
+    .diagnostic-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .diagnostic-table th {
+      text-align: left;
+      padding: 14px 24px;
+      background: var(--inst-ivory-warm);
+      font-weight: 700;
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--inst-navy);
+      border-bottom: 1px solid var(--inst-border-dark);
+    }
+
+    .diagnostic-table td {
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--inst-border-subtle);
+      vertical-align: top;
+      line-height: 1.6;
+    }
+
+    .diagnostic-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .td-domain {
+      font-weight: 700;
+      color: var(--inst-navy);
+      width: 22%;
+    }
+
+    .td-status-quo {
+      color: var(--inst-text-muted);
+      width: 39%;
+      background: rgba(241, 238, 231, 0.4);
+    }
+
+    .td-gap-focus {
+      color: var(--inst-text-dark);
+      font-weight: 500;
+      width: 39%;
+      background: rgba(27, 86, 72, 0.04);
+      border-left: 2px solid var(--inst-green-accent);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════
+       SECTION 4: DELIBERATION CHAMBERS (CRISP WHITE CANVAS #FFFFFF)
+       ═══════════════════════════════════════════════════════════════════════ */
+    .inst-section-chambers {
+      background-color: #FFFFFF;
+      padding: 104px 0;
+      border-bottom: 1px solid var(--inst-border-subtle);
+    }
+
+    .chambers-deck {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+    }
+
+    .chamber-card {
+      background: var(--inst-ivory);
+      border: 1px solid var(--inst-border-dark);
+      border-radius: var(--inst-radius-sm);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .chamber-banner {
+      height: 140px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .chamber-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.65) contrast(110%);
+    }
+
+    .chamber-banner-pill {
+      position: absolute;
+      top: 16px;
+      left: 20px;
+      z-index: 2;
+    }
+
+    .chamber-content {
+      padding: 32px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .chamber-title {
+      font-family: var(--inst-font-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--inst-navy);
+      line-height: 1.3;
+      margin-bottom: 14px;
+    }
+
+    .chamber-desc {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: var(--inst-text-body);
+      margin-bottom: 24px;
+    }
+
+    .chamber-inquiry-title {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--inst-gold-deep);
+      margin-bottom: 10px;
+    }
+
+    .chamber-inquiries {
+      list-style: none;
+      margin-bottom: 28px;
+    }
+
+    .chamber-inquiry-item {
+      font-size: 13.5px;
+      line-height: 1.5;
+      color: var(--inst-text-dark);
+      padding: 8px 0 8px 18px;
+      position: relative;
+      border-bottom: 1px dashed var(--inst-border-subtle);
+    }
+
+    .chamber-inquiry-item:last-child {
+      border-bottom: none;
+    }
+
+    .chamber-inquiry-item::before {
+      content: "▪";
+      color: var(--inst-gold);
+      position: absolute;
+      left: 0;
+      top: 7px;
+      font-size: 14px;
+    }
+
+    .chamber-clause-callout {
+      background: #FFFFFF;
+      border: 1px solid var(--inst-border-subtle);
+      border-left: 3px solid var(--inst-gold);
+      padding: 14px 18px;
+      margin-bottom: 24px;
+      border-radius: 0 var(--inst-radius-sm) var(--inst-radius-sm) 0;
+    }
+
+    .chamber-clause-lbl {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--inst-text-muted);
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .chamber-clause-text {
+      font-size: 12.5px;
+      line-height: 1.5;
+      color: var(--inst-navy);
+      font-weight: 500;
+    }
+
+    .chamber-mod-profile {
+      margin-top: auto;
+      padding-top: 20px;
+      border-top: 1px solid var(--inst-border-subtle);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .chamber-mod-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--inst-border-dark);
+    }
+
+    .chamber-mod-meta {
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .chamber-mod-role {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--inst-gold-deep);
+    }
+
+    .chamber-mod-name {
+      font-weight: 700;
+      color: var(--inst-navy);
+      font-size: 14.5px;
+    }
+
+    .chamber-mod-title {
+      font-size: 12px;
+      color: var(--inst-text-muted);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════
+       SECTION 5: ORDER OF PROCEEDINGS (DEEP NAVY LEDGER #0A1624)
+       ═══════════════════════════════════════════════════════════════════════ */
+    .inst-section-proceedings {
+      background-color: #0A1624;
+      color: #FFFFFF;
+      padding: 104px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .proceedings-ledger {
+      background: var(--inst-navy-surface);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--inst-radius-sm);
+      overflow: hidden;
+    }
+
+    .ledger-entry {
+      display: grid;
+      grid-template-columns: 140px 180px 1fr;
+      padding: 24px 32px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      align-items: baseline;
+      gap: 24px;
+      transition: var(--inst-transition);
+    }
+
+    .ledger-entry:last-child {
+      border-bottom: none;
+    }
+
+    .ledger-entry:hover {
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .ledger-time {
+      font-family: var(--inst-font-sans);
+      font-size: 15px;
+      font-weight: 700;
+      color: #FFFFFF;
+    }
+
+    .ledger-time span {
+      display: block;
+      font-size: 11px;
+      font-weight: 500;
+      color: #94A3B8;
+    }
+
+    .ledger-type {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #E2C792;
+    }
+
+    .ledger-text h4 {
+      font-family: var(--inst-font-display);
+      font-size: 17px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 6px;
+    }
+
+    .ledger-text p {
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: #CBD5E1;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════
+       SECTION 6: PRESIDING MODERATORS (WARM PARCHMENT #F8F5EE)
+       ═══════════════════════════════════════════════════════════════════════ */
+    .inst-section-moderators {
+      background-color: var(--inst-ivory-warm);
+      padding: 104px 0;
+      border-bottom: 1px solid var(--inst-border-subtle);
+    }
+
+    .moderators-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .moderator-profile-card {
+      background: #FFFFFF;
+      border: 1px solid var(--inst-border-dark);
+      border-radius: var(--inst-radius-sm);
+      padding: 36px;
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 24px;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+    }
+
+    .moderator-profile-pic {
+      width: 120px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: var(--inst-radius-sm);
+      border: 1px solid var(--inst-border-subtle);
+    }
+
+    .moderator-tag {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--inst-gold-deep);
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .moderator-name {
+      font-family: var(--inst-font-display);
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--inst-navy);
+      margin-bottom: 4px;
+    }
+
+    .moderator-title {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--inst-green-accent);
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .moderator-bio {
+      font-size: 13.5px;
+      line-height: 1.65;
+      color: var(--inst-text-body);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════
+       SECTION 7: DELEGATION QUOTAS (RACING GREEN SURFACE #0A1D18)
+       ═══════════════════════════════════════════════════════════════════════ */
+    .inst-section-delegation {
+      background-color: var(--inst-racing-green);
+      color: #FFFFFF;
+      padding: 104px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .delegation-quota-deck {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .quota-box {
+      background: var(--inst-green-surface);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--inst-radius-sm);
+      padding: 26px;
+      transition: var(--inst-transition);
+    }
+
+    .quota-box:hover {
+      border-color: #E2C792;
+    }
+
+    .quota-num {
+      font-family: var(--inst-font-serif);
+      font-size: 28px;
+      font-weight: 700;
+      color: #E2C792;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .quota-title {
+      font-family: var(--inst-font-display);
+      font-size: 16.5px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+
+    .quota-desc {
+      font-size: 13px;
+      line-height: 1.55;
+      color: #94A3B8;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════
+       SECTION 8: EXECUTIVE DIALOGUE & VENUE (CRISP WHITE #FFFFFF)
+       ═══════════════════════════════════════════════════════════════════════ */
+    .inst-section-protocol-rules {
+      background-color: #FFFFFF;
+      padding: 104px 0;
+      border-bottom: 1px solid var(--inst-border-subtle);
+    }
+
+    .protocol-cards-duo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+    }
+
+    .protocol-seal-card {
+      background: var(--inst-ivory);
+      border: 1px solid var(--inst-border-dark);
+      border-radius: var(--inst-radius-sm);
+      padding: 36px;
+    }
+
+    .protocol-seal-head {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .protocol-seal-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--inst-gold-pale);
+      color: var(--inst-gold-deep);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    .protocol-seal-title {
+      font-family: var(--inst-font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--inst-navy);
+    }
+
+    .protocol-seal-text {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: var(--inst-text-body);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════
+       SECTION 9: ACCREDITATION DOSSIER (EXECUTIVE TINT #F1EEE7)
+       ═══════════════════════════════════════════════════════════════════════ */
+    .inst-section-accreditation {
+      background-color: var(--inst-stone-tint);
+      padding: 104px 0;
+      border-bottom: 1px solid var(--inst-border-subtle);
+    }
+
+    .accreditation-grid {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 48px;
+    }
+
+    .accreditation-brief {
+      padding-right: 12px;
+    }
+
+    .accreditation-brief h3 {
+      font-family: var(--inst-font-display);
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--inst-navy);
+      margin-bottom: 14px;
+    }
+
+    .accreditation-brief p {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: var(--inst-text-body);
+      margin-bottom: 24px;
+    }
+
+    .accreditation-terms {
+      list-style: none;
+      border-top: 1px solid var(--inst-border-dark);
+      padding-top: 20px;
+      margin-bottom: 24px;
+    }
+
+    .accreditation-term-item {
+      font-size: 13.5px;
+      line-height: 1.55;
+      color: var(--inst-text-dark);
+      margin-bottom: 14px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .accreditation-term-item::before {
+      content: "✓";
+      color: var(--inst-green-accent);
+      font-weight: 700;
+      position: absolute;
+      left: 0;
+    }
+
+    .accreditation-form-card {
+      background: #FFFFFF;
+      border: 1px solid var(--inst-border-dark);
+      border-radius: var(--inst-radius-sm);
+      box-shadow: 0 6px 24px rgba(15, 23, 42, 0.05);
+      padding: 40px;
+    }
+
+    .form-header-bar {
+      margin-bottom: 28px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--inst-border-subtle);
+    }
+
+    .form-header-title {
+      font-family: var(--inst-font-display);
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--inst-navy);
+    }
+
+    .form-header-sub {
+      font-size: 13px;
+      color: var(--inst-text-muted);
+      margin-top: 4px;
+    }
+
+    /* Form Inputs */
+    .form-row-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .form-group-inst {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 18px;
+    }
+
+    .form-label-inst {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--inst-navy);
+      margin-bottom: 6px;
+    }
+
+    .form-label-inst span {
+      color: #B91C1C;
+    }
+
+    .form-control-inst {
+      width: 100%;
+      padding: 11px 14px;
+      font-family: var(--inst-font-sans);
+      font-size: 14px;
+      color: var(--inst-text-dark);
+      background: #FFFFFF;
+      border: 1px solid var(--inst-border-dark);
+      border-radius: var(--inst-radius-sm);
+      outline: none;
+      transition: var(--inst-transition);
+    }
+
+    .form-control-inst:focus {
+      border-color: var(--inst-navy);
+      box-shadow: 0 0 0 1px var(--inst-navy);
+    }
+
+    textarea.form-control-inst {
+      resize: vertical;
+      min-height: 90px;
+    }
+
+    .form-submit-inst {
+      width: 100%;
+      background: var(--inst-navy);
+      color: #FFFFFF;
+      font-family: var(--inst-font-sans);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      border: 1px solid var(--inst-navy);
+      border-radius: var(--inst-radius-sm);
+      cursor: pointer;
+      transition: var(--inst-transition);
+      margin-top: 10px;
+    }
+
+    .form-submit-inst:hover {
+      background: var(--inst-gold);
+      border-color: var(--inst-gold);
+    }
+
+    .form-legal-note {
+      font-size: 11.5px;
+      color: var(--inst-text-muted);
+      margin-top: 14px;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════
+       SECTION 10: CONVENING AUTHORITIES (WARM PARCHMENT #FCFAF6)
+       ═══════════════════════════════════════════════════════════════════════ */
+    .inst-section-institutions {
+      background-color: var(--inst-ivory);
+      padding: 92px 0;
+      border-bottom: 1px solid var(--inst-border-subtle);
+    }
+
+    .authorities-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+    }
+
+    .authority-box {
+      background: #FFFFFF;
+      border: 1px solid var(--inst-border-dark);
+      border-radius: var(--inst-radius-sm);
+      padding: 32px;
+    }
+
+    .authority-logo-area {
+      height: 38px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .authority-logo-area img {
+      max-height: 32px;
+      width: auto;
+    }
+
+    .authority-badge {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--inst-gold-deep);
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .authority-name {
+      font-family: var(--inst-font-display);
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--inst-navy);
+      margin-bottom: 10px;
+    }
+
+    .authority-desc {
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: var(--inst-text-body);
+      margin-bottom: 16px;
+    }
+
+    .authority-domicile {
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--inst-text-muted);
+      border-top: 1px solid var(--inst-border-subtle);
+      padding-top: 12px;
+    }
+
+    .authority-domicile strong {
+      display: block;
+      color: var(--inst-navy);
+      font-weight: 600;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════
+       RESPONSIVE BREAKPOINTS
+       ═══════════════════════════════════════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .inst-hero-dossier { grid-template-columns: repeat(2, 1fr); }
+      .deliverable-master-grid { grid-template-columns: 1fr; }
+      .deliverable-master-visual { border-right: none; border-bottom: 1px solid var(--inst-border-subtle); }
+      .deliverable-pillars-grid { grid-template-columns: repeat(2, 1fr); }
+      .pillar-card--span2 { grid-column: span 1; }
+      .deliverable-roadmap-steps { grid-template-columns: 1fr; }
+      .chambers-deck,
+      .imperative-lead-grid,
+      .moderators-grid,
+      .delegation-quota-deck,
+      .protocol-cards-duo,
+      .accreditation-grid,
+      .authorities-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .inst-hero-dossier { grid-template-columns: 1fr; }
+      .deliverable-pillars-grid { grid-template-columns: 1fr; }
+      .ledger-entry { grid-template-columns: 1fr; gap: 8px; }
+      .moderator-profile-card { grid-template-columns: 1fr; }
+      .form-row-2col { grid-template-columns: 1fr; }
+      .deliverable-meta-specs { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- SCOPED WRAPPER FOR WORDPRESS / ELEMENTOR COMPATIBILITY -->
+<div class="inst-page-wrap">
+
+  <!-- ================================================================ -->
+  <!-- [WORDPRESS BLOCK 1]: CONVENING PROCLAMATION (HERO)               -->
+  <!-- BACKGROUND: DEEP NAVY (#08131F)                                  -->
+  <!-- ================================================================ -->
+  <section class="inst-section-hero" id="hero">
+    <div class="inst-hero-bg">
+      <img src="hero_london_skyline.jpg" alt="London Institutional Skyline at Dusk" loading="eager">
+    </div>
+    <div class="inst-hero-overlay"></div>
+
+    <div class="inst-container">
+      <div class="inst-hero-content">
+        <div class="inst-chapter-badge inst-chapter-badge--dark">
+          <span>CONVENING MANDATE</span>
+          <span class="inst-chapter-sep">·</span>
+          <span>OCTOBER 2026</span>
+        </div>
+
+        <h1 class="inst-hero-title">
+          London Climate Resilience<br><em>Roundtable</em> 2026
+        </h1>
+
+        <p class="inst-hero-lead">
+          An official closed-door working session convening <strong>35 cross-sector leaders</strong> from commercial real estate, enterprise, municipal government, finance, and academia to formulate and deliver <strong>The London ESG &amp; Heat Adaptation White Paper and Business Capability Roadmap</strong>.
+        </p>
+
+        <!-- Metadata Dossier -->
+        <div class="inst-hero-dossier">
+          <div class="inst-dossier-cell">
+            <span class="inst-dossier-lbl">Convene Date</span>
+            <div class="inst-dossier-val">Wednesday, 21 Oct 2026</div>
+            <span class="inst-dossier-sub">14:00 – 18:30 GMT (Private Dining 18:30)</span>
+          </div>
+
+          <div class="inst-dossier-cell">
+            <span class="inst-dossier-lbl">Convening Chamber</span>
+            <div class="inst-dossier-val">Central London</div>
+            <span class="inst-dossier-sub">Historic Institution (Disclosed upon Accreditation)</span>
+          </div>
+
+          <div class="inst-dossier-cell">
+            <span class="inst-dossier-lbl">Deliberation Format</span>
+            <div class="inst-dossier-val">Closed Executive Roundtable</div>
+            <span class="inst-dossier-sub">Confidential Strategic Dialogue</span>
+          </div>
+
+          <div class="inst-dossier-cell">
+            <span class="inst-dossier-lbl">Primary Deliverable</span>
+            <div class="inst-dossier-val">Policy White Paper &amp; Roadmap</div>
+            <span class="inst-dossier-sub">Actionable Recommendations &amp; Capability Framework</span>
+          </div>
+        </div>
+
+        <div class="inst-btn-group">
+          <a href="#deliverables" class="inst-btn inst-btn--gold">
+            Review Policy Deliverables &amp; Roadmap ↓
+          </a>
+          <a href="#accreditation" class="inst-btn inst-btn--outline-light">
+            Apply for Delegation Accreditation →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- [WORDPRESS BLOCK 2]: THE PRIMARY OUTCOME — POLICY ROADMAP        -->
+  <!-- BACKGROUND: WARM IVORY (#FCFAF6) WITH DARK ROADMAP INSET        -->
+  <!-- ================================================================ -->
+  <section class="inst-section-deliverables" id="deliverables">
+    <div class="inst-container">
+      <div class="inst-section-heading inst-section-heading--center">
+        <div class="inst-chapter-badge inst-chapter-badge--gold">
+          <span>CHAPTER I</span>
+          <span class="inst-chapter-sep">/</span>
+          <span>THE PRIMARY DELIVERABLE &amp; ENDURING OUTCOME</span>
+        </div>
+        <h2 class="inst-section-title inst-section-title--dark">The London ESG &amp; Heat Adaptation <em>White Paper &amp; Roadmap</em></h2>
+        <p class="inst-section-lead">
+          The roundtable does not end with passive discussion. It is convened specifically to co-author and ratify an authoritative policy document and enterprise capability roadmap that directly addresses London's £9B–£45B adaptation deficit.
+        </p>
+      </div>
+
+      <!-- Master Document Card -->
+      <div class="deliverable-master-card">
+        <div class="deliverable-master-grid">
+          <div class="deliverable-master-visual">
+            <img src="accord_policy_document.jpg" alt="The London ESG and Heat Adaptation Policy Document and Business Capability Roadmap" class="deliverable-doc-img">
+            <span class="deliverable-doc-caption">Official Transmittal Document · 2026 Edition</span>
+          </div>
+          <div class="deliverable-master-text">
+            <span class="deliverable-master-kicker">Policy Instrument &amp; Capability Framework</span>
+            <h3 class="deliverable-master-heading">Urban Resilience Recommendations with a Dedicated Business Capability Roadmap</h3>
+            <p class="deliverable-master-p">
+              Following the forum, “The London ESG and Heat Adaptation Policy Document and Business Capability Roadmap” will be prepared over the subsequent 30 days. Combining urban resilience policy recommendations with a dedicated business capability roadmap, the white paper will be launched and formally presented to Greater London Authority officials, parliamentary committees, and relevant commercial sector stakeholders.
+            </p>
+            <div class="deliverable-meta-specs">
+              <div class="deliverable-spec-item">
+                <strong>Target Institutional Recipients</strong>
+                <span>Greater London Authority (GLA), DESNZ, DEFRA, and London Borough Cabinets.</span>
+              </div>
+              <div class="deliverable-spec-item">
+                <strong>Delegate Authorship Rights</strong>
+                <span>Attribution as contributing co-author and institutional signatory in the formal public release.</span>
+              </div>
+              <div class="deliverable-spec-item">
+                <strong>Legal &amp; Regulatory Alignment</strong>
+                <span>Mapped to CSRD (ESRS E1), IFRS S2 Climate Disclosures, and GRI 201/305.</span>
+              </div>
+              <div class="deliverable-spec-item">
+                <strong>Subsequent Deployment</strong>
+                <span>Open-access practitioner toolkit distributed to London Chambers of Commerce &amp; BIDs.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- The 5 Strategic Pillars -->
+      <div class="deliverable-pillars-header">
+        <span>The Core Policy Architecture</span>
+        Five Strategic Pillars Formulated in the Action Plan
+      </div>
+
+      <div class="deliverable-pillars-grid">
+        <!-- Pillar 1 -->
+        <article class="pillar-card">
+          <div class="pillar-card-num">01</div>
+          <h4 class="pillar-card-title">Built Environment &amp; Commercial Retrofitting</h4>
+          <p class="pillar-card-desc">
+            Defines actionable retrofit protocols, passive cooling standards, and building envelope thermal thresholds for London's aging commercial property stock, addressing the estimated £9B–£45B capital requirement.
+          </p>
+          <div class="pillar-card-footer">
+            Policy Alignment: <strong>GLA London Plan &amp; Heat Ready Framework</strong>
+          </div>
+        </article>
+
+        <!-- Pillar 2 -->
+        <article class="pillar-card">
+          <div class="pillar-card-num">02</div>
+          <h4 class="pillar-card-title">Workforce Duty-of-Care &amp; Thermal Stress</h4>
+          <p class="pillar-card-desc">
+            Establishes standardized corporate operational protocols for workforce safety during 40°C+ summer spikes, mitigating occupational health liabilities, remote/field worker vulnerability, and productivity loss.
+          </p>
+          <div class="pillar-card-footer">
+            Governance Standard: <strong>HSE Guidelines &amp; Corporate Duty of Care</strong>
+          </div>
+        </article>
+
+        <!-- Pillar 3 -->
+        <article class="pillar-card">
+          <div class="pillar-card-num">03</div>
+          <h4 class="pillar-card-title">Standardized Climate Risk Disclosures</h4>
+          <p class="pillar-card-desc">
+            Translates complex international disclosure mandates (GRI 201, CSRD ESRS E1, and IFRS S2) into clear physical climate risk reporting metrics that institutional investors, lenders, and insurers require.
+          </p>
+          <div class="pillar-card-footer">
+            Regulatory Framework: <strong>CSRD · IFRS S2 · GRI Standards</strong>
+          </div>
+        </article>
+
+        <!-- Pillar 4 -->
+        <article class="pillar-card">
+          <div class="pillar-card-num">04</div>
+          <h4 class="pillar-card-title">SME &amp; Supply-Chain Capability Roadmap</h4>
+          <p class="pillar-card-desc">
+            Bridges the critical institutional knowledge gap for tier-2/3 London suppliers through targeted training curricula, climate scenario toolkits, and transition financing mechanisms.
+          </p>
+          <div class="pillar-card-footer">
+            Economic Impact: <strong>Supply-Chain Continuity for 1M+ London SMEs</strong>
+          </div>
+        </article>
+
+        <!-- Pillar 5 -->
+        <article class="pillar-card pillar-card--span2">
+          <div class="pillar-card-num">05</div>
+          <h4 class="pillar-card-title">Public-Private Adaptation Governance Bridge</h4>
+          <p class="pillar-card-desc">
+            Establishes a permanent consultative bridge between corporate CSOs, institutional real estate developers, and municipal borough leaders to ensure municipal infrastructure planning and commercial enterprise operations stay aligned.
+          </p>
+          <div class="pillar-card-footer">
+            Institutional Standing: <strong>Joint Whitehall, GLA &amp; Corporate Advisory Channel</strong>
+          </div>
+        </article>
+      </div>
+
+      <!-- Dark Inset Roadmap Block -->
+      <div class="deliverable-roadmap-box">
+        <div class="deliverable-roadmap-header">
+          <h3 class="deliverable-roadmap-title">30–60–90 Day Post-Roundtable Delivery Roadmap</h3>
+          <p class="deliverable-roadmap-sub">
+            The white paper and capability roadmap transition from deliberation into formal policy and industry implementation through a structured, tripartite dissemination process.
+          </p>
+        </div>
+
+        <div class="deliverable-roadmap-steps">
+          <div class="roadmap-step-item">
+            <span class="roadmap-step-phase">Phase 01 · Days 1–30</span>
+            <h4 class="roadmap-step-name">Synthesis &amp; Delegate Peer Review</h4>
+            <p class="roadmap-step-body">
+              Chamber rapporteur findings and draft resolutions are synthesized into the master policy white paper. All 35 accredited delegates participate in a closed 14-day consultation to ratify clauses and institutional attribution.
+            </p>
+          </div>
+
+          <div class="roadmap-step-item">
+            <span class="roadmap-step-phase">Phase 02 · Days 31–60</span>
+            <h4 class="roadmap-step-name">Launch &amp; Transmittal to Government</h4>
+            <p class="roadmap-step-body">
+              The finalized recommendations and capability roadmap are formally launched in London and delivered directly to the Greater London Authority (GLA), the UK Climate Change Committee (CCC), parliamentary groups, and relevant borough cabinets.
+            </p>
+          </div>
+
+          <div class="roadmap-step-item">
+            <span class="roadmap-step-phase">Phase 03 · Days 61–90</span>
+            <h4 class="roadmap-step-name">Enterprise Capability Toolkit Distribution</h4>
+            <p class="roadmap-step-body">
+              Release of the open-access "London Business Heat Adaptation Toolkit" via London Chambers of Commerce, Business Improvement Districts (BIDs), and professional institutes to support SME operational resilience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- [WORDPRESS BLOCK 3]: THE CAPABILITY GAP & DIAGNOSTIC             -->
+  <!-- BACKGROUND: INSTITUTIONAL STONE TINT (#F1EEE7)                   -->
+  <!-- ================================================================ -->
+  <section class="inst-section-imperative" id="imperative">
+    <div class="inst-container">
+      <div class="inst-section-heading">
+        <div class="inst-chapter-badge inst-chapter-badge--gold">
+          <span>CHAPTER II</span>
+          <span class="inst-chapter-sep">/</span>
+          <span>ANALYTICAL PROBLEM STATEMENT</span>
+        </div>
+        <h2 class="inst-section-title inst-section-title--dark">The Capability Gap in <em>London's Adaptation</em></h2>
+        <p class="inst-section-lead">
+          Adapting the capital is no longer optional. While civil infrastructure and planning policies receive significant political attention, a critical structural deficit remains: business and institutional capability.
+        </p>
+      </div>
+
+      <div class="imperative-lead-grid">
+        <div class="imperative-prose">
+          <div class="imperative-pullquote">
+            “London is confronting an unprecedented warming climate. Record summer temperatures, the UK Government’s ‘Heat Ready London’ adaptation plan, and an estimated £9–£45 billion retrofitting requirement point to one inescapable conclusion: physical defense without business capability will fail.”
+          </div>
+          <p>
+            Record summer temperatures exceeding 40°C, widespread transport disruption, and tightening corporate disclosure mandates have exposed severe operational vulnerabilities across London’s commercial fabric.
+          </p>
+          <p>
+            Infrastructure and planning have received significant attention, but one critical gap remains under-addressed — <strong>business capability</strong>. Companies across London, from large FTSE enterprises to mid-market employers and supply-chain SMEs, need the knowledge, technical skills, and reporting capability to understand physical climate risk, meet tightening ESG obligations under GRI, CSRD, and IFRS S2, and translate adaptation policy into operational practice.
+          </p>
+          <p>
+            This forum convenes 35 curated leaders from enterprise, commercial real estate, finance, academia, civil society, and the public sector to bridge that gap through structured deliberation.
+          </p>
+        </div>
+
+        <div class="imperative-visual">
+          <img src="london_heat_imperative.jpg" alt="London Heat Wave Impact Analysis — Infrastructure vs Business Capability">
+          <div class="imperative-visual-caption">
+            Urban thermal stress across Central London: The £9B–£45B retrofit bill requires rapid commercial workforce capability.
+          </div>
+        </div>
+      </div>
+
+      <!-- Critical Capability Deficit Comparison Table -->
+      <div class="diagnostic-matrix">
+        <div class="diagnostic-matrix-header">
+          <h3 class="diagnostic-matrix-title">The Institutional Diagnostic: Infrastructure Policy vs. Business Capability Deficit</h3>
+          <p class="diagnostic-matrix-desc">Mapping the discrepancy between existing civil infrastructure plans and the operational capabilities required in enterprise boardrooms.</p>
+        </div>
+        <table class="diagnostic-table">
+          <thead>
+            <tr>
+              <th>Domain</th>
+              <th>Current Infrastructure Focus (Partial State)</th>
+              <th>The Unaddressed Capability Gap (Roundtable Focus)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="td-domain">Commercial Real Estate</td>
+              <td class="td-status-quo">Macro energy efficiency targets (EPC ratings, fabric insulation) and municipal planning guidance.</td>
+              <td class="td-gap-focus">Actionable engineering standards for passive cooling, overheating risk assessment, and retrofit capital structuring without crippling leasehold models.</td>
+            </tr>
+            <tr>
+              <td class="td-domain">Workforce &amp; Operations</td>
+              <td class="td-status-quo">Ad-hoc summer heat warnings issued by UKHSA and informal remote work recommendations.</td>
+              <td class="td-gap-focus">Legally defensible corporate heat-stress duty of care policies, frontline worker heat protection thresholds, and productivity loss insurance models.</td>
+            </tr>
+            <tr>
+              <td class="td-domain">ESG Disclosures</td>
+              <td class="td-status-quo">Broad carbon accounting (Scope 1 &amp; 2) and generic transition statements.</td>
+              <td class="td-gap-focus">Rigorous, quantitative physical climate risk disclosures under CSRD (ESRS E1), IFRS S2, and GRI Standards that satisfy institutional credit underwriters.</td>
+            </tr>
+            <tr>
+              <td class="td-domain">Supply Chain &amp; SMEs</td>
+              <td class="td-status-quo">Tier-1 corporate sustainability pledges without downstream supplier integration.</td>
+              <td class="td-gap-focus">Practical adaptation capability roadmaps, scenario analysis toolkits, and green engineering skills training for London's 1M+ small and medium enterprises.</td>
+            </tr>
+            <tr>
+              <td class="td-domain">Public-Private Alignment</td>
+              <td class="td-status-quo">Siloed public sector consultation papers with limited private sector feedback mechanisms.</td>
+              <td class="td-gap-focus">Direct co-authorship of the Policy Recommendations &amp; Capability Roadmap, establishing a permanent public-private governance bridge between corporate CSOs and municipal leaders.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- [WORDPRESS BLOCK 4]: WORKING CHAMBERS (TRACKS A & B)             -->
+  <!-- BACKGROUND: CRISP WHITE (#FFFFFF)                                -->
+  <!-- ================================================================ -->
+  <section class="inst-section-chambers" id="chambers">
+    <div class="inst-container">
+      <div class="inst-section-heading inst-section-heading--center">
+        <div class="inst-chapter-badge inst-chapter-badge--gold">
+          <span>CHAPTER III</span>
+          <span class="inst-chapter-sep">/</span>
+          <span>DELIBERATION ARCHITECTURE</span>
+        </div>
+        <h2 class="inst-section-title inst-section-title--dark">Two Parallel <em>Specialist Working Chambers</em></h2>
+        <p class="inst-section-lead">
+          Delegates are assigned to one of two closed deliberation chambers to tackle distinct institutional dimensions of the adaptation challenge, culminating in a joint plenary policy synthesis.
+        </p>
+      </div>
+
+      <div class="chambers-deck">
+        <!-- Chamber I -->
+        <article class="chamber-card">
+          <div class="chamber-banner">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80" alt="Commercial Real Estate and Built Environment in London">
+            <span class="inst-chapter-badge inst-chapter-badge--dark chamber-banner-pill">Chamber I · Built Environment</span>
+          </div>
+          <div class="chamber-content">
+            <h3 class="chamber-title">Heat-Resilient Buildings, Infrastructure &amp; Green Skills</h3>
+            <p class="chamber-desc">
+              Focuses on physical asset vulnerability across London's commercial property stock. Deliberations examine the capital retrofitting challenge, passive architectural cooling, nature-based infrastructure, and the severe deficit in engineering skills required to execute retrofits at scale.
+            </p>
+
+            <span class="chamber-inquiry-title">Core Deliberation Inquiries</span>
+            <ul class="chamber-inquiries">
+              <li class="chamber-inquiry-item">
+                How can commercial landlords finance thermal retrofits without transferring disproportionate costs to commercial tenants?
+              </li>
+              <li class="chamber-inquiry-item">
+                What technical benchmarks must be established for passive ventilation, cool roofs, and shading in London's designated conservation zones?
+              </li>
+              <li class="chamber-inquiry-item">
+                What green engineering and technical curricula must UK universities and polytechnics establish to bridge the green retrofit workforce shortage?
+              </li>
+            </ul>
+
+            <div class="chamber-clause-callout">
+              <span class="chamber-clause-lbl">Expected Policy Recommendation</span>
+              <div class="chamber-clause-text">
+                Proposed London Commercial Retrofit Benchmark (CRB-2027) establishing voluntary thermal resilience standards for institutional landlords.
+              </div>
+            </div>
+
+            <div class="chamber-mod-profile">
+              <img src="https://mcmcer.com/wp-content/uploads/2026/03/kirk-w.junker.jpg" alt="Prof. Kirk W. Junker" class="chamber-mod-avatar">
+              <div class="chamber-mod-meta">
+                <span class="chamber-mod-role">Lead Presiding Moderator</span>
+                <div class="chamber-mod-name">Prof. Kirk W. Junker</div>
+                <div class="chamber-mod-title">Vice Rector for Sustainability, University of Cologne</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Chamber II -->
+        <article class="chamber-card">
+          <div class="chamber-banner">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80" alt="Corporate Boardroom Climate Disclosure and Governance">
+            <span class="inst-chapter-badge inst-chapter-badge--green chamber-banner-pill">Chamber II · Corporate &amp; Governance</span>
+          </div>
+          <div class="chamber-content">
+            <h3 class="chamber-title">Corporate Adaptation, Workforce Welfare &amp; Climate Disclosure</h3>
+            <p class="chamber-desc">
+              Focuses on organizational and operational vulnerability. Deliberations examine legal duty-of-care frameworks during extreme heat episodes, supply-chain disruption, and the execution of quantitative physical climate disclosures under GRI, CSRD, and IFRS S2.
+            </p>
+
+            <span class="chamber-inquiry-title">Core Deliberation Inquiries</span>
+            <ul class="chamber-inquiries">
+              <li class="chamber-inquiry-item">
+                What legally defensible duty-of-care protocols should London enterprises adopt for frontline, field, and logistics workers during Level 4 heat events?
+              </li>
+              <li class="chamber-inquiry-item">
+                How do organizations reconcile reporting friction between EU CSRD ESRS E1, UK SDR, and IFRS S2 regarding chronic physical climate risk?
+              </li>
+              <li class="chamber-inquiry-item">
+                What financial instruments and blended finance options can assist tier-2/3 SME suppliers in conducting climate scenario stress tests?
+              </li>
+            </ul>
+
+            <div class="chamber-clause-callout">
+              <span class="chamber-clause-lbl">Expected Policy Recommendation</span>
+              <div class="chamber-clause-text">
+                Standardized Corporate Workplace Heat Adaptation Protocol &amp; Physical Climate Risk Disclosure Template for London enterprises.
+              </div>
+            </div>
+
+            <div class="chamber-mod-profile">
+              <img src="https://mcmcer.com/wp-content/uploads/2026/08/PHOTO-2026-08-17-11-08-24.jpg" alt="Alessandra Vignola" class="chamber-mod-avatar">
+              <div class="chamber-mod-meta">
+                <span class="chamber-mod-role">Lead Presiding Moderator</span>
+                <div class="chamber-mod-name">Alessandra Vignola</div>
+                <div class="chamber-mod-title">Sustainability Academic &amp; Strategic Advisor · GRI Certified Professional</div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- [WORDPRESS BLOCK 5]: ORDER OF PROCEEDINGS (FORMAL AGENDA)        -->
+  <!-- BACKGROUND: DEEP NAVY LEDGER (#0A1624)                           -->
+  <!-- ================================================================ -->
+  <section class="inst-section-proceedings" id="proceedings">
+    <div class="inst-container">
+      <div class="inst-section-heading inst-section-heading--center">
+        <div class="inst-chapter-badge inst-chapter-badge--dark">
+          <span>CHAPTER IV</span>
+          <span class="inst-chapter-sep">/</span>
+          <span>OFFICIAL ORDER OF PROCEEDINGS · 21 OCT 2026</span>
+        </div>
+        <h2 class="inst-section-title inst-section-title--light">Institutional Protocol &amp; <em>Working Schedule</em></h2>
+        <p class="inst-section-lead inst-section-lead--light">
+          Designed with parliamentary precision to maximize substantive debate, peer review, and definitive policy formulation.
+        </p>
+      </div>
+
+      <div class="proceedings-ledger">
+        <!-- 14:00 Registration -->
+        <div class="ledger-entry">
+          <div class="ledger-time">
+            14:00 – 14:30
+            <span>30 Minutes</span>
+          </div>
+          <div class="ledger-type">
+            Accreditation &amp; Reception
+          </div>
+          <div class="ledger-text">
+            <h4>Delegate Arrival, Security Accreditation &amp; Briefing Dossier Collection</h4>
+            <p>
+              Arrival of invited delegations at the Central London chamber. Verification of credentials, distribution of confidential track briefing dossiers, and initial bilateral introductions over refreshments.
+            </p>
+          </div>
+        </div>
+
+        <!-- 14:30 Opening Plenary -->
+        <div class="ledger-entry">
+          <div class="ledger-time">
+            14:30 – 14:45
+            <span>15 Minutes</span>
+          </div>
+          <div class="ledger-type">
+            Opening Plenary
+          </div>
+          <div class="ledger-text">
+            <h4>Convening Address: The Mandate for Action</h4>
+            <p>
+              Official opening statement by leadership of <strong>MCMCER Ltd</strong> and <strong>Global Advisory Alliance (GAA)</strong>. Setting the convening terms of reference, confidential strategic working format, and expected policy outputs.
+            </p>
+          </div>
+        </div>
+
+        <!-- 14:45 Keynote Context -->
+        <div class="ledger-entry">
+          <div class="ledger-time">
+            14:45 – 15:15
+            <span>30 Minutes</span>
+          </div>
+          <div class="ledger-type">
+            Policy Briefing
+          </div>
+          <div class="ledger-text">
+            <h4>Contextual Address: London’s £45B Retrofit Imperative &amp; Commercial Vulnerability</h4>
+            <p>
+              Framing presentation analyzing data from the UK Climate Change Committee, Mayor of London's Heat Ready Plan, and ESRS/IFRS physical risk compliance pressures facing capital market institutions.
+            </p>
+          </div>
+        </div>
+
+        <!-- 15:15 Chamber Deliberations -->
+        <div class="ledger-entry">
+          <div class="ledger-time">
+            15:15 – 16:30
+            <span>75 Minutes</span>
+          </div>
+          <div class="ledger-type">
+            Working Deliberations
+          </div>
+          <div class="ledger-text">
+            <h4>Closed-Door Deliberations in Parallel Working Chambers</h4>
+            <p>
+              Delegates divide into Chamber I (Built Infrastructure, Assets &amp; Skills) and Chamber II (Corporate Adaptation, Workforce &amp; Disclosures). Moderated debates focus on formulating specific policy clauses and drafting recommendations for the final white paper and capability roadmap.
+            </p>
+          </div>
+        </div>
+
+        <!-- 16:30 Tea & Intermission -->
+        <div class="ledger-entry">
+          <div class="ledger-time">
+            16:30 – 16:50
+            <span>20 Minutes</span>
+          </div>
+          <div class="ledger-type">
+            Executive Exchange
+          </div>
+          <div class="ledger-text">
+            <h4>Chamber Intermission &amp; Informal Bilateral Consultations</h4>
+            <p>
+              Executive coffee service and private discussions between delegates across chambers, facilitating cross-sector alignment between property owners and municipal representatives.
+            </p>
+          </div>
+        </div>
+
+        <!-- 16:50 Synthesis Plenary -->
+        <div class="ledger-entry">
+          <div class="ledger-time">
+            16:50 – 17:45
+            <span>55 Minutes</span>
+          </div>
+          <div class="ledger-type">
+            Synthesis Plenary
+          </div>
+          <div class="ledger-text">
+            <h4>Joint Plenary: Rapporteur Reporting &amp; Formulation of Action Plan</h4>
+            <p>
+              Rapporteurs from Chamber I and Chamber II present synthesized findings to the reconvened full delegation. Plenary floor debate, refinement of recommendations, and collective consensus on policy proposals.
+            </p>
+          </div>
+        </div>
+
+        <!-- 17:45 Closing & Adoption -->
+        <div class="ledger-entry">
+          <div class="ledger-time">
+            17:45 – 18:00
+            <span>15 Minutes</span>
+          </div>
+          <div class="ledger-type">
+            Closing Session
+          </div>
+          <div class="ledger-text">
+            <h4>Adoption of Working Communiqué &amp; 30-Day Transmittal Timetable</h4>
+            <p>
+              Formal adoption of the preliminary communique. Outline of the 30-day review period for co-signatory attribution before publication and government delivery.
+            </p>
+          </div>
+        </div>
+
+        <!-- 18:00 Reception -->
+        <div class="ledger-entry">
+          <div class="ledger-time">
+            18:00 – 19:30
+            <span>90 Minutes</span>
+          </div>
+          <div class="ledger-type">
+            Executive Reception
+          </div>
+          <div class="ledger-text">
+            <h4>Executive Dining Reception &amp; Cross-Sector Bilateral Dinner</h4>
+            <p>
+              Private networking reception with drinks, canapés, and strategic bilateral discussion among senior delegates and institutional hosts.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- [WORDPRESS BLOCK 6]: PRESIDING MODERATORS                        -->
+  <!-- BACKGROUND: WARM PARCHMENT (#F8F5EE)                             -->
+  <!-- ================================================================ -->
+  <section class="inst-section-moderators" id="leadership">
+    <div class="inst-container">
+      <div class="inst-section-heading inst-section-heading--center">
+        <div class="inst-chapter-badge inst-chapter-badge--gold">
+          <span>CHAPTER V</span>
+          <span class="inst-chapter-sep">/</span>
+          <span>CHAMBER GOVERNANCE</span>
+        </div>
+        <h2 class="inst-section-title inst-section-title--dark">Presiding <em>Chamber Moderators</em></h2>
+        <p class="inst-section-lead">
+          Distinguished international authorities presiding over the parallel deliberation chambers and steering the synthesis of the policy roadmap.
+        </p>
+      </div>
+
+      <div class="moderators-grid">
+        <!-- Moderator 1 -->
+        <div class="moderator-profile-card">
+          <img src="https://mcmcer.com/wp-content/uploads/2026/03/kirk-w.junker.jpg" alt="Prof. Kirk W. Junker" class="moderator-profile-pic">
+          <div>
+            <span class="moderator-tag">Lead Moderator · Chamber I</span>
+            <h3 class="moderator-name">Prof. Kirk W. Junker</h3>
+            <div class="moderator-title">Vice Rector for Sustainability, University of Cologne</div>
+            <p class="moderator-bio">
+              Director of the Environmental Law Centre and elected in 2023 as the University of Cologne's first Vice Rector for Sustainability. With extensive legal practice spanning the European Commission and superior state courts, Prof. Junker researches international environmental governance, science communication in policy, and regulatory mechanisms for urban climate adaptation.
+            </p>
+          </div>
+        </div>
+
+        <!-- Moderator 2 -->
+        <div class="moderator-profile-card">
+          <img src="https://mcmcer.com/wp-content/uploads/2026/08/PHOTO-2026-08-17-11-08-24.jpg" alt="Alessandra Vignola" class="moderator-profile-pic">
+          <div>
+            <span class="moderator-tag">Lead Moderator · Chamber II</span>
+            <h3 class="moderator-name">Alessandra Vignola</h3>
+            <div class="moderator-title">Sustainability Academic &amp; Strategic Advisor · GRI Certified</div>
+            <p class="moderator-bio">
+              A GRI-Certified sustainability leader with over two decades of experience spanning strategic consulting, corporate decarbonisation, and academic research across the UK and Continental Europe. Holding a Doctorate in Business Administration in Sustainability Management, her work focuses on corporate ESG disclosure under CSRD and translating climate science into board-level risk management.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- [WORDPRESS BLOCK 7]: DELEGATION MATRIX & SECTOR QUOTAS           -->
+  <!-- BACKGROUND: BRITISH RACING GREEN SURFACE (#0A1D18)               -->
+  <!-- ================================================================ -->
+  <section class="inst-section-delegation" id="delegation">
+    <div class="inst-container">
+      <div class="inst-section-heading inst-section-heading--center">
+        <div class="inst-chapter-badge inst-chapter-badge--green">
+          <span>CHAPTER VI</span>
+          <span class="inst-chapter-sep">/</span>
+          <span>ACCREDITED REPRESENTATION</span>
+        </div>
+        <h2 class="inst-section-title inst-section-title--light">Curated Multi-Sector <em>Delegation Quotas</em></h2>
+        <p class="inst-section-lead inst-section-lead--light">
+          To ensure balanced and defensible policy outputs, participation is strictly limited to 35–40 decision-makers distributed across six strategic institutional pillars.
+        </p>
+      </div>
+
+      <div class="delegation-quota-deck">
+        <div class="quota-box">
+          <div class="quota-num">06 Seats</div>
+          <h4 class="quota-title">Commercial Real Estate &amp; Landlords</h4>
+          <p class="quota-desc">Senior executives from institutional property funds, major London estates, development trusts, and retrofit engineering contractors.</p>
+        </div>
+
+        <div class="quota-box">
+          <div class="quota-num">06 Seats</div>
+          <h4 class="quota-title">Municipal &amp; Regional Authorities</h4>
+          <p class="quota-desc">Policy leads, climate adaptation directors, and resilience officers from Greater London Authority (GLA) and London Borough councils.</p>
+        </div>
+
+        <div class="quota-box">
+          <div class="quota-num">06 Seats</div>
+          <h4 class="quota-title">Banking, Insurance &amp; Asset Managers</h4>
+          <p class="quota-desc">Physical risk underwriters, sustainable finance officers, and institutional investors evaluating climate resilience in UK asset portfolios.</p>
+        </div>
+
+        <div class="quota-box">
+          <div class="quota-num">06 Seats</div>
+          <h4 class="quota-title">Critical Infrastructure &amp; Transport</h4>
+          <p class="quota-desc">Heads of sustainability and operational continuity across London transport networks, energy utilities, water systems, and telecommunications.</p>
+        </div>
+
+        <div class="quota-box">
+          <div class="quota-num">06 Seats</div>
+          <h4 class="quota-title">FTSE Enterprise &amp; Supply Chain</h4>
+          <p class="quota-desc">Chief Sustainability Officers, supply chain directors, and human resources leadership addressing employee heat vulnerability and operational continuity.</p>
+        </div>
+
+        <div class="quota-box">
+          <div class="quota-num">06 Seats</div>
+          <h4 class="quota-title">Academic, Legal &amp; Standards Bodies</h4>
+          <p class="quota-desc">Leading scholars in environmental law, climate economics, GRI certified faculty, and standards development organizations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- [WORDPRESS BLOCK 8]: EXECUTIVE DIALOGUE & VENUE PROTOCOLS        -->
+  <!-- BACKGROUND: CRISP WHITE (#FFFFFF)                                -->
+  <!-- ================================================================ -->
+  <section class="inst-section-protocol-rules" id="protocols">
+    <div class="inst-container">
+      <div class="inst-section-heading">
+        <div class="inst-chapter-badge inst-chapter-badge--gold">
+          <span>CHAPTER VII</span>
+          <span class="inst-chapter-sep">/</span>
+          <span>EXECUTIVE DIALOGUE &amp; ENVIRONMENT</span>
+        </div>
+        <h2 class="inst-section-title inst-section-title--dark">Deliberation Protocols &amp; <em>Convening Environment</em></h2>
+        <p class="inst-section-lead">
+          Ensuring frank, high-trust dialogue between public authorities and corporate decision-makers through structured executive consultation.
+        </p>
+      </div>
+
+      <div class="protocol-cards-duo">
+        <div class="protocol-seal-card">
+          <div class="protocol-seal-head">
+            <div class="protocol-seal-icon">⚖</div>
+            <h3 class="protocol-seal-title">Confidential Executive Dialogue</h3>
+          </div>
+          <p class="protocol-seal-text">
+            To foster complete candour and unencumbered strategic debate, all chamber proceedings and plenary exchanges are conducted as closed-door, confidential executive sessions. Participants engage directly in peer debate without public media coverage, ensuring practical commercial constraints, regulatory challenges, and corporate adaptation bottlenecks can be openly addressed. The published white paper reflects collective consensus and institutional recommendations.
+          </p>
+        </div>
+
+        <div class="protocol-seal-card">
+          <div class="protocol-seal-head">
+            <div class="protocol-seal-icon">🏛</div>
+            <h3 class="protocol-seal-title">Discreet Heritage Chamber</h3>
+          </div>
+          <p class="protocol-seal-text">
+            Deliberations will take place within a discreet Central London historic institutional setting. The venue provides isolated working deliberation chambers, private bilateral meeting rooms, and formal dining facilities. To protect delegate privacy and security, precise venue coordinates and security protocols are transmitted exclusively to accredited attendees upon confirmation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- [WORDPRESS BLOCK 9]: DELEGATE ACCREDITATION DOSSIER (FORM)       -->
+  <!-- BACKGROUND: EXECUTIVE TINT (#F1EEE7)                             -->
+  <!-- ================================================================ -->
+  <section class="inst-section-accreditation" id="accreditation">
+    <div class="inst-container">
+      <div class="accreditation-grid">
+        <!-- Briefing Info -->
+        <div class="accreditation-brief">
+          <div class="inst-chapter-badge inst-chapter-badge--gold" style="margin-bottom:12px;">
+            <span>CHAPTER VIII</span>
+            <span class="inst-chapter-sep">/</span>
+            <span>ACCREDITATION REVIEW</span>
+          </div>
+          <h3>Expression of Interest &amp; Delegate Dossier</h3>
+          <p>
+            Due to strict seating caps (35–40 delegates) and multi-sector quotas, participation is by institutional invitation and peer accreditation.
+          </p>
+          <p>
+            Applications are reviewed by the convening secretariat within 48 hours to ensure equitable sector balance across municipal authorities, commercial real estate, corporate enterprise, and academia.
+          </p>
+
+          <ul class="accreditation-terms">
+            <li class="accreditation-term-item">
+              <strong>Zero Delegate Registration Fees:</strong> Concurring with institutional think-tank conventions, accredited delegates attend without commercial fees.
+            </li>
+            <li class="accreditation-term-item">
+              <strong>Official Policy Co-Authorship:</strong> Formal attribution in the policy document delivered to the Greater London Authority and UK Government bodies.
+            </li>
+            <li class="accreditation-term-item">
+              <strong>Executive Dining Access:</strong> Full participation in the post-deliberation reception, bilateral briefings, and private dinner.
+            </li>
+          </ul>
+
+          <div style="font-size:12px; color:var(--inst-text-muted); line-height:1.5;">
+            🔒 All submissions are processed in strict compliance with UK GDPR regulations by MCMCER Ltd &amp; GAA Ltd. Information is used exclusively for accreditation credentialing.
+          </div>
+        </div>
+
+        <!-- Form Card (Compatible with Contact Form 7 / Elementor / Semantic Fallback) -->
+        <div class="accreditation-form-card">
+          <div class="form-header-bar">
+            <h3 class="form-header-title">Delegate Accreditation Dossier</h3>
+            <p class="form-header-sub">Complete to request chamber allocation and official working credentials.</p>
+          </div>
+
+          <!-- Contact Form 7 Shortcode Slot for WordPress integration -->
+          <div class="cf7-integration-slot" style="display:none;">
+            [contact-form-7 id="8717b6b" title="Contact_form_London Heat Forum Accreditation"]
+          </div>
+
+          <!-- Semantic Working Form (Standalone & Fallback) -->
+          <form action="#" method="POST" id="accreditationForm" onsubmit="event.preventDefault(); alert('Your accreditation dossier has been submitted to the MCMCER Convening Secretariat. Confirmation will be issued within 48 hours.');">
+            <div class="form-row-2col">
+              <div class="form-group-inst">
+                <label class="form-label-inst" for="delegate-name">Full Name <span>*</span></label>
+                <input type="text" id="delegate-name" name="full-name" class="form-control-inst" placeholder="e.g. Dr. Sarah Jenkins" required>
+              </div>
+              <div class="form-group-inst">
+                <label class="form-label-inst" for="delegate-email">Work Email <span>*</span></label>
+                <input type="email" id="delegate-email" name="work-email" class="form-control-inst" placeholder="sarah.jenkins@organisation.co.uk" required>
+              </div>
+            </div>
+
+            <div class="form-row-2col">
+              <div class="form-group-inst">
+                <label class="form-label-inst" for="delegate-org">Institution / Organisation <span>*</span></label>
+                <input type="text" id="delegate-org" name="organisation" class="form-control-inst" placeholder="e.g. Grosvenor / GLA / Arup" required>
+              </div>
+              <div class="form-group-inst">
+                <label class="form-label-inst" for="delegate-title">Job Title / Office <span>*</span></label>
+                <input type="text" id="delegate-title" name="job-title" class="form-control-inst" placeholder="e.g. Chief Sustainability Officer" required>
+              </div>
+            </div>
+
+            <div class="form-row-2col">
+              <div class="form-group-inst">
+                <label class="form-label-inst" for="delegate-sector">Sector Representation <span>*</span></label>
+                <select id="delegate-sector" name="sector" class="form-control-inst" required>
+                  <option value="" disabled selected>Select Institutional Sector</option>
+                  <option value="Commercial Real Estate & Built Environment">Commercial Real Estate &amp; Built Environment</option>
+                  <option value="Municipal / Borough Authority / GLA">Municipal Authority / GLA / London Borough</option>
+                  <option value="Infrastructure, Transport & Energy">Infrastructure, Transport &amp; Energy</option>
+                  <option value="Banking, Insurance & Asset Management">Banking, Insurance &amp; Asset Management</option>
+                  <option value="Corporate Enterprise & Supply Chain">Corporate Enterprise &amp; Supply Chain</option>
+                  <option value="Academic, Legal & Policy Research">Academic, Legal &amp; Policy Research</option>
+                </select>
+              </div>
+              <div class="form-group-inst">
+                <label class="form-label-inst" for="delegate-track">Working Chamber Preference <span>*</span></label>
+                <select id="delegate-track" name="track-preference" class="form-control-inst" required>
+                  <option value="" disabled selected>Select Working Chamber</option>
+                  <option value="Chamber I: Built Infrastructure, Commercial Assets & Skills">Chamber I: Built Infrastructure &amp; Green Skills</option>
+                  <option value="Chamber II: Corporate Adaptation, Workforce & Disclosures">Chamber II: Corporate Adaptation &amp; ESG Disclosures</option>
+                  <option value="Cross-Chamber Delegate (No Preference)">Cross-Chamber Delegate (No Preference)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group-inst">
+              <label class="form-label-inst" for="delegate-challenge">Primary Contribution or Institutional Challenge</label>
+              <textarea id="delegate-challenge" name="contribution" class="form-control-inst" placeholder="Briefly outline your organisation's heat adaptation challenge, or the policy perspectives you seek to bring to the strategic roadmap drafting..."></textarea>
+            </div>
+
+            <button type="submit" class="form-submit-inst">
+              Submit Accreditation Request →
+            </button>
+
+            <p class="form-legal-note">
+              Accreditation notices and venue access credentials issued within 48 hours following secretariat review.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!-- [WORDPRESS BLOCK 10]: CONVENING AUTHORITIES                      -->
+  <!-- BACKGROUND: WARM IVORY (#FCFAF6)                                 -->
+  <!-- ================================================================ -->
+  <section class="inst-section-institutions" id="institutions">
+    <div class="inst-container">
+      <div class="inst-section-heading inst-section-heading--center">
+        <div class="inst-chapter-badge inst-chapter-badge--gold">
+          <span>CHAPTER IX</span>
+          <span class="inst-chapter-sep">/</span>
+          <span>CONVENING AUTHORITIES</span>
+        </div>
+        <h2 class="inst-section-title inst-section-title--dark">Convened by Research &amp; Advisory <em>Institutions</em></h2>
+        <p class="inst-section-lead">
+          Organised under the joint auspices of London-registered educational and policy advisory bodies dedicated to advancing sustainability capability and climate governance.
+        </p>
+      </div>
+
+      <div class="authorities-grid">
+        <!-- Institution 1: MCMCER -->
+        <div class="authority-box">
+          <div class="authority-logo-area">
+            <img src="https://globalnexconferences.com/wp-content/uploads/2026/09/Black-2636X600-scaled.png" alt="MCMCER Logo">
+          </div>
+          <span class="authority-badge">Convening Host Organisation</span>
+          <h3 class="authority-name">M.C. Mehta Centre for Education and Research Ltd</h3>
+          <p class="authority-desc">
+            A London-based research and executive education institution specialising in sustainability governance, environmental law, ESG capability building, and international sustainability certifications (GRI, CSRD, and IFRS S2). MCMCER convenes the forum and leads the secretariat drafting of the policy white paper and capability roadmap.
+          </p>
+          <div class="authority-domicile">
+            <strong>Registered London Office</strong>
+            Mappin House, 4 Winsley Street, London, W1W 8HF, United Kingdom
+          </div>
+        </div>
+
+        <!-- Institution 2: GAA -->
+        <div class="authority-box">
+          <div class="authority-logo-area">
+            <img src="https://cdn.prod.website-files.com/6a6f3f188c009ce091d63ad6/6a99726fde26a0acd0fad705_GAA%20Logo%20Simple.svg" alt="Global Advisory Alliance Logo">
+          </div>
+          <span class="authority-badge" style="color:var(--inst-green-accent);">Strategic Convening Partner</span>
+          <h3 class="authority-name">Global Advisory Alliance Ltd</h3>
+          <p class="authority-desc">
+            An international sustainability advisory practice dedicated to climate policy formulation, corporate adaptation frameworks, and institutional transition planning. GAA works with municipal authorities, institutional asset managers, and corporate boards across the UK, Europe, and South Asia to build enduring climate resilience.
+          </p>
+          <div class="authority-domicile">
+            <strong>Registered London Office</strong>
+            86–90 Paul Street, London, EC2A 4NE, United Kingdom
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- END INSTITUTIONAL CONTENT BLOCKS -->
+
+</div><!-- END .inst-page-wrap -->
+
+<!-- Smooth Scroll Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.inst-page-wrap a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId && targetId !== '#') {
+          const targetEl = document.querySelector(targetId);
+          if (targetEl) {
+            e.preventDefault();
+            const targetPosition = targetEl.getBoundingClientRect().top + window.pageYOffset - 24;
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+          }
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
