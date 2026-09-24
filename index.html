@@ -1,22 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>London Climate Resilience Roundtable 2026 | MCMCER & GAA</title>
-  <meta name="description" content="An invitation-only working roundtable convening 35 cross-sector leaders to tackle urban heat, asset resilience, and corporate climate adaptation. 21 October 2026, Central London.">
-  <meta name="keywords" content="London climate resilience, ESG roundtable, heat adaptation, GRI, CSRD, IFRS S2, sustainability, MCMCER, Global Advisory Alliance">
+  <meta name="description"
+    content="An invitation-only working roundtable convening senior cross-sector leaders to tackle urban heat, asset resilience, and corporate climate adaptation. 21 October 2026, Central London.">
+  <meta name="keywords"
+    content="London climate resilience, ESG roundtable, heat adaptation, GRI, CSRD, IFRS S2, sustainability, MCMCER, Global Advisory Alliance">
 
   <!-- Open Graph -->
   <meta property="og:title" content="London Climate Resilience Roundtable 2026">
-  <meta property="og:description" content="An invitation-only working roundtable convening 35 cross-sector leaders in Central London.">
+  <meta property="og:description"
+    content="An invitation-only working roundtable convening senior cross-sector leaders in Central London.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="hero_london_skyline.jpg">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
 
   <style>
     /* ═══════════════════════════════════════════════════════════════
@@ -57,8 +69,19 @@
     }
 
     /* Reset & Base */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
     body {
       font-family: var(--lc-body);
       font-size: 16px;
@@ -67,10 +90,24 @@
       background: var(--lc-ivory);
       overflow-x: hidden;
     }
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-    ul { list-style: none; }
-    button { font-family: inherit; }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    button {
+      font-family: inherit;
+    }
 
     .lc-container {
       max-width: var(--lc-container);
@@ -91,6 +128,7 @@
       align-items: center;
       gap: 10px;
     }
+
     .lc-label::before {
       content: '';
       width: 28px;
@@ -98,9 +136,11 @@
       background: var(--lc-gold);
       border-radius: 2px;
     }
+
     .lc-label--center {
       justify-content: center;
     }
+
     .lc-label--center::after {
       content: '';
       width: 28px;
@@ -117,10 +157,12 @@
       color: var(--lc-text-dark);
       letter-spacing: -0.02em;
     }
+
     .lc-section-title em {
       font-style: italic;
       color: var(--lc-gold);
     }
+
     .lc-section-subtitle {
       font-size: 17px;
       line-height: 1.6;
@@ -148,9 +190,11 @@
       padding: 0 clamp(20px, 4vw, 48px);
       transition: var(--lc-transition);
     }
+
     .lc-nav--transparent {
       background: transparent;
     }
+
     .lc-nav--solid {
       background: rgba(250, 248, 245, 0.94);
       backdrop-filter: blur(20px);
@@ -158,6 +202,7 @@
       border-bottom: 1px solid var(--lc-border-light);
       box-shadow: 0 4px 18px rgba(12, 27, 42, 0.05);
     }
+
     .lc-nav__inner {
       max-width: var(--lc-container);
       margin: 0 auto;
@@ -166,20 +211,24 @@
       justify-content: space-between;
       height: 72px;
     }
+
     .lc-nav__logo img {
       height: 24px;
       width: auto;
       object-fit: contain;
       transition: var(--lc-transition);
     }
+
     .lc-nav--transparent .lc-nav__logo img {
       filter: brightness(0) invert(1);
     }
+
     .lc-nav__links {
       display: flex;
       align-items: center;
       gap: 26px;
     }
+
     .lc-nav__links a {
       font-size: 13.5px;
       font-weight: 600;
@@ -187,12 +236,15 @@
       color: var(--lc-text-muted);
       transition: color 0.2s ease;
     }
+
     .lc-nav--transparent .lc-nav__links a {
       color: rgba(255, 255, 255, 0.85);
     }
+
     .lc-nav__links a:hover {
       color: var(--lc-gold);
     }
+
     .lc-nav__cta {
       display: inline-flex;
       align-items: center;
@@ -206,11 +258,13 @@
       transition: var(--lc-transition);
       box-shadow: 0 4px 14px rgba(201, 150, 59, 0.25);
     }
+
     .lc-nav__cta:hover {
       background: var(--lc-gold-light);
       transform: translateY(-1px);
       box-shadow: 0 6px 18px rgba(201, 150, 59, 0.35);
     }
+
     .lc-nav__hamburger {
       display: none;
       background: none;
@@ -220,6 +274,7 @@
       height: 32px;
       position: relative;
     }
+
     .lc-nav__hamburger span {
       display: block;
       width: 22px;
@@ -229,10 +284,22 @@
       left: 5px;
       transition: var(--lc-transition);
     }
-    .lc-nav--transparent .lc-nav__hamburger span { background: white; }
-    .lc-nav__hamburger span:nth-child(1) { top: 9px; }
-    .lc-nav__hamburger span:nth-child(2) { top: 15px; }
-    .lc-nav__hamburger span:nth-child(3) { top: 21px; }
+
+    .lc-nav--transparent .lc-nav__hamburger span {
+      background: white;
+    }
+
+    .lc-nav__hamburger span:nth-child(1) {
+      top: 9px;
+    }
+
+    .lc-nav__hamburger span:nth-child(2) {
+      top: 15px;
+    }
+
+    .lc-nav__hamburger span:nth-child(3) {
+      top: 21px;
+    }
 
     /* Mobile Menu Drawer */
     .lc-mobile-menu {
@@ -248,7 +315,11 @@
       gap: 24px;
       padding: 30px;
     }
-    .lc-mobile-menu.active { display: flex; }
+
+    .lc-mobile-menu.active {
+      display: flex;
+    }
+
     .lc-mobile-menu a {
       font-family: var(--lc-display);
       font-size: 24px;
@@ -256,7 +327,11 @@
       color: var(--lc-white);
       transition: color 0.2s;
     }
-    .lc-mobile-menu a:hover { color: var(--lc-gold); }
+
+    .lc-mobile-menu a:hover {
+      color: var(--lc-gold);
+    }
+
     .lc-mobile-close {
       position: absolute;
       top: 24px;
@@ -282,33 +357,37 @@
       padding: 130px 24px 84px;
       background: var(--lc-navy-deep);
     }
+
     .lc-hero__bg {
       position: absolute;
       inset: 0;
       z-index: 1;
     }
+
     .lc-hero__bg img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: center 38%;
     }
+
     .lc-hero__overlay {
       position: absolute;
       inset: 0;
       z-index: 2;
       background: linear-gradient(180deg,
-        rgba(7, 16, 24, 0.86) 0%,
-        rgba(12, 27, 42, 0.72) 35%,
-        rgba(21, 34, 50, 0.70) 65%,
-        rgba(12, 27, 42, 0.92) 100%
-      );
+          rgba(7, 16, 24, 0.86) 0%,
+          rgba(12, 27, 42, 0.72) 35%,
+          rgba(21, 34, 50, 0.70) 65%,
+          rgba(12, 27, 42, 0.92) 100%);
     }
+
     .lc-hero__content {
       position: relative;
       z-index: 3;
       max-width: 880px;
     }
+
     .lc-hero__hosts {
       display: inline-flex;
       align-items: center;
@@ -320,6 +399,7 @@
       border: 1px solid rgba(255, 255, 255, 0.14);
       border-radius: 50px;
     }
+
     .lc-hero__hosts-label {
       font-size: 11px;
       font-weight: 700;
@@ -328,27 +408,32 @@
       color: var(--lc-gold);
       white-space: nowrap;
     }
+
     .lc-hero__hosts-sep {
       width: 1px;
       height: 18px;
       background: rgba(255, 255, 255, 0.22);
     }
+
     .lc-hero__hosts-logos {
       display: flex;
       align-items: center;
       gap: 16px;
     }
+
     .lc-hero__hosts-logos img {
       height: 22px;
       width: auto;
       object-fit: contain;
       opacity: 0.95;
     }
+
     .lc-hero__hosts-logos img.lc-logo-gaa {
       filter: brightness(0) invert(1);
       opacity: 0.9;
       height: 19px;
     }
+
     .lc-hero__title {
       font-family: var(--lc-display);
       font-size: clamp(38px, 6vw, 64px);
@@ -358,10 +443,12 @@
       letter-spacing: -0.02em;
       margin-bottom: 22px;
     }
+
     .lc-hero__title em {
       font-style: italic;
       color: var(--lc-gold);
     }
+
     .lc-hero__subtitle {
       font-size: clamp(16px, 2vw, 19px);
       line-height: 1.6;
@@ -369,10 +456,12 @@
       max-width: 720px;
       margin: 0 auto 36px;
     }
+
     .lc-hero__subtitle strong {
       color: var(--lc-white);
       font-weight: 600;
     }
+
     .lc-hero__meta {
       display: flex;
       align-items: stretch;
@@ -381,6 +470,7 @@
       margin-bottom: 36px;
       flex-wrap: wrap;
     }
+
     .lc-hero__meta-card {
       display: flex;
       flex-direction: column;
@@ -393,12 +483,14 @@
       border-radius: var(--lc-radius);
       min-width: 140px;
     }
+
     .lc-hero__meta-val {
       font-family: var(--lc-display);
       font-size: 20px;
       font-weight: 700;
       color: var(--lc-white);
     }
+
     .lc-hero__meta-lbl {
       font-size: 11px;
       font-weight: 600;
@@ -406,6 +498,7 @@
       text-transform: uppercase;
       color: rgba(255, 255, 255, 0.65);
     }
+
     .lc-hero__action-row {
       display: flex;
       align-items: center;
@@ -414,6 +507,7 @@
       margin-bottom: 36px;
       flex-wrap: wrap;
     }
+
     .lc-hero__cta {
       display: inline-flex;
       align-items: center;
@@ -428,11 +522,13 @@
       transition: var(--lc-transition);
       box-shadow: 0 8px 24px rgba(201, 150, 59, 0.35);
     }
+
     .lc-hero__cta:hover {
       background: var(--lc-gold-light);
       transform: translateY(-2px);
       box-shadow: 0 12px 32px rgba(201, 150, 59, 0.45);
     }
+
     .lc-hero__cta svg {
       width: 18px;
       height: 18px;
@@ -441,9 +537,11 @@
       fill: none;
       transition: transform 0.2s;
     }
+
     .lc-hero__cta:hover svg {
       transform: translateX(4px);
     }
+
     .lc-hero__secondary-cta {
       display: inline-flex;
       align-items: center;
@@ -458,10 +556,12 @@
       backdrop-filter: blur(8px);
       transition: var(--lc-transition);
     }
+
     .lc-hero__secondary-cta:hover {
       background: rgba(255, 255, 255, 0.16);
       border-color: rgba(255, 255, 255, 0.4);
     }
+
     .lc-hero__countdown {
       display: flex;
       align-items: center;
@@ -474,7 +574,11 @@
       margin: 0 auto;
       max-width: 440px;
     }
-    .lc-hero__cd-unit { text-align: center; }
+
+    .lc-hero__cd-unit {
+      text-align: center;
+    }
+
     .lc-hero__cd-val {
       font-family: var(--lc-display);
       font-size: 26px;
@@ -482,6 +586,7 @@
       color: var(--lc-white);
       line-height: 1;
     }
+
     .lc-hero__cd-lbl {
       font-size: 10px;
       font-weight: 700;
@@ -490,6 +595,7 @@
       color: var(--lc-gold);
       margin-top: 4px;
     }
+
     .lc-hero__cd-sep {
       font-family: var(--lc-display);
       font-size: 22px;
@@ -505,12 +611,15 @@
       background: var(--lc-ivory);
       position: relative;
     }
+
     .lc-imperative__header {
       margin-bottom: 44px;
     }
+
     .lc-imperative__header .lc-section-title {
       margin-top: 14px;
     }
+
     .lc-imperative__grid {
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
@@ -518,11 +627,13 @@
       align-items: center;
       margin-bottom: 48px;
     }
+
     .lc-imperative__text {
       display: flex;
       flex-direction: column;
       gap: 16px;
     }
+
     .lc-imperative__pullquote {
       font-family: var(--lc-display);
       font-size: clamp(24px, 3vw, 32px);
@@ -533,16 +644,22 @@
       padding-left: 20px;
       margin-bottom: 6px;
     }
-    .lc-imperative__pullquote span { color: var(--lc-gold); }
+
+    .lc-imperative__pullquote span {
+      color: var(--lc-gold);
+    }
+
     .lc-imperative__p {
       font-size: 15.5px;
       line-height: 1.65;
       color: var(--lc-text-body);
     }
+
     .lc-imperative__p strong {
       color: var(--lc-text-dark);
       font-weight: 700;
     }
+
     .lc-imperative__image {
       position: relative;
       border-radius: var(--lc-radius);
@@ -550,20 +667,24 @@
       box-shadow: var(--lc-shadow-lg);
       border: 1px solid var(--lc-border);
     }
+
     .lc-imperative__image img {
       width: 100%;
       height: 380px;
       object-fit: cover;
       transition: transform 0.5s ease;
     }
+
     .lc-imperative__image:hover img {
       transform: scale(1.02);
     }
+
     .lc-imperative__stats {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 20px;
     }
+
     .lc-stat {
       text-align: center;
       padding: 24px 16px;
@@ -573,11 +694,13 @@
       transition: var(--lc-transition);
       box-shadow: var(--lc-shadow-sm);
     }
+
     .lc-stat:hover {
       transform: translateY(-3px);
       box-shadow: var(--lc-shadow);
       border-color: var(--lc-gold);
     }
+
     .lc-stat__val {
       font-family: var(--lc-display);
       font-size: 34px;
@@ -586,6 +709,7 @@
       line-height: 1;
       margin-bottom: 6px;
     }
+
     .lc-stat__desc {
       font-size: 12.5px;
       font-weight: 700;
@@ -604,15 +728,17 @@
       border-bottom: 1px solid var(--lc-border-light);
       position: relative;
     }
+
     .lc-wh__header {
       text-align: center;
       max-width: 760px;
       margin: 0 auto 52px;
     }
+
     .lc-wh__header .lc-section-title {
       margin-top: 14px;
     }
-    
+
     /* 4-Stage Stepper Function */
     .lc-stepper {
       display: grid;
@@ -620,6 +746,7 @@
       gap: 16px;
       margin-bottom: 36px;
     }
+
     .lc-step-btn {
       background: var(--lc-stone-light);
       border: 1px solid var(--lc-border);
@@ -633,16 +760,19 @@
       flex-direction: column;
       gap: 8px;
     }
+
     .lc-step-btn:hover {
       background: var(--lc-white);
       border-color: var(--lc-gold);
       transform: translateY(-2px);
     }
+
     .lc-step-btn.active {
       background: var(--lc-navy);
       border-color: var(--lc-gold);
       box-shadow: 0 8px 24px rgba(12, 27, 42, 0.15);
     }
+
     .lc-step-btn__badge {
       display: inline-flex;
       align-items: center;
@@ -653,17 +783,21 @@
       text-transform: uppercase;
       color: var(--lc-gold);
     }
+
     .lc-step-btn.active .lc-step-btn__badge {
       color: var(--lc-gold-light);
     }
+
     .lc-step-btn__time {
       font-size: 12px;
       font-weight: 600;
       color: var(--lc-text-muted);
     }
+
     .lc-step-btn.active .lc-step-btn__time {
       color: rgba(255, 255, 255, 0.7);
     }
+
     .lc-step-btn__title {
       font-family: var(--lc-display);
       font-size: 17px;
@@ -671,6 +805,7 @@
       color: var(--lc-text-dark);
       line-height: 1.25;
     }
+
     .lc-step-btn.active .lc-step-btn__title {
       color: var(--lc-white);
     }
@@ -690,6 +825,7 @@
       position: relative;
       overflow: hidden;
     }
+
     .lc-step-detail-card::before {
       content: '';
       position: absolute;
@@ -699,6 +835,7 @@
       height: 100%;
       background: var(--lc-gold);
     }
+
     .lc-step-detail__info h4 {
       font-family: var(--lc-display);
       font-size: 24px;
@@ -709,17 +846,20 @@
       align-items: center;
       gap: 12px;
     }
+
     .lc-step-detail__info p {
       font-size: 15px;
       line-height: 1.65;
       color: var(--lc-text-body);
       margin-bottom: 20px;
     }
+
     .lc-step-detail__points {
       display: flex;
       flex-direction: column;
       gap: 10px;
     }
+
     .lc-step-detail__point {
       display: flex;
       align-items: center;
@@ -728,6 +868,7 @@
       font-weight: 600;
       color: var(--lc-text-dark);
     }
+
     .lc-step-detail__point svg {
       width: 16px;
       height: 16px;
@@ -736,6 +877,7 @@
       fill: none;
       flex-shrink: 0;
     }
+
     .lc-step-detail__meta {
       background: var(--lc-white);
       border: 1px solid var(--lc-border-light);
@@ -745,6 +887,7 @@
       flex-direction: column;
       gap: 14px;
     }
+
     .lc-step-detail__meta-row {
       display: flex;
       justify-content: space-between;
@@ -753,14 +896,17 @@
       border-bottom: 1px dashed var(--lc-border-light);
       padding-bottom: 10px;
     }
+
     .lc-step-detail__meta-row:last-child {
       border-bottom: none;
       padding-bottom: 0;
     }
+
     .lc-step-detail__meta-lbl {
       color: var(--lc-text-muted);
       font-weight: 500;
     }
+
     .lc-step-detail__meta-val {
       font-weight: 700;
       color: var(--lc-text-dark);
@@ -772,6 +918,7 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 20px;
     }
+
     .lc-wh-feature {
       background: var(--lc-stone-light);
       border: 1px solid var(--lc-border-light);
@@ -779,12 +926,14 @@
       padding: 26px 22px;
       transition: var(--lc-transition);
     }
+
     .lc-wh-feature:hover {
       background: var(--lc-white);
       transform: translateY(-3px);
       box-shadow: var(--lc-shadow);
       border-color: var(--lc-gold);
     }
+
     .lc-wh-feature__icon {
       width: 44px;
       height: 44px;
@@ -795,6 +944,7 @@
       justify-content: center;
       margin-bottom: 16px;
     }
+
     .lc-wh-feature__icon svg {
       width: 22px;
       height: 22px;
@@ -802,6 +952,7 @@
       stroke-width: 2;
       fill: none;
     }
+
     .lc-wh-feature__title {
       font-family: var(--lc-display);
       font-size: 18px;
@@ -810,6 +961,7 @@
       margin-bottom: 8px;
       line-height: 1.25;
     }
+
     .lc-wh-feature__desc {
       font-size: 13.5px;
       line-height: 1.55;
@@ -824,11 +976,13 @@
       background: var(--lc-stone);
       position: relative;
     }
+
     .lc-rt__header {
       text-align: center;
       max-width: 760px;
       margin: 0 auto 48px;
     }
+
     .lc-rt__header .lc-section-title {
       margin-top: 14px;
     }
@@ -847,6 +1001,7 @@
       width: fit-content;
       box-shadow: var(--lc-shadow-sm);
     }
+
     .lc-rt-toggle-btn {
       padding: 9px 20px;
       border: none;
@@ -861,6 +1016,7 @@
       align-items: center;
       gap: 6px;
     }
+
     .lc-rt-toggle-btn.active {
       background: var(--lc-navy);
       color: var(--lc-white);
@@ -873,6 +1029,7 @@
       grid-template-columns: 1fr 1fr;
       gap: 32px;
     }
+
     .lc-rt-card {
       background: var(--lc-white);
       border: 1px solid var(--lc-border);
@@ -883,15 +1040,23 @@
       display: flex;
       flex-direction: column;
     }
+
     .lc-rt-card:hover {
       transform: translateY(-4px);
       box-shadow: var(--lc-shadow-lg);
     }
+
     .lc-rt-card__header-bar {
       height: 6px;
     }
-    .lc-rt-card--a .lc-rt-card__header-bar { background: var(--lc-gold); }
-    .lc-rt-card--b .lc-rt-card__header-bar { background: var(--lc-teal); }
+
+    .lc-rt-card--a .lc-rt-card__header-bar {
+      background: var(--lc-gold);
+    }
+
+    .lc-rt-card--b .lc-rt-card__header-bar {
+      background: var(--lc-teal);
+    }
 
     .lc-rt-card__body {
       padding: 34px 30px;
@@ -899,6 +1064,7 @@
       display: flex;
       flex-direction: column;
     }
+
     .lc-rt-card__top {
       display: flex;
       align-items: center;
@@ -907,6 +1073,7 @@
       flex-wrap: wrap;
       gap: 10px;
     }
+
     .lc-rt-card__chamber-tag {
       font-size: 11px;
       font-weight: 800;
@@ -915,14 +1082,17 @@
       padding: 4px 12px;
       border-radius: 50px;
     }
+
     .lc-rt-card--a .lc-rt-card__chamber-tag {
       background: var(--lc-gold-pale);
       color: var(--lc-gold);
     }
+
     .lc-rt-card--b .lc-rt-card__chamber-tag {
       background: var(--lc-teal-light);
       color: var(--lc-teal);
     }
+
     .lc-rt-card__capacity {
       font-size: 12px;
       font-weight: 600;
@@ -931,6 +1101,7 @@
       align-items: center;
       gap: 5px;
     }
+
     .lc-rt-card__title {
       font-family: var(--lc-display);
       font-size: 24px;
@@ -939,6 +1110,7 @@
       line-height: 1.25;
       margin-bottom: 12px;
     }
+
     .lc-rt-card__desc {
       font-size: 14.5px;
       line-height: 1.6;
@@ -954,6 +1126,7 @@
       padding: 18px 20px;
       margin-bottom: 22px;
     }
+
     .lc-rt-prompts__title {
       font-size: 11.5px;
       font-weight: 800;
@@ -965,11 +1138,13 @@
       align-items: center;
       gap: 6px;
     }
+
     .lc-rt-prompts__list {
       display: flex;
       flex-direction: column;
       gap: 8px;
     }
+
     .lc-rt-prompts__item {
       display: flex;
       align-items: flex-start;
@@ -979,6 +1154,7 @@
       color: var(--lc-text-dark);
       font-weight: 500;
     }
+
     .lc-rt-prompts__dot {
       width: 6px;
       height: 6px;
@@ -986,8 +1162,14 @@
       flex-shrink: 0;
       margin-top: 6px;
     }
-    .lc-rt-card--a .lc-rt-prompts__dot { background: var(--lc-gold); }
-    .lc-rt-card--b .lc-rt-prompts__dot { background: var(--lc-teal); }
+
+    .lc-rt-card--a .lc-rt-prompts__dot {
+      background: var(--lc-gold);
+    }
+
+    .lc-rt-card--b .lc-rt-prompts__dot {
+      background: var(--lc-teal);
+    }
 
     /* Moderator Mini Card */
     .lc-rt-moderator {
@@ -1001,6 +1183,7 @@
       margin-top: auto;
       margin-bottom: 16px;
     }
+
     .lc-rt-mod-avatar {
       width: 48px;
       height: 48px;
@@ -1010,12 +1193,17 @@
       border: 2px solid var(--lc-white);
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
+
     .lc-rt-mod-avatar img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-    .lc-rt-mod-details { flex-grow: 1; }
+
+    .lc-rt-mod-details {
+      flex-grow: 1;
+    }
+
     .lc-rt-mod-label {
       font-size: 10px;
       font-weight: 700;
@@ -1023,13 +1211,21 @@
       text-transform: uppercase;
       margin-bottom: 2px;
     }
-    .lc-rt-card--a .lc-rt-mod-label { color: var(--lc-gold); }
-    .lc-rt-card--b .lc-rt-mod-label { color: var(--lc-teal); }
+
+    .lc-rt-card--a .lc-rt-mod-label {
+      color: var(--lc-gold);
+    }
+
+    .lc-rt-card--b .lc-rt-mod-label {
+      color: var(--lc-teal);
+    }
+
     .lc-rt-mod-name {
       font-size: 14px;
       font-weight: 700;
       color: var(--lc-text-dark);
     }
+
     .lc-rt-mod-affiliation {
       font-size: 12px;
       color: var(--lc-text-muted);
@@ -1048,7 +1244,10 @@
       font-size: 12.5px;
       color: var(--lc-text-body);
     }
-    .lc-rt-output strong { color: var(--lc-text-dark); }
+
+    .lc-rt-output strong {
+      color: var(--lc-text-dark);
+    }
 
     /* ═══════════════════════════════════════════════════════════════
        SECTION 5: PROGRAMME / AGENDA (Interactive & Scannable)
@@ -1057,11 +1256,13 @@
       padding: var(--lc-section-pad) 0;
       background: var(--lc-ivory);
     }
+
     .lc-agenda__header {
       text-align: center;
       max-width: 740px;
       margin: 0 auto 44px;
     }
+
     .lc-agenda__header .lc-section-title {
       margin-top: 14px;
     }
@@ -1075,6 +1276,7 @@
       margin-bottom: 40px;
       flex-wrap: wrap;
     }
+
     .lc-ag-btn {
       padding: 8px 18px;
       background: var(--lc-white);
@@ -1086,10 +1288,12 @@
       cursor: pointer;
       transition: var(--lc-transition);
     }
+
     .lc-ag-btn:hover {
       border-color: var(--lc-gold);
       color: var(--lc-gold);
     }
+
     .lc-ag-btn.active {
       background: var(--lc-navy);
       color: var(--lc-white);
@@ -1105,6 +1309,7 @@
       flex-direction: column;
       gap: 16px;
     }
+
     .lc-tl-card {
       background: var(--lc-white);
       border: 1px solid var(--lc-border-light);
@@ -1114,16 +1319,19 @@
       box-shadow: 0 2px 10px rgba(12, 27, 42, 0.03);
       position: relative;
     }
+
     .lc-tl-card:hover {
       transform: translateX(4px);
       box-shadow: var(--lc-shadow);
       border-color: var(--lc-border);
     }
+
     .lc-tl-card--keystone {
       border-left: 5px solid var(--lc-gold);
       background: linear-gradient(135deg, #FFFDF9 0%, var(--lc-white) 100%);
       box-shadow: var(--lc-shadow);
     }
+
     .lc-tl-top {
       display: flex;
       align-items: center;
@@ -1132,12 +1340,14 @@
       margin-bottom: 8px;
       flex-wrap: wrap;
     }
+
     .lc-tl-time {
       font-family: var(--lc-display);
       font-size: 18px;
       font-weight: 700;
       color: var(--lc-text-dark);
     }
+
     .lc-tl-duration {
       font-size: 11px;
       font-weight: 700;
@@ -1148,6 +1358,7 @@
       padding: 3px 10px;
       border-radius: 50px;
     }
+
     .lc-tl-format {
       font-size: 11px;
       font-weight: 700;
@@ -1155,6 +1366,7 @@
       text-transform: uppercase;
       color: var(--lc-text-muted);
     }
+
     .lc-tl-heading {
       font-size: 17px;
       font-weight: 700;
@@ -1162,11 +1374,13 @@
       line-height: 1.35;
       margin-bottom: 6px;
     }
+
     .lc-tl-desc {
       font-size: 14px;
       line-height: 1.55;
       color: var(--lc-text-muted);
     }
+
     .lc-tl-tracks-preview {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -1175,19 +1389,23 @@
       padding-top: 14px;
       border-top: 1px solid var(--lc-border-light);
     }
+
     .lc-tl-tpill {
       padding: 10px 14px;
       border-radius: var(--lc-radius-sm);
       font-size: 12.5px;
     }
+
     .lc-tl-tpill--a {
       background: var(--lc-gold-pale);
       border: 1px solid rgba(201, 150, 59, 0.25);
     }
+
     .lc-tl-tpill--b {
       background: var(--lc-teal-light);
       border: 1px solid rgba(27, 122, 110, 0.2);
     }
+
     .lc-tl-tpill strong {
       display: block;
       font-size: 11px;
@@ -1195,8 +1413,14 @@
       letter-spacing: 0.06em;
       margin-bottom: 2px;
     }
-    .lc-tl-tpill--a strong { color: var(--lc-gold); }
-    .lc-tl-tpill--b strong { color: var(--lc-teal); }
+
+    .lc-tl-tpill--a strong {
+      color: var(--lc-gold);
+    }
+
+    .lc-tl-tpill--b strong {
+      color: var(--lc-teal);
+    }
 
     /* ═══════════════════════════════════════════════════════════════
        SECTION 6: FACULTY & DELEGATION (Leadership & Who Is In The Room)
@@ -1207,11 +1431,13 @@
       border-top: 1px solid var(--lc-border-light);
       border-bottom: 1px solid var(--lc-border-light);
     }
+
     .lc-lead__header {
       text-align: center;
       max-width: 740px;
       margin: 0 auto 52px;
     }
+
     .lc-lead__header .lc-section-title {
       margin-top: 14px;
     }
@@ -1223,6 +1449,7 @@
       gap: 30px;
       margin-bottom: 56px;
     }
+
     .lc-chair {
       background: var(--lc-stone-light);
       border: 1px solid var(--lc-border);
@@ -1234,12 +1461,14 @@
       transition: var(--lc-transition);
       box-shadow: var(--lc-shadow-sm);
     }
+
     .lc-chair:hover {
       background: var(--lc-white);
       transform: translateY(-3px);
       box-shadow: var(--lc-shadow);
       border-color: var(--lc-gold);
     }
+
     .lc-chair__photo {
       width: 120px;
       height: 120px;
@@ -1249,12 +1478,17 @@
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
       border: 2px solid var(--lc-white);
     }
+
     .lc-chair__photo img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-    .lc-chair__body { flex-grow: 1; }
+
+    .lc-chair__body {
+      flex-grow: 1;
+    }
+
     .lc-chair__badge {
       display: inline-flex;
       align-items: center;
@@ -1267,8 +1501,17 @@
       text-transform: uppercase;
       margin-bottom: 8px;
     }
-    .lc-chair--a .lc-chair__badge { background: var(--lc-gold-pale); color: var(--lc-gold); }
-    .lc-chair--b .lc-chair__badge { background: var(--lc-teal-light); color: var(--lc-teal); }
+
+    .lc-chair--a .lc-chair__badge {
+      background: var(--lc-gold-pale);
+      color: var(--lc-gold);
+    }
+
+    .lc-chair--b .lc-chair__badge {
+      background: var(--lc-teal-light);
+      color: var(--lc-teal);
+    }
+
     .lc-chair__name {
       font-family: var(--lc-display);
       font-size: 21px;
@@ -1276,14 +1519,22 @@
       color: var(--lc-text-dark);
       margin-bottom: 2px;
     }
+
     .lc-chair__title {
       font-size: 13.5px;
       font-weight: 600;
       margin-bottom: 12px;
       line-height: 1.35;
     }
-    .lc-chair--a .lc-chair__title { color: var(--lc-gold); }
-    .lc-chair--b .lc-chair__title { color: var(--lc-teal); }
+
+    .lc-chair--a .lc-chair__title {
+      color: var(--lc-gold);
+    }
+
+    .lc-chair--b .lc-chair__title {
+      color: var(--lc-teal);
+    }
+
     .lc-chair__bio {
       font-size: 13.5px;
       line-height: 1.55;
@@ -1298,11 +1549,13 @@
       padding: 36px 32px;
       box-shadow: var(--lc-shadow-sm);
     }
+
     .lc-del-header {
       text-align: center;
       max-width: 620px;
       margin: 0 auto 30px;
     }
+
     .lc-del-header h3 {
       font-family: var(--lc-display);
       font-size: 22px;
@@ -1310,15 +1563,18 @@
       color: var(--lc-text-dark);
       margin-bottom: 6px;
     }
+
     .lc-del-header p {
       font-size: 14.5px;
       color: var(--lc-text-muted);
     }
+
     .lc-sectors-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 14px;
     }
+
     .lc-sector {
       display: flex;
       align-items: center;
@@ -1329,11 +1585,13 @@
       border-radius: var(--lc-radius-sm);
       transition: var(--lc-transition);
     }
+
     .lc-sector:hover {
       border-color: var(--lc-gold);
       transform: translateY(-2px);
       box-shadow: var(--lc-shadow-sm);
     }
+
     .lc-sector__icon {
       width: 38px;
       height: 38px;
@@ -1344,6 +1602,7 @@
       justify-content: center;
       flex-shrink: 0;
     }
+
     .lc-sector__icon svg {
       width: 18px;
       height: 18px;
@@ -1351,12 +1610,14 @@
       stroke-width: 1.8;
       fill: none;
     }
+
     .lc-sector__name {
       font-size: 13.5px;
       font-weight: 700;
       color: var(--lc-text-dark);
       line-height: 1.3;
     }
+
     .lc-sector__sub {
       font-size: 12px;
       color: var(--lc-text-muted);
@@ -1372,22 +1633,29 @@
       color: var(--lc-white);
       position: relative;
     }
+
     .lc-deliv__header {
       text-align: center;
       max-width: 740px;
       margin: 0 auto 50px;
     }
-    .lc-deliv__header .lc-label { color: var(--lc-gold); }
+
+    .lc-deliv__header .lc-label {
+      color: var(--lc-gold);
+    }
+
     .lc-deliv__header .lc-section-title {
       color: var(--lc-white);
       margin-top: 14px;
     }
+
     .lc-deliv__grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
       margin-bottom: 40px;
     }
+
     .lc-deliv-card {
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.12);
@@ -1397,11 +1665,13 @@
       display: flex;
       flex-direction: column;
     }
+
     .lc-deliv-card:hover {
       background: rgba(255, 255, 255, 0.08);
       border-color: rgba(201, 150, 59, 0.4);
       transform: translateY(-3px);
     }
+
     .lc-deliv-card__badge {
       font-size: 11px;
       font-weight: 800;
@@ -1413,6 +1683,7 @@
       align-items: center;
       gap: 6px;
     }
+
     .lc-deliv-card__title {
       font-family: var(--lc-display);
       font-size: 20px;
@@ -1421,12 +1692,14 @@
       line-height: 1.3;
       margin-bottom: 12px;
     }
+
     .lc-deliv-card__desc {
       font-size: 14px;
       line-height: 1.6;
       color: rgba(255, 255, 255, 0.7);
       margin-bottom: 20px;
     }
+
     .lc-deliv-card__footer {
       margin-top: auto;
       padding-top: 16px;
@@ -1447,20 +1720,24 @@
       background: var(--lc-stone);
       border-top: 1px solid var(--lc-border);
     }
+
     .lc-part__header {
       text-align: center;
       max-width: 680px;
       margin: 0 auto 44px;
     }
+
     .lc-part__header .lc-section-title {
       margin-top: 14px;
     }
+
     .lc-partners__grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 28px;
       margin-bottom: 40px;
     }
+
     .lc-partner {
       background: var(--lc-white);
       border: 1px solid var(--lc-border-light);
@@ -1469,11 +1746,13 @@
       transition: var(--lc-transition);
       box-shadow: var(--lc-shadow-sm);
     }
+
     .lc-partner:hover {
       transform: translateY(-2px);
       box-shadow: var(--lc-shadow);
       border-color: var(--lc-gold);
     }
+
     .lc-partner__role {
       font-size: 11px;
       font-weight: 700;
@@ -1482,16 +1761,19 @@
       color: var(--lc-gold);
       margin-bottom: 14px;
     }
+
     .lc-partner__logo {
       height: 28px;
       margin-bottom: 18px;
     }
+
     .lc-partner__logo img {
       height: 100%;
       width: auto;
       max-width: 170px;
       object-fit: contain;
     }
+
     .lc-partner__name {
       font-family: var(--lc-display);
       font-size: 19px;
@@ -1499,12 +1781,14 @@
       color: var(--lc-text-dark);
       margin-bottom: 8px;
     }
+
     .lc-partner__desc {
       font-size: 14px;
       line-height: 1.6;
       color: var(--lc-text-body);
       margin-bottom: 16px;
     }
+
     .lc-partner__address {
       font-size: 12.5px;
       color: var(--lc-text-muted);
@@ -1512,6 +1796,7 @@
       border-top: 1px solid var(--lc-border-light);
       line-height: 1.5;
     }
+
     .lc-partner__address strong {
       color: var(--lc-text-body);
       display: block;
@@ -1528,6 +1813,7 @@
       border-top: 1px solid var(--lc-border);
       flex-wrap: wrap;
     }
+
     .lc-series__label {
       font-size: 11px;
       font-weight: 700;
@@ -1535,6 +1821,7 @@
       text-transform: uppercase;
       color: var(--lc-text-muted);
     }
+
     .lc-series__item {
       display: flex;
       align-items: center;
@@ -1543,10 +1830,12 @@
       font-weight: 600;
       color: var(--lc-text-body);
     }
+
     .lc-series__item--active {
       color: var(--lc-gold);
       font-weight: 700;
     }
+
     .lc-series__dot {
       width: 6px;
       height: 6px;
@@ -1554,7 +1843,10 @@
       background: var(--lc-gold);
       opacity: 0.4;
     }
-    .lc-series__item--active .lc-series__dot { opacity: 1; }
+
+    .lc-series__item--active .lc-series__dot {
+      opacity: 1;
+    }
 
     /* ═══════════════════════════════════════════════════════════════
        SECTION 9: REGISTRATION / ACCREDITATION
@@ -1565,13 +1857,18 @@
       color: var(--lc-white);
       position: relative;
     }
+
     .lc-register__layout {
       display: grid;
       grid-template-columns: 1fr 1.15fr;
       gap: 52px;
       align-items: center;
     }
-    .lc-register__info .lc-label { color: var(--lc-gold); }
+
+    .lc-register__info .lc-label {
+      color: var(--lc-gold);
+    }
+
     .lc-register__title {
       font-family: var(--lc-display);
       font-size: clamp(28px, 3.5vw, 38px);
@@ -1580,19 +1877,26 @@
       margin: 14px 0 12px;
       line-height: 1.2;
     }
-    .lc-register__title em { font-style: italic; color: var(--lc-gold); }
+
+    .lc-register__title em {
+      font-style: italic;
+      color: var(--lc-gold);
+    }
+
     .lc-register__lead {
       font-size: 15px;
       line-height: 1.6;
       color: rgba(255, 255, 255, 0.7);
       margin-bottom: 26px;
     }
+
     .lc-register__perks {
       display: flex;
       flex-direction: column;
       gap: 12px;
       margin-bottom: 28px;
     }
+
     .lc-register__perk {
       display: flex;
       align-items: center;
@@ -1600,6 +1904,7 @@
       font-size: 14px;
       color: rgba(255, 255, 255, 0.85);
     }
+
     .lc-register__perk-icon {
       width: 22px;
       height: 22px;
@@ -1610,6 +1915,7 @@
       justify-content: center;
       flex-shrink: 0;
     }
+
     .lc-register__perk-icon svg {
       width: 12px;
       height: 12px;
@@ -1617,7 +1923,11 @@
       stroke-width: 3;
       fill: none;
     }
-    .lc-register__perk strong { color: var(--lc-white); }
+
+    .lc-register__perk strong {
+      color: var(--lc-white);
+    }
+
     .lc-register__cap {
       display: inline-flex;
       align-items: center;
@@ -1638,11 +1948,13 @@
       padding: 34px 30px;
       box-shadow: 0 16px 44px rgba(0, 0, 0, 0.35);
     }
+
     .lc-register__card-header {
       margin-bottom: 18px;
       padding-bottom: 14px;
       border-bottom: 1px solid var(--lc-border-light);
     }
+
     .lc-register__card-title {
       font-family: var(--lc-display);
       font-size: 22px;
@@ -1650,6 +1962,7 @@
       color: var(--lc-text-dark);
       margin-bottom: 4px;
     }
+
     .lc-register__card-desc {
       font-size: 13px;
       color: var(--lc-text-muted);
@@ -1662,6 +1975,7 @@
       gap: 12px 14px;
       margin-bottom: 12px;
     }
+
     .lc-field label {
       display: block;
       font-size: 11.5px;
@@ -1671,7 +1985,11 @@
       letter-spacing: 0.04em;
       text-transform: uppercase;
     }
-    .lc-field label span { color: var(--lc-gold); }
+
+    .lc-field label span {
+      color: var(--lc-gold);
+    }
+
     .lc-field input,
     .lc-field select,
     .lc-field textarea,
@@ -1691,6 +2009,7 @@
       outline: none !important;
       transition: var(--lc-transition) !important;
     }
+
     .lc-field input:focus,
     .lc-field select:focus,
     .lc-field textarea:focus,
@@ -1701,6 +2020,7 @@
       box-shadow: 0 0 0 3px rgba(201, 150, 59, 0.14) !important;
       background: var(--lc-white) !important;
     }
+
     .lc-field select,
     .lc-register__card .wpcf7 select {
       cursor: pointer !important;
@@ -1710,12 +2030,14 @@
       background-position: right 12px center !important;
       padding-right: 32px !important;
     }
+
     .lc-field textarea,
     .lc-register__card .wpcf7 textarea {
       height: 68px !important;
       min-height: 60px !important;
       resize: vertical !important;
     }
+
     .lc-form-submit,
     .lc-register__card .wpcf7 input[type="submit"] {
       width: 100% !important;
@@ -1734,11 +2056,13 @@
       box-shadow: 0 4px 16px rgba(201, 150, 59, 0.3) !important;
       margin-top: 6px !important;
     }
+
     .lc-form-submit:hover,
     .lc-register__card .wpcf7 input[type="submit"]:hover {
       background: var(--lc-gold-light) !important;
       transform: translateY(-1px) !important;
     }
+
     .lc-form-footnote {
       font-size: 11px;
       color: var(--lc-text-muted);
@@ -1756,6 +2080,7 @@
       color: rgba(255, 255, 255, 0.5);
       font-size: 13px;
     }
+
     .lc-footer__inner {
       display: flex;
       align-items: center;
@@ -1763,37 +2088,46 @@
       flex-wrap: wrap;
       gap: 14px;
     }
+
     .lc-footer__left {
       display: flex;
       align-items: center;
       gap: 10px;
     }
+
     .lc-footer__dot {
       width: 6px;
       height: 6px;
       border-radius: 50%;
       background: var(--lc-gold);
     }
+
     .lc-footer__left strong {
       color: rgba(255, 255, 255, 0.85);
       font-weight: 700;
     }
+
     .lc-footer__right {
       display: flex;
       align-items: center;
       gap: 14px;
       flex-wrap: wrap;
     }
+
     .lc-footer__right a {
       color: var(--lc-gold);
       font-weight: 600;
       transition: color 0.2s;
     }
+
     .lc-footer__right a:hover {
       color: var(--lc-gold-light);
       text-decoration: underline;
     }
-    .lc-footer__sep { color: rgba(255, 255, 255, 0.2); }
+
+    .lc-footer__sep {
+      color: rgba(255, 255, 255, 0.2);
+    }
 
     /* Sticky Mobile Bottom Bar */
     .lc-mobile-bar {
@@ -1809,25 +2143,30 @@
       padding: 10px 18px;
       box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.25);
     }
+
     .lc-mobile-bar__inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 12px;
     }
+
     .lc-mobile-bar__info {
       display: flex;
       flex-direction: column;
     }
+
     .lc-mobile-bar__title {
       font-size: 12px;
       font-weight: 700;
       color: var(--lc-white);
     }
+
     .lc-mobile-bar__subtitle {
       font-size: 10.5px;
       color: var(--lc-gold);
     }
+
     .lc-mobile-bar__btn {
       padding: 8px 16px;
       background: var(--lc-gold);
@@ -1842,53 +2181,152 @@
        MOBILE & RESPONSIVE OPTIMIZATION
        ═══════════════════════════════════════════════════════════════ */
     @media (max-width: 1024px) {
-      .lc-sectors-grid { grid-template-columns: repeat(2, 1fr); }
-      .lc-stepper { grid-template-columns: repeat(2, 1fr); }
-      .lc-wh-features { grid-template-columns: repeat(2, 1fr); }
-      .lc-deliv__grid { grid-template-columns: 1fr; }
+      .lc-sectors-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .lc-stepper {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .lc-wh-features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .lc-deliv__grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 991px) {
-      :root { --lc-section-pad: 76px; }
-      .lc-imperative__grid { grid-template-columns: 1fr; gap: 36px; }
-      .lc-step-detail-card { grid-template-columns: 1fr; gap: 24px; padding: 26px 22px; }
-      .lc-rt-grid { grid-template-columns: 1fr; }
-      .lc-chairs-grid { grid-template-columns: 1fr; }
-      .lc-partners__grid { grid-template-columns: 1fr; }
-      .lc-register__layout { grid-template-columns: 1fr; gap: 36px; }
+      :root {
+        --lc-section-pad: 76px;
+      }
+
+      .lc-imperative__grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .lc-step-detail-card {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 26px 22px;
+      }
+
+      .lc-rt-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .lc-chairs-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .lc-partners__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .lc-register__layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
     }
 
     @media (max-width: 767px) {
-      :root { --lc-section-pad: 56px; }
+      :root {
+        --lc-section-pad: 56px;
+      }
 
-      .lc-nav__links, .lc-nav__cta { display: none; }
-      .lc-nav__hamburger { display: block; }
-      .lc-mobile-bar { display: block; }
-      body { padding-bottom: 58px; }
+      .lc-nav__links,
+      .lc-nav__cta {
+        display: none;
+      }
 
-      .lc-hero { padding: 96px 18px 50px; min-height: auto; }
-      .lc-hero__meta { flex-direction: column; align-items: stretch; width: 100%; max-width: 320px; }
-      .lc-hero__action-row { flex-direction: column; width: 100%; }
-      .lc-hero__cta, .lc-hero__secondary-cta { width: 100%; justify-content: center; }
-      .lc-hero__countdown { width: 100%; gap: 12px; padding: 10px 16px; }
+      .lc-nav__hamburger {
+        display: block;
+      }
 
-      .lc-imperative__stats { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .lc-mobile-bar {
+        display: block;
+      }
 
-      .lc-stepper { grid-template-columns: 1fr; }
-      .lc-wh-features { grid-template-columns: 1fr; }
+      body {
+        padding-bottom: 58px;
+      }
 
-      .lc-tl-tracks-preview { grid-template-columns: 1fr; }
+      .lc-hero {
+        padding: 96px 18px 50px;
+        min-height: auto;
+      }
 
-      .lc-chair { flex-direction: column; padding: 22px 18px; gap: 16px; }
-      .lc-chair__photo { width: 90px; height: 90px; }
+      .lc-hero__meta {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        max-width: 320px;
+      }
 
-      .lc-sectors-grid { grid-template-columns: 1fr; }
-      .lc-form-grid { grid-template-columns: 1fr; }
+      .lc-hero__action-row {
+        flex-direction: column;
+        width: 100%;
+      }
 
-      .lc-footer__inner { flex-direction: column; text-align: center; }
+      .lc-hero__cta,
+      .lc-hero__secondary-cta {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .lc-hero__countdown {
+        width: 100%;
+        gap: 12px;
+        padding: 10px 16px;
+      }
+
+      .lc-imperative__stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .lc-stepper {
+        grid-template-columns: 1fr;
+      }
+
+      .lc-wh-features {
+        grid-template-columns: 1fr;
+      }
+
+      .lc-tl-tracks-preview {
+        grid-template-columns: 1fr;
+      }
+
+      .lc-chair {
+        flex-direction: column;
+        padding: 22px 18px;
+        gap: 16px;
+      }
+
+      .lc-chair__photo {
+        width: 90px;
+        height: 90px;
+      }
+
+      .lc-sectors-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .lc-form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .lc-footer__inner {
+        flex-direction: column;
+        text-align: center;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- ═══════════════════════════════════════════════════════════════
@@ -1932,7 +2370,8 @@
        ═══════════════════════════════════════════════════════════════ -->
   <section class="lc-hero" id="hero">
     <div class="lc-hero__bg">
-      <img src="hero_london_skyline.jpg" alt="London skyline at golden hour — Climate Resilience Roundtable 2026" loading="eager">
+      <img src="hero_london_skyline.jpg" alt="London skyline at golden hour — Climate Resilience Roundtable 2026"
+        loading="eager">
     </div>
     <div class="lc-hero__overlay"></div>
 
@@ -1943,16 +2382,20 @@
           <img src="https://globalnexconferences.com/wp-content/uploads/2026/09/White-2636X600-scaled.png" alt="MCMCER">
         </div>
         <span class="lc-hero__hosts-sep"></span>
-        <span class="lc-hero__hosts-label" style="color:rgba(255,255,255,0.7);font-size:10px;">In Partnership With</span>
+        <span class="lc-hero__hosts-label" style="color:rgba(255,255,255,0.7);font-size:10px;">In Partnership
+          With</span>
         <div class="lc-hero__hosts-logos">
-          <img src="https://cdn.prod.website-files.com/6a6f3f188c009ce091d63ad6/6a99726fde26a0acd0fad705_GAA%20Logo%20Simple.svg" alt="GAA" class="lc-logo-gaa">
+          <img
+            src="https://cdn.prod.website-files.com/6a6f3f188c009ce091d63ad6/6a99726fde26a0acd0fad705_GAA%20Logo%20Simple.svg"
+            alt="GAA" class="lc-logo-gaa">
         </div>
       </div>
 
       <h1 class="lc-hero__title">London Climate Resilience<br><em>Roundtable</em> 2026</h1>
 
       <p class="lc-hero__subtitle">
-        An invitation-only executive working session convening <strong>35 cross-sector leaders</strong> to tackle London's urban overheating, commercial asset retrofits, and corporate ESG adaptation.
+        An invitation-only executive working session convening <strong>senior cross-sector leaders</strong> to tackle
+        London's urban overheating, commercial asset retrofits, and corporate ESG adaptation.
       </p>
 
       <div class="lc-hero__meta">
@@ -1965,19 +2408,22 @@
           <span class="lc-hero__meta-lbl">United Kingdom</span>
         </div>
         <div class="lc-hero__meta-card">
-          <span class="lc-hero__meta-val">35 Seats</span>
+          <span class="lc-hero__meta-val">Executive</span>
           <span class="lc-hero__meta-lbl">By Invitation</span>
         </div>
         <div class="lc-hero__meta-card">
-          <span class="lc-hero__meta-val">Chatham</span>
-          <span class="lc-hero__meta-lbl">House Rule</span>
+          <span class="lc-hero__meta-val">2 Tracks</span>
+          <span class="lc-hero__meta-lbl">Parallel Chambers</span>
         </div>
       </div>
 
       <div class="lc-hero__action-row">
         <a href="#register" class="lc-hero__cta">
           Request an Invitation
-          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <svg viewBox="0 0 24 24">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
         </a>
         <a href="#what-happens" class="lc-hero__secondary-cta">
           Explore What Happens ↓
@@ -2016,42 +2462,49 @@
   <section class="lc-imperative" id="challenge">
     <div class="lc-container">
       <div class="lc-imperative__header">
-        <span class="lc-label">Urban Resilience Context</span>
         <h2 class="lc-section-title">The Climate <em>Imperative</em></h2>
       </div>
 
       <div class="lc-imperative__grid">
         <div class="lc-imperative__text">
           <div class="lc-imperative__pullquote">
-            <span>£9–£45 Billion</span> — the capital cost of climate-resilience retrofitting London's commercial building stock.
+            <span>£9–£45 Billion</span> — the capital cost of climate-resilience retrofitting London's commercial
+            building stock.
           </div>
           <p class="lc-imperative__p">
-            With record summer temperatures breaching 40°C and the UK Government's <strong>"Heat Ready London"</strong> plan coming into force, adaptation is no longer an abstract CSR ambition — it is a pressing fiduciary and operational requirement.
+            With record summer temperatures breaching 40°C and the UK Government's <strong>"Heat Ready London"</strong>
+            plan coming into force, adaptation is no longer an abstract CSR ambition — it is a pressing fiduciary and
+            operational requirement.
           </p>
           <p class="lc-imperative__p">
-            While major infrastructure is planned, the acute bottleneck is <strong>business capability</strong>: corporate real estate, enterprise workplaces, and finance teams lack the operational blueprints and reporting know-how to comply with mandatory physical risk disclosures under <strong>GRI, CSRD, and IFRS S2</strong>.
+            While major infrastructure is planned, the acute bottleneck is <strong>business capability</strong>:
+            corporate real estate, enterprise workplaces, and finance teams lack the operational blueprints and
+            reporting know-how to comply with mandatory physical risk disclosures under <strong>GRI, CSRD, and IFRS
+              S2</strong>.
           </p>
           <p class="lc-imperative__p">
-            This Forum convenes <strong>35 selected institutional leaders</strong> into focused working roundtables to bridge this capability deficit with tangible solutions.
+            This Forum convenes <strong>selected institutional leaders</strong> into focused working roundtables to
+            bridge this capability deficit with tangible solutions.
           </p>
         </div>
         <div class="lc-imperative__image">
-          <img src="london_heat_imperative.jpg" alt="London heat resilience challenge — urban temperature stress" loading="lazy">
+          <img src="london_heat_imperative.jpg" alt="London heat resilience challenge — urban temperature stress"
+            loading="lazy">
         </div>
       </div>
 
       <div class="lc-imperative__stats">
         <div class="lc-stat">
-          <div class="lc-stat__val">40.3°C</div>
-          <div class="lc-stat__desc">London Heat Record</div>
+          <div class="lc-stat__val">2</div>
+          <div class="lc-stat__desc">parallel roundtables</div>
         </div>
         <div class="lc-stat">
-          <div class="lc-stat__val">£45B</div>
-          <div class="lc-stat__desc">Retrofit Liability</div>
+          <div class="lc-stat__val">90 min</div>
+          <div class="lc-stat__desc">Working session </div>
         </div>
         <div class="lc-stat">
-          <div class="lc-stat__val">35 Seats</div>
-          <div class="lc-stat__desc">Curated Cohort</div>
+          <div class="lc-stat__val">Curated</div>
+          <div class="lc-stat__desc">Executive Cohort</div>
         </div>
         <div class="lc-stat">
           <div class="lc-stat__val">90 Min</div>
@@ -2070,7 +2523,8 @@
         <span class="lc-label lc-label--center">Executive Experience</span>
         <h2 class="lc-section-title">What Will <em>Happen</em> on the Day</h2>
         <p class="lc-section-subtitle" style="margin: 14px auto 0;">
-          No passive lectures or generic panels. The afternoon is engineered for structured peer problem-solving, high-level deliberation, and decisive consensus.
+          No passive lectures or generic panels. The afternoon is engineered for structured peer problem-solving,
+          high-level deliberation, and decisive consensus.
         </p>
       </div>
 
@@ -2105,19 +2559,26 @@
             <span>Stage 01:</span> Accreditation &amp; Working Dossier Collection
           </h4>
           <p id="step-detail-desc">
-            Delegates arrive at the Central London heritage venue, complete executive accreditation, and receive their confidential Chamber Dossier containing sector benchmarks, baseline data, and assigned roundtable seating.
+            Delegates arrive at the Central London heritage venue, complete executive accreditation, and receive their
+            confidential Chamber Dossier containing sector benchmarks, baseline data, and assigned roundtable seating.
           </p>
           <div class="lc-step-detail__points" id="step-detail-points">
             <div class="lc-step-detail__point">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Personalized delegate pack with Chatham House guidelines</span>
+              <svg viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              <span>Personalized delegate pack with chamber briefing notes</span>
             </div>
             <div class="lc-step-detail__point">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <svg viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
               <span>Pre-circulated physical risk datasets and retrofit cost models</span>
             </div>
             <div class="lc-step-detail__point">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <svg viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
               <span>Informal pre-session coffee and peer introductions</span>
             </div>
           </div>
@@ -2147,34 +2608,55 @@
       <div class="lc-wh-features">
         <div class="lc-wh-feature">
           <div class="lc-wh-feature__icon">
-            <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
           </div>
-          <h4 class="lc-wh-feature__title">Chatham House Rule</h4>
-          <p class="lc-wh-feature__desc">A protected, confidential chamber atmosphere allowing direct, unfiltered discussion between competitors, regulators, and advisers.</p>
+          <h4 class="lc-wh-feature__title">High-Level Policy Dialogue</h4>
+          <p class="lc-wh-feature__desc">A focused, collaborative chamber atmosphere enabling direct, constructive
+            exchange between industry peers, regulators, and advisers.</p>
         </div>
 
         <div class="lc-wh-feature">
           <div class="lc-wh-feature__icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="12" y1="8" x2="12" y2="12" />
+              <line x1="12" y1="16" x2="12.01" y2="16" />
+            </svg>
           </div>
           <h4 class="lc-wh-feature__title">Real Scenario Solving</h4>
-          <p class="lc-wh-feature__desc">Structured around live London dilemmas: commercial asset overheating thresholds, tenant duty-of-care, and Scope 3 disclosure.</p>
+          <p class="lc-wh-feature__desc">Structured around live London dilemmas: commercial asset overheating
+            thresholds, tenant duty-of-care, and Scope 3 disclosure.</p>
         </div>
 
         <div class="lc-wh-feature">
           <div class="lc-wh-feature__icon">
-            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
           </div>
-          <h4 class="lc-wh-feature__title">35 Curated Leaders</h4>
-          <p class="lc-wh-feature__desc">Carefully balanced across commercial real estate, municipal authorities, financial institutions, and corporate CSOs.</p>
+          <h4 class="lc-wh-feature__title">Curated Senior Cohort</h4>
+          <p class="lc-wh-feature__desc">Carefully balanced across commercial real estate, municipal authorities,
+            financial institutions, and corporate CSOs.</p>
         </div>
 
         <div class="lc-wh-feature">
           <div class="lc-wh-feature__icon">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+              <polyline points="10 9 9 9 8 9" />
+            </svg>
           </div>
           <h4 class="lc-wh-feature__title">Direct Action Outputs</h4>
-          <p class="lc-wh-feature__desc">Every participant actively contributes specific recommendations to the post-forum capability roadmap and Accord deliverable.</p>
+          <p class="lc-wh-feature__desc">Every participant actively contributes specific recommendations to the
+            post-forum capability roadmap and Accord deliverable.</p>
         </div>
       </div>
 
@@ -2190,7 +2672,8 @@
         <span class="lc-label lc-label--center">Parallel Working Sessions</span>
         <h2 class="lc-section-title">Two Working <em>Roundtables</em></h2>
         <p class="lc-section-subtitle" style="margin: 14px auto 0;">
-          Delegates break into two dedicated, parallel chambers for 90 minutes of moderated, high-intensity problem solving led by recognized subject matter authorities.
+          Delegates break into two dedicated, parallel chambers for 90 minutes of moderated, high-intensity problem
+          solving led by recognized subject matter authorities.
         </p>
       </div>
 
@@ -2210,37 +2693,48 @@
             <div class="lc-rt-card__top">
               <span class="lc-rt-card__chamber-tag">Chamber A · Physical Assets &amp; Retrofit</span>
               <span class="lc-rt-card__capacity">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                </svg>
                 17 Selected Leaders
               </span>
             </div>
 
             <h3 class="lc-rt-card__title">Heat-Resilient Buildings, Infrastructure &amp; Skills</h3>
             <p class="lc-rt-card__desc">
-              Addressing London's commercial asset retrofitting gap, passive cooling technologies, district heat mitigation, and the urgent green engineering skills pipeline.
+              Addressing London's commercial asset retrofitting gap, passive cooling technologies, district heat
+              mitigation, and the urgent green engineering skills pipeline.
             </p>
 
             <div class="lc-rt-prompts">
               <div class="lc-rt-prompts__title">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--lc-gold)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="12 8 8 12 12 16 12 8"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--lc-gold)" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <polygon points="12 8 8 12 12 16 12 8" />
+                </svg>
                 Core Deliberation Prompts
               </div>
               <div class="lc-rt-prompts__list">
                 <div class="lc-rt-prompts__item">
                   <span class="lc-rt-prompts__dot"></span>
-                  <span><strong>Overheating Thresholds:</strong> Practical retrofitting of commercial office towers against CIBSE TM59/TM52 criteria.</span>
+                  <span><strong>Overheating Thresholds:</strong> Practical retrofitting of commercial office towers
+                    against CIBSE TM59/TM52 criteria.</span>
                 </div>
                 <div class="lc-rt-prompts__item">
                   <span class="lc-rt-prompts__dot"></span>
-                  <span><strong>Passive Engineering:</strong> Integration of external shading, green roofs, and facade ventilation over energy-intensive AC.</span>
+                  <span><strong>Passive Engineering:</strong> Integration of external shading, green roofs, and facade
+                    ventilation over energy-intensive AC.</span>
                 </div>
                 <div class="lc-rt-prompts__item">
                   <span class="lc-rt-prompts__dot"></span>
-                  <span><strong>Capital Allocation:</strong> De-risking green retrofit financing with commercial banks and London authorities.</span>
+                  <span><strong>Capital Allocation:</strong> De-risking green retrofit financing with commercial banks
+                    and London authorities.</span>
                 </div>
                 <div class="lc-rt-prompts__item">
                   <span class="lc-rt-prompts__dot"></span>
-                  <span><strong>Workforce Capabilities:</strong> Scaling MEP engineering and facade installer apprenticeships across Greater London.</span>
+                  <span><strong>Workforce Capabilities:</strong> Scaling MEP engineering and facade installer
+                    apprenticeships across Greater London.</span>
                 </div>
               </div>
             </div>
@@ -2248,7 +2742,8 @@
             <!-- Lead Moderator -->
             <div class="lc-rt-moderator">
               <div class="lc-rt-mod-avatar">
-                <img src="https://mcmcer.com/wp-content/uploads/2026/03/kirk-w.junker.jpg" alt="Prof. Kirk W. Junker" loading="lazy">
+                <img src="https://mcmcer.com/wp-content/uploads/2026/03/kirk-w.junker.jpg" alt="Prof. Kirk W. Junker"
+                  loading="lazy">
               </div>
               <div class="lc-rt-mod-details">
                 <div class="lc-rt-mod-label">Lead Moderator · Chamber A</div>
@@ -2258,7 +2753,10 @@
             </div>
 
             <div class="lc-rt-output">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--lc-gold)" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--lc-gold)" stroke-width="2">
+                <polyline points="9 11 12 14 22 4" />
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+              </svg>
               <span><strong>Key Output:</strong> Commercial Building Adaptation &amp; Skills Playbook clauses</span>
             </div>
           </div>
@@ -2271,37 +2769,48 @@
             <div class="lc-rt-card__top">
               <span class="lc-rt-card__chamber-tag">Chamber B · Enterprise ESG &amp; Disclosure</span>
               <span class="lc-rt-card__capacity">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                </svg>
                 18 Selected Leaders
               </span>
             </div>
 
             <h3 class="lc-rt-card__title">Corporate Adaptation, Workforce &amp; Climate Disclosure</h3>
             <p class="lc-rt-card__desc">
-              Tackling corporate exposure to physical heat: employee heat-stress duty-of-care, supply chain business continuity, and quantitative physical risk reporting under GRI, CSRD, and IFRS S2.
+              Tackling corporate exposure to physical heat: employee heat-stress duty-of-care, supply chain business
+              continuity, and quantitative physical risk reporting under GRI, CSRD, and IFRS S2.
             </p>
 
             <div class="lc-rt-prompts">
               <div class="lc-rt-prompts__title" style="color:var(--lc-teal);">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--lc-teal)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="12 8 8 12 12 16 12 8"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--lc-teal)" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <polygon points="12 8 8 12 12 16 12 8" />
+                </svg>
                 Core Deliberation Prompts
               </div>
               <div class="lc-rt-prompts__list">
                 <div class="lc-rt-prompts__item">
                   <span class="lc-rt-prompts__dot"></span>
-                  <span><strong>Workforce Duty-of-Care:</strong> Operational guidelines for frontline, transport, and desk workers during severe heat alerts.</span>
+                  <span><strong>Workforce Duty-of-Care:</strong> Operational guidelines for frontline, transport, and
+                    desk workers during severe heat alerts.</span>
                 </div>
                 <div class="lc-rt-prompts__item">
                   <span class="lc-rt-prompts__dot"></span>
-                  <span><strong>Productivity Economics:</strong> Quantifying lost employee hours and HVAC strain for enterprise CFOs.</span>
+                  <span><strong>Productivity Economics:</strong> Quantifying lost employee hours and HVAC strain for
+                    enterprise CFOs.</span>
                 </div>
                 <div class="lc-rt-prompts__item">
                   <span class="lc-rt-prompts__dot"></span>
-                  <span><strong>Physical Climate Risk Reporting:</strong> Auditable metrics compliant with IFRS S2 and CSRD ESRS E1 standards.</span>
+                  <span><strong>Physical Climate Risk Reporting:</strong> Auditable metrics compliant with IFRS S2 and
+                    CSRD ESRS E1 standards.</span>
                 </div>
                 <div class="lc-rt-prompts__item">
                   <span class="lc-rt-prompts__dot"></span>
-                  <span><strong>Supply Chain Contingency:</strong> Critical supplier resilience and temperature-sensitive distribution in SE England.</span>
+                  <span><strong>Supply Chain Contingency:</strong> Critical supplier resilience and
+                    temperature-sensitive distribution in SE England.</span>
                 </div>
               </div>
             </div>
@@ -2309,7 +2818,8 @@
             <!-- Lead Moderator -->
             <div class="lc-rt-moderator">
               <div class="lc-rt-mod-avatar">
-                <img src="https://mcmcer.com/wp-content/uploads/2026/08/PHOTO-2026-08-17-11-08-24.jpg" alt="Alessandra Vignola" loading="lazy">
+                <img src="https://mcmcer.com/wp-content/uploads/2026/08/PHOTO-2026-08-17-11-08-24.jpg"
+                  alt="Alessandra Vignola" loading="lazy">
               </div>
               <div class="lc-rt-mod-details">
                 <div class="lc-rt-mod-label">Lead Moderator · Chamber B</div>
@@ -2319,7 +2829,10 @@
             </div>
 
             <div class="lc-rt-output">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--lc-teal)" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--lc-teal)" stroke-width="2">
+                <polyline points="9 11 12 14 22 4" />
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+              </svg>
               <span><strong>Key Output:</strong> Corporate Heat Adaptation Protocol &amp; Disclosure Toolkit</span>
             </div>
           </div>
@@ -2338,7 +2851,8 @@
         <span class="lc-label lc-label--center">Afternoon Schedule · 21 October 2026</span>
         <h2 class="lc-section-title">Forum <em>Programme</em></h2>
         <p class="lc-section-subtitle" style="margin: 14px auto 0;">
-          A precision-timed afternoon designed for high-density peer discussion, collaborative decision-making, and executive networking.
+          A precision-timed afternoon designed for high-density peer discussion, collaborative decision-making, and
+          executive networking.
         </p>
       </div>
 
@@ -2360,7 +2874,8 @@
             <span class="lc-tl-format">☕ Executive Arrival</span>
           </div>
           <h3 class="lc-tl-heading">Accreditation, Coffee &amp; Dossier Collection</h3>
-          <p class="lc-tl-desc">Arrival of invited delegations, security clearance, distribution of confidential track briefing dossiers, and initial cross-sector networking.</p>
+          <p class="lc-tl-desc">Arrival of invited delegations, security clearance, distribution of confidential track
+            briefing dossiers, and initial cross-sector networking.</p>
         </div>
 
         <!-- 14:30 Welcome -->
@@ -2371,7 +2886,8 @@
             <span class="lc-tl-format">🎤 Opening Plenary</span>
           </div>
           <h3 class="lc-tl-heading">Host Welcome &amp; Statement of Intent</h3>
-          <p class="lc-tl-desc">Opening address by leadership from MCMCER and Global Advisory Alliance (GAA) outlining the roundtable objectives and outcomes.</p>
+          <p class="lc-tl-desc">Opening address by leadership from MCMCER and Global Advisory Alliance (GAA) outlining
+            the roundtable objectives and outcomes.</p>
         </div>
 
         <!-- 14:35 Macro Plenary -->
@@ -2382,7 +2898,8 @@
             <span class="lc-tl-format">📊 Evidence Plenary</span>
           </div>
           <h3 class="lc-tl-heading">London's 40°C Threshold: Physical Exposure &amp; Business Vulnerability</h3>
-          <p class="lc-tl-desc">Data-driven presentation on Greater London heat projections, urban microclimates, asset overheating risk, and regulatory reporting requirements under GRI and CSRD.</p>
+          <p class="lc-tl-desc">Data-driven presentation on Greater London heat projections, urban microclimates, asset
+            overheating risk, and regulatory reporting requirements under GRI and CSRD.</p>
         </div>
 
         <!-- 15:05 KEYSTONE ROUNDTABLES -->
@@ -2390,10 +2907,12 @@
           <div class="lc-tl-top">
             <span class="lc-tl-time">15:05 – 16:35</span>
             <span class="lc-tl-duration" style="background:var(--lc-gold);color:white;">90 min</span>
-            <span class="lc-tl-format" style="color:var(--lc-gold);font-weight:800;">🔒 Parallel Working Roundtables</span>
+            <span class="lc-tl-format" style="color:var(--lc-gold);font-weight:800;">🏛️ Parallel Working
+              Roundtables</span>
           </div>
-          <h3 class="lc-tl-heading" style="font-size:19px;">Closed-Chamber Deliberation Sessions</h3>
-          <p class="lc-tl-desc">Delegates convene in assigned specialist chambers for structured, moderated problem-solving sessions under the Chatham House Rule.</p>
+          <h3 class="lc-tl-heading" style="font-size:19px;">Parallel Deliberation Sessions</h3>
+          <p class="lc-tl-desc">Delegates convene in assigned specialist chambers for structured, moderated
+            problem-solving sessions focused on tangible capability solutions.</p>
           <div class="lc-tl-tracks-preview">
             <div class="lc-tl-tpill lc-tl-tpill--a">
               <strong>Chamber A · Real Estate &amp; Infra</strong>
@@ -2414,7 +2933,8 @@
             <span class="lc-tl-format">☕ Executive Break</span>
           </div>
           <h3 class="lc-tl-heading">Inter-Chamber Synthesis &amp; Refreshments</h3>
-          <p class="lc-tl-desc">Informal peer exchanges while chamber lead moderators consolidate drafting points and recommendations.</p>
+          <p class="lc-tl-desc">Informal peer exchanges while chamber lead moderators consolidate drafting points and
+            recommendations.</p>
         </div>
 
         <!-- 16:50 Plenary Readouts -->
@@ -2425,7 +2945,8 @@
             <span class="lc-tl-format">🤝 All Delegates</span>
           </div>
           <h3 class="lc-tl-heading">Joint Chamber Readouts &amp; Strategic Synthesis</h3>
-          <p class="lc-tl-desc">Both chambers reconvene. Lead moderators present key findings, followed by moderated cross-table debate and alignment on key recommendations.</p>
+          <p class="lc-tl-desc">Both chambers reconvene. Lead moderators present key findings, followed by moderated
+            cross-table debate and alignment on key recommendations.</p>
         </div>
 
         <!-- 18:30 Reception -->
@@ -2436,7 +2957,8 @@
             <span class="lc-tl-format">🍷 Executive Reception</span>
           </div>
           <h3 class="lc-tl-heading">Networking Reception &amp; Bilateral Discussions</h3>
-          <p class="lc-tl-desc">Private drinks and canapés reception allowing delegates, moderators, and partners to continue bilateral discussions in an informal heritage setting.</p>
+          <p class="lc-tl-desc">Private drinks and canapés reception allowing delegates, moderators, and partners to
+            continue bilateral discussions in an informal heritage setting.</p>
         </div>
 
       </div>
@@ -2452,7 +2974,8 @@
         <span class="lc-label lc-label--center">Deliberation Leadership</span>
         <h2 class="lc-section-title">Chamber Moderators &amp; <em>Delegation</em></h2>
         <p class="lc-section-subtitle" style="margin: 14px auto 0;">
-          Recognized European sustainability and environmental law authorities guide the discussions alongside 35 senior decision-makers across six core sectors.
+          Recognized European sustainability and environmental law authorities guide the discussions alongside senior
+          decision-makers across six core sectors.
         </p>
       </div>
 
@@ -2460,25 +2983,31 @@
       <div class="lc-chairs-grid">
         <div class="lc-chair lc-chair--a">
           <div class="lc-chair__photo">
-            <img src="https://mcmcer.com/wp-content/uploads/2026/03/kirk-w.junker.jpg" alt="Prof. Kirk W. Junker" loading="lazy">
+            <img src="https://mcmcer.com/wp-content/uploads/2026/03/kirk-w.junker.jpg" alt="Prof. Kirk W. Junker"
+              loading="lazy">
           </div>
           <div class="lc-chair__body">
             <span class="lc-chair__badge">Moderator · Chamber A</span>
             <h3 class="lc-chair__name">Prof. Kirk W. Junker</h3>
             <div class="lc-chair__title">Vice Rector for Sustainability, University of Cologne</div>
-            <p class="lc-chair__bio">Director of the Environmental Law Centre and the University of Cologne's first Vice Rector for Sustainability. Extensive experience advising the European Commission, researching comparative environmental governance, and chairing international climate law symposia.</p>
+            <p class="lc-chair__bio">Director of the Environmental Law Centre and the University of Cologne's first Vice
+              Rector for Sustainability. Extensive experience advising the European Commission, researching comparative
+              environmental governance, and chairing international climate law symposia.</p>
           </div>
         </div>
 
         <div class="lc-chair lc-chair--b">
           <div class="lc-chair__photo">
-            <img src="https://mcmcer.com/wp-content/uploads/2026/08/PHOTO-2026-08-17-11-08-24.jpg" alt="Alessandra Vignola" loading="lazy">
+            <img src="https://mcmcer.com/wp-content/uploads/2026/08/PHOTO-2026-08-17-11-08-24.jpg"
+              alt="Alessandra Vignola" loading="lazy">
           </div>
           <div class="lc-chair__body">
             <span class="lc-chair__badge">Moderator · Chamber B</span>
             <h3 class="lc-chair__name">Alessandra Vignola</h3>
             <div class="lc-chair__title">Sustainability Academic &amp; Consultant · GRI Certified</div>
-            <p class="lc-chair__bio">GRI-Certified sustainability professional with 20+ years' experience bridging European corporate strategy and operational decarbonisation. Holds a Doctorate in Sustainability Management, turning complex disclosure frameworks into practical organisational routines.</p>
+            <p class="lc-chair__bio">GRI-Certified sustainability professional with 20+ years' experience bridging
+              European corporate strategy and operational decarbonisation. Holds a Doctorate in Sustainability
+              Management, turning complex disclosure frameworks into practical organisational routines.</p>
           </div>
         </div>
       </div>
@@ -2494,7 +3023,13 @@
         <div class="lc-sectors-grid">
           <div class="lc-sector">
             <div class="lc-sector__icon">
-              <svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="8" y2="6.01"/><line x1="16" y1="6" x2="16" y2="6.01"/><line x1="8" y1="10" x2="8" y2="10.01"/><line x1="16" y1="10" x2="16" y2="10.01"/></svg>
+              <svg viewBox="0 0 24 24">
+                <rect x="4" y="2" width="16" height="20" rx="2" />
+                <line x1="8" y1="6" x2="8" y2="6.01" />
+                <line x1="16" y1="6" x2="16" y2="6.01" />
+                <line x1="8" y1="10" x2="8" y2="10.01" />
+                <line x1="16" y1="10" x2="16" y2="10.01" />
+              </svg>
             </div>
             <div>
               <div class="lc-sector__name">Commercial Real Estate</div>
@@ -2504,7 +3039,11 @@
 
           <div class="lc-sector">
             <div class="lc-sector__icon">
-              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <line x1="3" y1="9" x2="21" y2="9" />
+                <line x1="9" y1="21" x2="9" y2="9" />
+              </svg>
             </div>
             <div>
               <div class="lc-sector__name">Critical Infrastructure</div>
@@ -2514,7 +3053,11 @@
 
           <div class="lc-sector">
             <div class="lc-sector__icon">
-              <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              <svg viewBox="0 0 24 24">
+                <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                <polyline points="2 17 12 22 22 17" />
+                <polyline points="2 12 12 17 22 12" />
+              </svg>
             </div>
             <div>
               <div class="lc-sector__name">Municipal Policy</div>
@@ -2524,7 +3067,10 @@
 
           <div class="lc-sector">
             <div class="lc-sector__icon">
-              <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              <svg viewBox="0 0 24 24">
+                <line x1="12" y1="1" x2="12" y2="23" />
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+              </svg>
             </div>
             <div>
               <div class="lc-sector__name">Finance &amp; Insurance</div>
@@ -2534,7 +3080,10 @@
 
           <div class="lc-sector">
             <div class="lc-sector__icon">
-              <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <svg viewBox="0 0 24 24">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
             </div>
             <div>
               <div class="lc-sector__name">Corporate ESG</div>
@@ -2544,7 +3093,10 @@
 
           <div class="lc-sector">
             <div class="lc-sector__icon">
-              <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              <svg viewBox="0 0 24 24">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+              </svg>
             </div>
             <div>
               <div class="lc-sector__name">Legal &amp; Standards</div>
@@ -2566,7 +3118,8 @@
         <span class="lc-label lc-label--center">Post-Forum Impact</span>
         <h2 class="lc-section-title">Tangible <em>Outputs</em></h2>
         <p class="lc-section-subtitle" style="color:rgba(255,255,255,0.7);margin: 14px auto 0;">
-          The roundtable does not end with dialogue. Deliberations translate directly into three actionable, persistent deliverables.
+          The roundtable does not end with dialogue. Deliberations translate directly into three actionable, persistent
+          deliverables.
         </p>
       </div>
 
@@ -2574,12 +3127,16 @@
 
         <div class="lc-deliv-card">
           <span class="lc-deliv-card__badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+            </svg>
             Co-Authored Output
           </span>
           <h3 class="lc-deliv-card__title">The London ESG &amp; Heat Adaptation Accord</h3>
           <p class="lc-deliv-card__desc">
-            A consensus recommendations document drafted over 30 days following the session, co-signed by participating institutions and shared with Greater London authorities.
+            A consensus recommendations document drafted over 30 days following the session, co-signed by participating
+            institutions and shared with Greater London authorities.
           </p>
           <div class="lc-deliv-card__footer">
             <span>Delivered 30 days post-event</span>
@@ -2589,12 +3146,16 @@
 
         <div class="lc-deliv-card">
           <span class="lc-deliv-card__badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><polyline points="9 11 12 14 22 4"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <polyline points="9 11 12 14 22 4" />
+            </svg>
             Operational Asset
           </span>
           <h3 class="lc-deliv-card__title">Enterprise Heat Capability Toolkit</h3>
           <p class="lc-deliv-card__desc">
-            A pragmatic operational pack featuring building retrofit priority checklists, workplace duty-of-care templates, and quantitative IFRS S2 physical risk reporting metrics.
+            A pragmatic operational pack featuring building retrofit priority checklists, workplace duty-of-care
+            templates, and quantitative IFRS S2 physical risk reporting metrics.
           </p>
           <div class="lc-deliv-card__footer">
             <span>Exclusive to accredited attendees</span>
@@ -2604,12 +3165,16 @@
 
         <div class="lc-deliv-card">
           <span class="lc-deliv-card__badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 12l-4-4-4 4M12 16V9"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M16 12l-4-4-4 4M12 16V9" />
+            </svg>
             Ongoing Alliance
           </span>
           <h3 class="lc-deliv-card__title">Cross-Sector Resilience Working Group</h3>
           <p class="lc-deliv-card__desc">
-            An invitation into the ongoing London resilience exchange, connecting participants across bi-annual working briefings and the 2027 Copenhagen &amp; Delhi forum series.
+            An invitation into the ongoing London resilience exchange, connecting participants across bi-annual working
+            briefings and the 2027 Copenhagen &amp; Delhi forum series.
           </p>
           <div class="lc-deliv-card__footer">
             <span>Bi-annual practitioner briefings</span>
@@ -2638,10 +3203,12 @@
         <div class="lc-partner">
           <div class="lc-partner__role">Host Organisation</div>
           <div class="lc-partner__logo">
-            <img src="https://globalnexconferences.com/wp-content/uploads/2026/09/Black-2636X600-scaled.png" alt="MCMCER Logo" loading="lazy">
+            <img src="https://globalnexconferences.com/wp-content/uploads/2026/09/Black-2636X600-scaled.png"
+              alt="MCMCER Logo" loading="lazy">
           </div>
           <h3 class="lc-partner__name">M.C. Mehta Centre for Education and Research Ltd</h3>
-          <p class="lc-partner__desc">London-based education and research institute specialising in corporate ESG capability development, environmental compliance, and legal frameworks for sustainability.</p>
+          <p class="lc-partner__desc">London-based education and research institute specialising in corporate ESG
+            capability development, environmental compliance, and legal frameworks for sustainability.</p>
           <div class="lc-partner__address">
             <strong>Registered Office</strong>
             Mappin House, 4 Winsley Street, London, W1W 8HF, United Kingdom
@@ -2651,10 +3218,13 @@
         <div class="lc-partner">
           <div class="lc-partner__role" style="color:var(--lc-teal);">Strategic Partner</div>
           <div class="lc-partner__logo">
-            <img src="https://cdn.prod.website-files.com/6a6f3f188c009ce091d63ad6/6a99726fde26a0acd0fad705_GAA%20Logo%20Simple.svg" alt="GAA Logo" loading="lazy">
+            <img
+              src="https://cdn.prod.website-files.com/6a6f3f188c009ce091d63ad6/6a99726fde26a0acd0fad705_GAA%20Logo%20Simple.svg"
+              alt="GAA Logo" loading="lazy">
           </div>
           <h3 class="lc-partner__name">Global Advisory Alliance Ltd</h3>
-          <p class="lc-partner__desc">International advisory firm focused on climate governance, adaptation policy, and cross-border capability transfer across Europe and South Asia.</p>
+          <p class="lc-partner__desc">International advisory firm focused on climate governance, adaptation policy, and
+            cross-border capability transfer across Europe and South Asia.</p>
           <div class="lc-partner__address">
             <strong>Registered Office</strong>
             86–90 Paul Street, London, EC2A 4NE, United Kingdom
@@ -2689,27 +3259,37 @@
           <span class="lc-label">Accreditation</span>
           <h2 class="lc-register__title">Request an <em>Invitation</em></h2>
           <p class="lc-register__lead">
-            Participation is strictly restricted to 35 accredited senior decision-makers to maintain genuine working-table intimacy and cross-sector balance.
+            Participation is reserved for accredited senior decision-makers and key institutional stakeholders to
+            maintain genuine working-table intimacy and cross-sector balance.
           </p>
 
           <div class="lc-register__perks">
             <div class="lc-register__perk">
-              <span class="lc-register__perk-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span class="lc-register__perk-icon"><svg viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></span>
               <span><strong>Complimentary Delegation</strong> — Zero registration or attendance fees.</span>
             </div>
             <div class="lc-register__perk">
-              <span class="lc-register__perk-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span class="lc-register__perk-icon"><svg viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></span>
               <span><strong>Roundtable Co-Signatory</strong> — Direct drafting and attribution rights.</span>
             </div>
             <div class="lc-register__perk">
-              <span class="lc-register__perk-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span class="lc-register__perk-icon"><svg viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg></span>
               <span><strong>Private Reception</strong> — Executive networking over wine &amp; canapés.</span>
             </div>
           </div>
 
           <div class="lc-register__cap">
-            <svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:var(--lc-gold);stroke-width:2;fill:none;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>Cohort Capped: <strong>35 Leaders</strong> · 21 Oct 2026</span>
+            <svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:var(--lc-gold);stroke-width:2;fill:none;">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+            <span>By Invitation · <strong>Executive Delegation</strong> · 21 Oct 2026</span>
           </div>
         </div>
 
@@ -2724,7 +3304,8 @@
           [contact-form-7 id="8717b6b" title="Contact_form_London Heat Forum Accreditation"]
 
           <!-- Client-Side Static Form Fallback Preview -->
-          <form id="lc-static-form" onsubmit="event.preventDefault(); alert('Accreditation request received. Our London secretariat will contact you within 48 hours.');">
+          <form id="lc-static-form"
+            onsubmit="event.preventDefault(); alert('Accreditation request received. Our London secretariat will contact you within 48 hours.');">
             <div class="lc-form-grid">
               <div class="lc-field">
                 <label>First Name <span>*</span></label>
@@ -2771,7 +3352,8 @@
             <button type="submit" class="lc-form-submit">Submit Accreditation Request →</button>
           </form>
 
-          <p class="lc-form-footnote">🔒 Information managed under strict confidentiality (GDPR). Central London heritage venue confirmed upon clearance.</p>
+          <p class="lc-form-footnote">🔒 Information managed under strict confidentiality (GDPR). Central London
+            heritage venue confirmed upon clearance.</p>
         </div>
 
       </div>
@@ -2791,7 +3373,7 @@
           <span>21 October 2026, Central London</span>
         </div>
         <div class="lc-footer__right">
-          <a href="mailto:london@mcmcer.org">london@mcmcer.org</a>
+          <a href="mailto:london@mcmcer.org">info@mcmcer.com</a>
           <span class="lc-footer__sep">·</span>
           <a href="https://mcmcer.com" target="_blank" rel="noopener">mcmcer.com</a>
           <span class="lc-footer__sep">·</span>
@@ -2806,7 +3388,7 @@
     <div class="lc-mobile-bar__inner">
       <div class="lc-mobile-bar__info">
         <span class="lc-mobile-bar__title">London Climate Roundtable</span>
-        <span class="lc-mobile-bar__subtitle">21 Oct 2026 · 35 Seats</span>
+        <span class="lc-mobile-bar__subtitle">21 Oct 2026 · Central London</span>
       </div>
       <a href="#register" class="lc-mobile-bar__btn">Request Invite →</a>
     </div>
@@ -2817,7 +3399,7 @@
        ═══════════════════════════════════════════════════════════════ -->
   <script>
     // ── 1. Live Countdown Timer ──
-    (function() {
+    (function () {
       var target = new Date('2026-10-21T14:00:00+01:00').getTime();
       function updateCD() {
         var now = new Date().getTime();
@@ -2843,7 +3425,7 @@
     })();
 
     // ── 2. Sticky Navigation & Mobile Bar ──
-    (function() {
+    (function () {
       var nav = document.getElementById('lc-nav');
       var hero = document.getElementById('hero');
       var mobileBar = document.getElementById('lc-mobile-bar');
@@ -2865,8 +3447,8 @@
     })();
 
     // ── 3. Smooth Scrolling ──
-    document.querySelectorAll('a[href^="#"]').forEach(function(link) {
-      link.addEventListener('click', function(e) {
+    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+      link.addEventListener('click', function (e) {
         var targetId = this.getAttribute('href');
         if (targetId && targetId !== '#') {
           var el = document.querySelector(targetId);
@@ -2883,31 +3465,31 @@
     });
 
     // ── 4. Mobile Menu Drawer ──
-    (function() {
+    (function () {
       var hamburger = document.getElementById('lc-hamburger');
       var mobileMenu = document.getElementById('lc-mobile-menu');
       var closeBtn = document.getElementById('lc-mobile-close');
 
       if (hamburger && mobileMenu) {
-        hamburger.addEventListener('click', function() {
+        hamburger.addEventListener('click', function () {
           mobileMenu.classList.add('active');
         });
       }
       if (closeBtn && mobileMenu) {
-        closeBtn.addEventListener('click', function() {
+        closeBtn.addEventListener('click', function () {
           mobileMenu.classList.remove('active');
         });
       }
     })();
 
     // ── 5. FUNCTION: Interactive 4-Stage Stepper (What Happens) ──
-    (function() {
+    (function () {
       var stepData = {
         1: {
           title: "<span>Stage 01:</span> Accreditation &amp; Working Dossier Collection",
           desc: "Delegates arrive at the Central London heritage venue, complete executive accreditation, and receive their confidential Chamber Dossier containing sector benchmarks, baseline data, and assigned roundtable seating.",
           points: [
-            "Personalized delegate pack with Chatham House guidelines",
+            "Personalized delegate pack with chamber briefing notes",
             "Pre-circulated physical risk datasets and retrofit cost models",
             "Informal pre-session coffee and peer introductions"
           ],
@@ -2918,7 +3500,7 @@
         },
         2: {
           title: "<span>Stage 02:</span> Evidence Baseline &amp; Strategic Plenary",
-          desc: "All 35 delegates convene for a compact, high-impact data briefing on London's physical vulnerability, urban heat islands, and tightening disclosure liabilities under GRI, CSRD, and IFRS S2.",
+          desc: "All delegates convene for a compact, high-impact data briefing on London's physical vulnerability, urban heat islands, and tightening disclosure liabilities under GRI, CSRD, and IFRS S2.",
           points: [
             "Evidence presentation on Greater London 40°C scenarios",
             "Economic breakdown of £45B building retrofit requirement",
@@ -2931,7 +3513,7 @@
         },
         3: {
           title: "<span>Stage 03:</span> The Working Roundtables (Parallel Chambers)",
-          desc: "The core engine of the forum. Delegates split into two closed-door chambers for 90 minutes of moderated, table-level problem solving under the Chatham House Rule.",
+          desc: "The core engine of the forum. Delegates split into two closed-door chambers for 90 minutes of moderated, table-level problem solving and practical capability exchange.",
           points: [
             "Chamber A: Commercial real estate, MEP retrofits &amp; green skills",
             "Chamber B: Workforce heat duty-of-care &amp; IFRS S2 disclosure",
@@ -2966,9 +3548,9 @@
       var metaFormat = document.getElementById('step-meta-format');
       var metaAction = document.getElementById('step-meta-action');
 
-      stepBtns.forEach(function(btn) {
-        btn.addEventListener('click', function() {
-          stepBtns.forEach(function(b) { b.classList.remove('active'); });
+      stepBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          stepBtns.forEach(function (b) { b.classList.remove('active'); });
           this.classList.add('active');
           var step = this.getAttribute('data-step');
           var data = stepData[step];
@@ -2980,10 +3562,10 @@
             metaFormat.innerHTML = data.format;
             metaAction.innerHTML = data.action;
 
-            detailPoints.innerHTML = data.points.map(function(pt) {
+            detailPoints.innerHTML = data.points.map(function (pt) {
               return '<div class="lc-step-detail__point">' +
-                     '<svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>' +
-                     '<span>' + pt + '</span></div>';
+                '<svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>' +
+                '<span>' + pt + '</span></div>';
             }).join('');
           }
         });
@@ -2991,15 +3573,15 @@
     })();
 
     // ── 6. FUNCTION: Chamber Toggle Switcher ──
-    (function() {
+    (function () {
       var toggleBtns = document.querySelectorAll('.lc-rt-toggle-btn');
       var cardA = document.getElementById('card-chamber-a');
       var cardB = document.getElementById('card-chamber-b');
       var grid = document.getElementById('rt-grid');
 
-      toggleBtns.forEach(function(btn) {
-        btn.addEventListener('click', function() {
-          toggleBtns.forEach(function(b) { b.classList.remove('active'); });
+      toggleBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          toggleBtns.forEach(function (b) { b.classList.remove('active'); });
           this.classList.add('active');
           var filter = this.getAttribute('data-filter');
 
@@ -3019,7 +3601,7 @@
         });
       });
 
-      window.addEventListener('resize', function() {
+      window.addEventListener('resize', function () {
         var activeBtn = document.querySelector('.lc-rt-toggle-btn.active');
         if (activeBtn && activeBtn.getAttribute('data-filter') === 'both') {
           grid.style.gridTemplateColumns = window.innerWidth > 991 ? '1fr 1fr' : '1fr';
@@ -3028,17 +3610,17 @@
     })();
 
     // ── 7. FUNCTION: Interactive Agenda Category Filter ──
-    (function() {
+    (function () {
       var filterBtns = document.querySelectorAll('.lc-ag-btn');
       var agendaCards = document.querySelectorAll('#agenda-timeline .lc-tl-card');
 
-      filterBtns.forEach(function(btn) {
-        btn.addEventListener('click', function() {
-          filterBtns.forEach(function(b) { b.classList.remove('active'); });
+      filterBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          filterBtns.forEach(function (b) { b.classList.remove('active'); });
           this.classList.add('active');
           var filter = this.getAttribute('data-filter');
 
-          agendaCards.forEach(function(card) {
+          agendaCards.forEach(function (card) {
             var cat = card.getAttribute('data-category');
             if (filter === 'all' || cat === filter) {
               card.style.display = 'block';
@@ -3051,7 +3633,7 @@
     })();
 
     // ── 8. Form 7 Fallback Detection ──
-    (function() {
+    (function () {
       var staticForm = document.getElementById('lc-static-form');
       var wpcf7Form = document.querySelector('.lc-register__card .wpcf7');
       if (wpcf7Form && staticForm) {
@@ -3062,4 +3644,5 @@
   </script>
 
 </body>
+
 </html>
