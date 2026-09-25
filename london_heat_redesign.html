@@ -2194,6 +2194,75 @@
       line-height: 1.4;
     }
 
+    .lc-form-status {
+      padding: 12px 14px;
+      border-radius: var(--lc-radius-sm);
+      font-size: 13px;
+      font-weight: 600;
+      margin-top: 12px;
+      text-align: center;
+      display: none;
+    }
+
+    .lc-form-status--error {
+      background: #FEF2F2;
+      border: 1px solid #FCA5A5;
+      color: #991B1B;
+      display: block;
+    }
+
+    .lc-form-success {
+      display: none;
+      text-align: center;
+      padding: 24px 16px;
+    }
+
+    .lc-form-success__icon {
+      width: 56px;
+      height: 56px;
+      background: var(--lc-gold-pale);
+      border: 2px solid var(--lc-gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      color: var(--lc-gold);
+    }
+
+    .lc-form-success__icon svg {
+      width: 28px;
+      height: 28px;
+      stroke: var(--lc-gold);
+      stroke-width: 2.5;
+      fill: none;
+    }
+
+    .lc-form-success__title {
+      font-family: var(--lc-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--lc-text-dark);
+      margin-bottom: 8px;
+    }
+
+    .lc-form-success__desc {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--lc-text-body);
+      margin-bottom: 18px;
+    }
+
+    .lc-form-success__meta {
+      background: var(--lc-stone-light);
+      border: 1px solid var(--lc-border-light);
+      border-radius: var(--lc-radius-sm);
+      padding: 12px 16px;
+      font-size: 12.5px;
+      color: var(--lc-text-muted);
+      line-height: 1.5;
+    }
+
     /* ═══════════════════════════════════════════════════════════════
        FOOTER & STICKY MOBILE ACTION BAR
        ═══════════════════════════════════════════════════════════════ */
@@ -3352,56 +3421,79 @@
           <!-- Contact Form 7 Shortcode -->
           [contact-form-7 id="8717b6b" title="Contact_form_London Heat Forum Accreditation"]
 
-          <!-- Client-Side Static Form Fallback Preview -->
-          <form id="lc-static-form"
-            onsubmit="event.preventDefault(); alert('Accreditation request received. Our London secretariat will contact you within 48 hours.');">
+          <!-- Web3Forms Powered Accreditation Form -->
+          <form id="lc-static-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="ad7dd0ba-7c79-4abc-bc07-c1a0b8d6ff51">
+            <input type="hidden" name="subject" value="New Delegate Application — London Climate Resilience Roundtable 2026">
+            <input type="hidden" name="from_name" value="London Roundtable Secretariat">
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
             <div class="lc-form-grid">
               <div class="lc-field">
                 <label>First Name <span>*</span></label>
-                <input type="text" placeholder="Kirk" required>
+                <input type="text" name="first_name" placeholder="Kirk" required>
               </div>
               <div class="lc-field">
                 <label>Last Name <span>*</span></label>
-                <input type="text" placeholder="Junker" required>
+                <input type="text" name="last_name" placeholder="Junker" required>
               </div>
             </div>
 
             <div class="lc-form-grid">
               <div class="lc-field">
                 <label>Work Email <span>*</span></label>
-                <input type="email" placeholder="name@organisation.com" required>
+                <input type="email" name="email" placeholder="name@organisation.com" required>
               </div>
               <div class="lc-field">
                 <label>Phone / WhatsApp <span>*</span></label>
-                <input type="text" placeholder="+44 7000 000000" required>
+                <input type="tel" name="phone" placeholder="+44 7000 000000" required>
               </div>
             </div>
 
             <div class="lc-form-grid">
               <div class="lc-field">
                 <label>Organisation <span>*</span></label>
-                <input type="text" placeholder="Company or Institution" required>
+                <input type="text" name="organization" placeholder="Company or Institution" required>
               </div>
               <div class="lc-field">
                 <label>Job Title <span>*</span></label>
-                <input type="text" placeholder="Head of Sustainability / Director" required>
+                <input type="text" name="job_title" placeholder="Head of Sustainability / Director" required>
               </div>
             </div>
 
             <div class="lc-field" style="margin-bottom:12px;">
               <label>Preferred Working Chamber <span>*</span></label>
-              <select required>
+              <select name="preferred_chamber" required>
                 <option value="">Select chamber alignment...</option>
-                <option value="Chamber A">Chamber A: Built Environment, Infrastructure &amp; Skills</option>
-                <option value="Chamber B">Chamber B: Corporate ESG, Workforce &amp; Disclosure</option>
-                <option value="Either">Either Chamber / Conveners' Discretion</option>
+                <option value="Chamber A: Built Environment, Infrastructure & Skills">Chamber A: Built Environment, Infrastructure &amp; Skills</option>
+                <option value="Chamber B: Corporate ESG, Workforce & Disclosure">Chamber B: Corporate ESG, Workforce &amp; Disclosure</option>
+                <option value="Either Chamber / Conveners' Discretion">Either Chamber / Conveners' Discretion</option>
               </select>
             </div>
 
-            <button type="submit" class="lc-form-submit">Submit Accreditation Request →</button>
+            <div id="lc-form-status" class="lc-form-status"></div>
+
+            <button type="submit" id="lc-submit-btn" class="lc-form-submit">Submit Accreditation Request →</button>
           </form>
 
-          <p class="lc-form-footnote">🔒 Information managed under strict confidentiality (GDPR). Central London
+          <!-- Success Confirmation Card -->
+          <div id="lc-form-success" class="lc-form-success">
+            <div class="lc-form-success__icon">
+              <svg viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <h4 class="lc-form-success__title">Application Received</h4>
+            <p class="lc-form-success__desc" id="lc-success-msg">
+              Thank you. Your expression of interest has been submitted to the London Secretariat.
+            </p>
+            <div class="lc-form-success__meta">
+              ✓ Credentials review in progress (within 48 hours)<br>
+              ✓ Central London venue confirmation will follow clearance
+            </div>
+          </div>
+
+          <p class="lc-form-footnote" id="lc-form-footnote">🔒 Information managed under strict confidentiality (GDPR). Central London
             heritage venue confirmed upon clearance.</p>
         </div>
 
@@ -3701,13 +3793,84 @@
       });
     })();
 
-    // ── 8. Form 7 Fallback Detection ──
+    // ── 8. Web3Forms Live Submission Handler & WP CF7 Detection ──
     (function () {
       var staticForm = document.getElementById('lc-static-form');
       var wpcf7Form = document.querySelector('.lc-register__card .wpcf7');
+      var submitBtn = document.getElementById('lc-submit-btn');
+      var statusBox = document.getElementById('lc-form-status');
+      var successCard = document.getElementById('lc-form-success');
+      var successMsg = document.getElementById('lc-success-msg');
+
       if (wpcf7Form && staticForm) {
         // If WordPress CF7 renders, hide the static HTML fallback form
         staticForm.style.display = 'none';
+        if (successCard) successCard.style.display = 'none';
+        return;
+      }
+
+      if (staticForm) {
+        staticForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Submitting Application...';
+          }
+          if (statusBox) {
+            statusBox.style.display = 'none';
+            statusBox.className = 'lc-form-status';
+          }
+
+          var formData = new FormData(staticForm);
+          var object = Object.fromEntries(formData);
+          var json = JSON.stringify(object);
+
+          fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: json
+          })
+          .then(async function (response) {
+            var res = await response.json();
+            if (response.status === 200 && res.success) {
+              // Trigger Analytics / GTM conversion event
+              if (window.dataLayer) {
+                window.dataLayer.push({
+                  'event': 'london_heat_accreditation_submit',
+                  'form_name': 'london_heat_roundtable',
+                  'chamber': object.preferred_chamber || 'unspecified'
+                });
+              }
+
+              // Display Executive Success Card
+              staticForm.style.display = 'none';
+              if (successCard) {
+                if (object.first_name && successMsg) {
+                  successMsg.innerHTML = 'Thank you, <strong>' + object.first_name + '</strong>. Your application for <strong>' + (object.preferred_chamber || 'the Roundtable') + '</strong> has been received by the London Secretariat.';
+                }
+                successCard.style.display = 'block';
+              }
+            } else {
+              throw new Error(res.message || 'Submission failed. Please try again.');
+            }
+          })
+          .catch(function (err) {
+            if (statusBox) {
+              statusBox.textContent = err.message || 'An error occurred while submitting your application. Please try again.';
+              statusBox.className = 'lc-form-status lc-form-status--error';
+              statusBox.style.display = 'block';
+            }
+          })
+          .finally(function () {
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = 'Submit Accreditation Request →';
+            }
+          });
+        });
       }
     })();
   </script>
