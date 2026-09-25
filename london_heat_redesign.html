@@ -59,7 +59,7 @@
       --lc-border-light: #EAE6DF;
 
       --lc-container: 1200px;
-      --lc-section-pad: 104px;
+      --lc-section-pad: clamp(52px, 7vw, 104px);
       --lc-radius: 14px;
       --lc-radius-sm: 8px;
       --lc-shadow-sm: 0 2px 10px rgba(12, 27, 42, 0.04);
@@ -75,11 +75,13 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      -webkit-tap-highlight-color: transparent;
     }
 
     html {
       scroll-behavior: smooth;
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
     body {
@@ -89,6 +91,12 @@
       color: var(--lc-text-body);
       background: var(--lc-ivory);
       overflow-x: hidden;
+      width: 100%;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+      touch-action: none;
     }
 
     a {
@@ -98,6 +106,7 @@
 
     img {
       max-width: 100%;
+      height: auto;
       display: block;
     }
 
@@ -107,31 +116,32 @@
 
     button {
       font-family: inherit;
+      touch-action: manipulation;
     }
 
     .lc-container {
       max-width: var(--lc-container);
       margin: 0 auto;
       width: 100%;
-      padding: 0 clamp(20px, 4vw, 44px);
+      padding: 0 clamp(16px, 4vw, 44px);
     }
 
     /* Section Typography & Badges */
     .lc-label {
       font-family: var(--lc-body);
-      font-size: 12px;
+      font-size: clamp(10.5px, 2.5vw, 12px);
       font-weight: 700;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--lc-gold);
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
     }
 
     .lc-label::before {
       content: '';
-      width: 28px;
+      width: clamp(18px, 3vw, 28px);
       height: 2px;
       background: var(--lc-gold);
       border-radius: 2px;
@@ -143,7 +153,7 @@
 
     .lc-label--center::after {
       content: '';
-      width: 28px;
+      width: clamp(18px, 3vw, 28px);
       height: 2px;
       background: var(--lc-gold);
       border-radius: 2px;
@@ -151,11 +161,12 @@
 
     .lc-section-title {
       font-family: var(--lc-display);
-      font-size: clamp(30px, 4vw, 44px);
+      font-size: clamp(26px, 5.5vw, 44px);
       font-weight: 700;
-      line-height: 1.18;
+      line-height: 1.2;
       color: var(--lc-text-dark);
       letter-spacing: -0.02em;
+      word-break: break-word;
     }
 
     .lc-section-title em {
@@ -164,11 +175,11 @@
     }
 
     .lc-section-subtitle {
-      font-size: 17px;
+      font-size: clamp(14px, 3.2vw, 17px);
       line-height: 1.6;
       color: var(--lc-text-muted);
       max-width: 720px;
-      margin-top: 14px;
+      margin-top: 12px;
     }
 
     /* Decorative Gold Hairline */
@@ -187,7 +198,7 @@
       left: 0;
       right: 0;
       z-index: 1000;
-      padding: 0 clamp(20px, 4vw, 48px);
+      padding: 0 clamp(16px, 4vw, 48px);
       transition: var(--lc-transition);
     }
 
@@ -196,7 +207,7 @@
     }
 
     .lc-nav--solid {
-      background: rgba(250, 248, 245, 0.94);
+      background: rgba(250, 248, 245, 0.96);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--lc-border-light);
@@ -209,11 +220,17 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 72px;
+      height: 68px;
+    }
+
+    .lc-nav__logo {
+      display: flex;
+      align-items: center;
+      z-index: 10;
     }
 
     .lc-nav__logo img {
-      height: 24px;
+      height: clamp(20px, 4vw, 24px);
       width: auto;
       object-fit: contain;
       transition: var(--lc-transition);
@@ -226,7 +243,7 @@
     .lc-nav__links {
       display: flex;
       align-items: center;
-      gap: 26px;
+      gap: 24px;
     }
 
     .lc-nav__links a {
@@ -235,10 +252,11 @@
       letter-spacing: 0.02em;
       color: var(--lc-text-muted);
       transition: color 0.2s ease;
+      padding: 6px 0;
     }
 
     .lc-nav--transparent .lc-nav__links a {
-      color: rgba(255, 255, 255, 0.85);
+      color: rgba(255, 255, 255, 0.88);
     }
 
     .lc-nav__links a:hover {
@@ -249,7 +267,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 10px 22px;
+      padding: 10px 20px;
       background: var(--lc-gold);
       color: var(--lc-white) !important;
       font-size: 13px;
@@ -257,6 +275,7 @@
       border-radius: var(--lc-radius-sm);
       transition: var(--lc-transition);
       box-shadow: 0 4px 14px rgba(201, 150, 59, 0.25);
+      white-space: nowrap;
     }
 
     .lc-nav__cta:hover {
@@ -270,9 +289,16 @@
       background: none;
       border: none;
       cursor: pointer;
-      width: 32px;
-      height: 32px;
+      width: 44px;
+      height: 44px;
       position: relative;
+      padding: 0;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+
+    .lc-nav__hamburger:active {
+      background: rgba(255, 255, 255, 0.1);
     }
 
     .lc-nav__hamburger span {
@@ -281,8 +307,9 @@
       height: 2px;
       background: var(--lc-text-dark);
       position: absolute;
-      left: 5px;
+      left: 11px;
       transition: var(--lc-transition);
+      border-radius: 2px;
     }
 
     .lc-nav--transparent .lc-nav__hamburger span {
@@ -290,15 +317,15 @@
     }
 
     .lc-nav__hamburger span:nth-child(1) {
-      top: 9px;
+      top: 14px;
     }
 
     .lc-nav__hamburger span:nth-child(2) {
-      top: 15px;
+      top: 21px;
     }
 
     .lc-nav__hamburger span:nth-child(3) {
-      top: 21px;
+      top: 28px;
     }
 
     /* Mobile Menu Drawer */
@@ -309,52 +336,76 @@
       z-index: 1100;
       background: rgba(7, 16, 24, 0.98);
       backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 24px;
-      padding: 30px;
+      gap: 20px;
+      padding: 30px 24px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      overflow-y: auto;
     }
 
     .lc-mobile-menu.active {
       display: flex;
+      opacity: 1;
+      pointer-events: auto;
     }
 
     .lc-mobile-menu a {
       font-family: var(--lc-display);
-      font-size: 24px;
+      font-size: clamp(20px, 5.5vw, 24px);
       font-weight: 600;
       color: var(--lc-white);
       transition: color 0.2s;
+      padding: 8px 16px;
+      text-align: center;
     }
 
-    .lc-mobile-menu a:hover {
+    .lc-mobile-menu a:hover,
+    .lc-mobile-menu a:active {
       color: var(--lc-gold);
     }
 
     .lc-mobile-close {
       position: absolute;
-      top: 24px;
-      right: 24px;
-      background: none;
-      border: none;
+      top: 18px;
+      right: 18px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 50%;
       color: var(--lc-white);
-      font-size: 32px;
+      font-size: 20px;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       cursor: pointer;
+      transition: var(--lc-transition);
+    }
+
+    .lc-mobile-close:hover,
+    .lc-mobile-close:active {
+      background: rgba(255, 255, 255, 0.2);
+      color: var(--lc-gold);
     }
 
     /* ═══════════════════════════════════════════════════════════════
-       SECTION 1: HERO (Preserved & Enhanced)
+       SECTION 1: HERO
        ═══════════════════════════════════════════════════════════════ */
     .lc-hero {
       position: relative;
       min-height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
       overflow: hidden;
-      padding: 130px 24px 84px;
+      padding: clamp(100px, 14vh, 140px) 16px clamp(50px, 8vh, 80px);
       background: var(--lc-navy-deep);
     }
 
@@ -376,34 +427,46 @@
       inset: 0;
       z-index: 2;
       background: linear-gradient(180deg,
-          rgba(7, 16, 24, 0.86) 0%,
-          rgba(12, 27, 42, 0.72) 35%,
-          rgba(21, 34, 50, 0.70) 65%,
-          rgba(12, 27, 42, 0.92) 100%);
+          rgba(7, 16, 24, 0.88) 0%,
+          rgba(12, 27, 42, 0.74) 35%,
+          rgba(21, 34, 50, 0.72) 65%,
+          rgba(12, 27, 42, 0.94) 100%);
     }
 
     .lc-hero__content {
       position: relative;
       z-index: 3;
       max-width: 880px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
 
     .lc-hero__hosts {
       display: inline-flex;
       align-items: center;
-      gap: 14px;
-      margin-bottom: 28px;
-      padding: 8px 22px;
+      justify-content: center;
+      gap: clamp(8px, 2vw, 14px);
+      margin: 0 auto clamp(18px, 3.5vw, 26px);
+      padding: 8px clamp(12px, 3vw, 22px);
       background: rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border: 1px solid rgba(255, 255, 255, 0.14);
       border-radius: 50px;
+      max-width: 100%;
+      flex-wrap: wrap;
+      text-align: center;
     }
 
     .lc-hero__hosts-label {
-      font-size: 11px;
+      font-size: clamp(9.5px, 2vw, 11px);
       font-weight: 700;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--lc-gold);
       white-space: nowrap;
@@ -411,18 +474,19 @@
 
     .lc-hero__hosts-sep {
       width: 1px;
-      height: 18px;
+      height: 16px;
       background: rgba(255, 255, 255, 0.22);
     }
 
     .lc-hero__hosts-logos {
       display: flex;
       align-items: center;
-      gap: 16px;
+      justify-content: center;
+      gap: 12px;
     }
 
     .lc-hero__hosts-logos img {
-      height: 22px;
+      height: clamp(18px, 3.5vw, 22px);
       width: auto;
       object-fit: contain;
       opacity: 0.95;
@@ -431,17 +495,20 @@
     .lc-hero__hosts-logos img.lc-logo-gaa {
       filter: brightness(0) invert(1);
       opacity: 0.9;
-      height: 19px;
+      height: clamp(16px, 3.2vw, 19px);
     }
 
     .lc-hero__title {
       font-family: var(--lc-display);
-      font-size: clamp(38px, 6vw, 64px);
+      font-size: clamp(30px, 7vw, 64px);
       font-weight: 700;
-      line-height: 1.1;
+      line-height: 1.12;
       color: var(--lc-white);
       letter-spacing: -0.02em;
-      margin-bottom: 22px;
+      margin: 0 auto clamp(14px, 3vw, 22px);
+      text-align: center;
+      word-break: break-word;
+      width: 100%;
     }
 
     .lc-hero__title em {
@@ -450,11 +517,13 @@
     }
 
     .lc-hero__subtitle {
-      font-size: clamp(16px, 2vw, 19px);
-      line-height: 1.6;
+      font-size: clamp(14.5px, 3.2vw, 19px);
+      line-height: 1.58;
       color: rgba(255, 255, 255, 0.88);
       max-width: 720px;
-      margin: 0 auto 36px;
+      margin: 0 auto clamp(24px, 4vw, 36px);
+      text-align: center;
+      width: 100%;
     }
 
     .lc-hero__subtitle strong {
@@ -466,35 +535,41 @@
       display: flex;
       align-items: stretch;
       justify-content: center;
-      gap: 14px;
-      margin-bottom: 36px;
+      gap: clamp(8px, 2vw, 14px);
+      margin: 0 auto clamp(24px, 4vw, 36px);
       flex-wrap: wrap;
+      width: 100%;
+      max-width: 760px;
     }
 
     .lc-hero__meta-card {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 4px;
-      padding: 14px 24px;
+      justify-content: center;
+      text-align: center;
+      gap: 3px;
+      padding: 12px clamp(14px, 2.5vw, 24px);
       background: rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.14);
       border-radius: var(--lc-radius);
-      min-width: 140px;
+      min-width: 125px;
+      flex: 1 1 125px;
     }
 
     .lc-hero__meta-val {
       font-family: var(--lc-display);
-      font-size: 20px;
+      font-size: clamp(17px, 3.5vw, 20px);
       font-weight: 700;
       color: var(--lc-white);
     }
 
     .lc-hero__meta-lbl {
-      font-size: 11px;
+      font-size: clamp(9.5px, 2vw, 11px);
       font-weight: 600;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: rgba(255, 255, 255, 0.65);
     }
@@ -503,24 +578,27 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 16px;
-      margin-bottom: 36px;
+      gap: 14px;
+      margin: 0 auto clamp(24px, 4vw, 36px);
       flex-wrap: wrap;
+      width: 100%;
     }
 
     .lc-hero__cta {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 10px;
-      padding: 16px 38px;
+      padding: 16px clamp(24px, 5vw, 38px);
       background: var(--lc-gold);
       color: var(--lc-white) !important;
-      font-size: 15px;
+      font-size: clamp(14px, 3vw, 15px);
       font-weight: 700;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.02em;
       border-radius: var(--lc-radius-sm);
       transition: var(--lc-transition);
       box-shadow: 0 8px 24px rgba(201, 150, 59, 0.35);
+      min-height: 48px;
     }
 
     .lc-hero__cta:hover {
@@ -536,6 +614,7 @@
       stroke-width: 2.5;
       fill: none;
       transition: transform 0.2s;
+      flex-shrink: 0;
     }
 
     .lc-hero__cta:hover svg {
@@ -545,16 +624,19 @@
     .lc-hero__secondary-cta {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
-      padding: 16px 28px;
+      padding: 16px clamp(20px, 4vw, 28px);
       background: rgba(255, 255, 255, 0.09);
       color: var(--lc-white);
-      font-size: 14px;
+      font-size: clamp(13.5px, 2.8vw, 14px);
       font-weight: 600;
       border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: var(--lc-radius-sm);
       backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       transition: var(--lc-transition);
+      min-height: 48px;
     }
 
     .lc-hero__secondary-cta:hover {
@@ -566,31 +648,34 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 20px;
-      padding: 12px 28px;
+      gap: clamp(8px, 3vw, 20px);
+      padding: 12px clamp(14px, 3vw, 28px);
       background: rgba(255, 255, 255, 0.06);
       border: 1px solid rgba(201, 150, 59, 0.3);
       border-radius: 50px;
       margin: 0 auto;
       max-width: 440px;
+      width: 100%;
+      text-align: center;
     }
 
     .lc-hero__cd-unit {
       text-align: center;
+      min-width: clamp(38px, 10vw, 54px);
     }
 
     .lc-hero__cd-val {
       font-family: var(--lc-display);
-      font-size: 26px;
+      font-size: clamp(20px, 5vw, 26px);
       font-weight: 700;
       color: var(--lc-white);
       line-height: 1;
     }
 
     .lc-hero__cd-lbl {
-      font-size: 10px;
+      font-size: clamp(9px, 2vw, 10px);
       font-weight: 700;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--lc-gold);
       margin-top: 4px;
@@ -598,13 +683,13 @@
 
     .lc-hero__cd-sep {
       font-family: var(--lc-display);
-      font-size: 22px;
+      font-size: clamp(16px, 4vw, 22px);
       color: rgba(255, 255, 255, 0.3);
       margin-top: -4px;
     }
 
     /* ═══════════════════════════════════════════════════════════════
-       SECTION 2: THE CHALLENGE / IMPERATIVE (Crisp & Visual)
+       SECTION 2: THE CHALLENGE / IMPERATIVE
        ═══════════════════════════════════════════════════════════════ */
     .lc-imperative {
       padding: var(--lc-section-pad) 0;
@@ -613,19 +698,19 @@
     }
 
     .lc-imperative__header {
-      margin-bottom: 44px;
+      margin-bottom: clamp(24px, 5vw, 44px);
     }
 
     .lc-imperative__header .lc-section-title {
-      margin-top: 14px;
+      margin-top: 12px;
     }
 
     .lc-imperative__grid {
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
-      gap: 48px;
+      gap: clamp(24px, 5vw, 48px);
       align-items: center;
-      margin-bottom: 48px;
+      margin-bottom: clamp(28px, 5vw, 48px);
     }
 
     .lc-imperative__text {
@@ -636,13 +721,13 @@
 
     .lc-imperative__pullquote {
       font-family: var(--lc-display);
-      font-size: clamp(24px, 3vw, 32px);
+      font-size: clamp(20px, 4.5vw, 32px);
       font-weight: 700;
       line-height: 1.25;
       color: var(--lc-text-dark);
       border-left: 3px solid var(--lc-gold);
-      padding-left: 20px;
-      margin-bottom: 6px;
+      padding-left: clamp(14px, 3vw, 20px);
+      margin-bottom: 4px;
     }
 
     .lc-imperative__pullquote span {
@@ -650,7 +735,7 @@
     }
 
     .lc-imperative__p {
-      font-size: 15.5px;
+      font-size: clamp(14.5px, 2.8vw, 15.5px);
       line-height: 1.65;
       color: var(--lc-text-body);
     }
@@ -670,7 +755,7 @@
 
     .lc-imperative__image img {
       width: 100%;
-      height: 380px;
+      height: clamp(220px, 35vw, 380px);
       object-fit: cover;
       transition: transform 0.5s ease;
     }
@@ -682,12 +767,12 @@
     .lc-imperative__stats {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
+      gap: clamp(10px, 2.5vw, 20px);
     }
 
     .lc-stat {
       text-align: center;
-      padding: 24px 16px;
+      padding: clamp(16px, 3vw, 24px) clamp(10px, 2vw, 16px);
       background: var(--lc-white);
       border: 1px solid var(--lc-border-light);
       border-radius: var(--lc-radius);
@@ -703,7 +788,7 @@
 
     .lc-stat__val {
       font-family: var(--lc-display);
-      font-size: 34px;
+      font-size: clamp(24px, 5vw, 34px);
       font-weight: 700;
       color: var(--lc-gold);
       line-height: 1;
@@ -711,15 +796,15 @@
     }
 
     .lc-stat__desc {
-      font-size: 12.5px;
+      font-size: clamp(11px, 2.2vw, 12.5px);
       font-weight: 700;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
       color: var(--lc-text-muted);
     }
 
     /* ═══════════════════════════════════════════════════════════════
-       SECTION 3: WHAT IS GOING TO HAPPEN (PRIMARY HIGHLIGHT #1)
+       SECTION 3: WHAT IS GOING TO HAPPEN
        ═══════════════════════════════════════════════════════════════ */
     .lc-what-happens {
       padding: var(--lc-section-pad) 0;
@@ -732,33 +817,34 @@
     .lc-wh__header {
       text-align: center;
       max-width: 760px;
-      margin: 0 auto 52px;
+      margin: 0 auto clamp(28px, 5vw, 52px);
     }
 
     .lc-wh__header .lc-section-title {
-      margin-top: 14px;
+      margin-top: 12px;
     }
 
     /* 4-Stage Stepper Function */
     .lc-stepper {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      margin-bottom: 36px;
+      gap: clamp(10px, 2vw, 16px);
+      margin-bottom: clamp(22px, 4vw, 36px);
     }
 
     .lc-step-btn {
       background: var(--lc-stone-light);
       border: 1px solid var(--lc-border);
       border-radius: var(--lc-radius);
-      padding: 20px 18px;
+      padding: clamp(14px, 2.5vw, 20px) clamp(12px, 2vw, 18px);
       text-align: left;
       cursor: pointer;
       transition: var(--lc-transition);
       position: relative;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 6px;
+      min-height: 48px;
     }
 
     .lc-step-btn:hover {
@@ -800,7 +886,7 @@
 
     .lc-step-btn__title {
       font-family: var(--lc-display);
-      font-size: 17px;
+      font-size: clamp(15px, 2.5vw, 17px);
       font-weight: 700;
       color: var(--lc-text-dark);
       line-height: 1.25;
@@ -815,12 +901,12 @@
       background: linear-gradient(135deg, var(--lc-stone-light) 0%, var(--lc-white) 100%);
       border: 1px solid var(--lc-border);
       border-radius: var(--lc-radius);
-      padding: 34px 38px;
+      padding: clamp(20px, 4vw, 34px) clamp(16px, 4vw, 38px);
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
-      gap: 36px;
+      gap: clamp(20px, 4vw, 36px);
       align-items: center;
-      margin-bottom: 50px;
+      margin-bottom: clamp(28px, 5vw, 50px);
       box-shadow: var(--lc-shadow);
       position: relative;
       overflow: hidden;
@@ -838,20 +924,21 @@
 
     .lc-step-detail__info h4 {
       font-family: var(--lc-display);
-      font-size: 24px;
+      font-size: clamp(19px, 3.5vw, 24px);
       font-weight: 700;
       color: var(--lc-text-dark);
       margin-bottom: 12px;
       display: flex;
-      align-items: center;
-      gap: 12px;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.3;
     }
 
     .lc-step-detail__info p {
-      font-size: 15px;
+      font-size: clamp(14px, 2.8vw, 15px);
       line-height: 1.65;
       color: var(--lc-text-body);
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     .lc-step-detail__points {
@@ -862,11 +949,12 @@
 
     .lc-step-detail__point {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 10px;
-      font-size: 14px;
+      font-size: clamp(13px, 2.5vw, 14px);
       font-weight: 600;
       color: var(--lc-text-dark);
+      line-height: 1.45;
     }
 
     .lc-step-detail__point svg {
@@ -876,25 +964,27 @@
       stroke-width: 2.5;
       fill: none;
       flex-shrink: 0;
+      margin-top: 3px;
     }
 
     .lc-step-detail__meta {
       background: var(--lc-white);
       border: 1px solid var(--lc-border-light);
       border-radius: var(--lc-radius-sm);
-      padding: 24px;
+      padding: clamp(16px, 3vw, 24px);
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 12px;
     }
 
     .lc-step-detail__meta-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 13.5px;
+      font-size: clamp(12.5px, 2.5vw, 13.5px);
       border-bottom: 1px dashed var(--lc-border-light);
-      padding-bottom: 10px;
+      padding-bottom: 8px;
+      gap: 10px;
     }
 
     .lc-step-detail__meta-row:last-child {
@@ -905,25 +995,27 @@
     .lc-step-detail__meta-lbl {
       color: var(--lc-text-muted);
       font-weight: 500;
+      white-space: nowrap;
     }
 
     .lc-step-detail__meta-val {
       font-weight: 700;
       color: var(--lc-text-dark);
+      text-align: right;
     }
 
     /* 4 Distinct Roundtable Feature Cards */
     .lc-wh-features {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
+      gap: clamp(12px, 2.5vw, 20px);
     }
 
     .lc-wh-feature {
       background: var(--lc-stone-light);
       border: 1px solid var(--lc-border-light);
       border-radius: var(--lc-radius);
-      padding: 26px 22px;
+      padding: clamp(20px, 3vw, 26px) clamp(16px, 2.5vw, 22px);
       transition: var(--lc-transition);
     }
 
@@ -942,7 +1034,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
+      flex-shrink: 0;
     }
 
     .lc-wh-feature__icon svg {
@@ -955,7 +1048,7 @@
 
     .lc-wh-feature__title {
       font-family: var(--lc-display);
-      font-size: 18px;
+      font-size: clamp(16px, 3vw, 18px);
       font-weight: 700;
       color: var(--lc-text-dark);
       margin-bottom: 8px;
@@ -963,13 +1056,13 @@
     }
 
     .lc-wh-feature__desc {
-      font-size: 13.5px;
+      font-size: clamp(13px, 2.5vw, 13.5px);
       line-height: 1.55;
       color: var(--lc-text-muted);
     }
 
     /* ═══════════════════════════════════════════════════════════════
-       SECTION 4: THE ROUNDTABLES / PARALLEL CHAMBERS (PRIMARY HIGHLIGHT #2)
+       SECTION 4: THE ROUNDTABLES / PARALLEL CHAMBERS
        ═══════════════════════════════════════════════════════════════ */
     .lc-roundtables {
       padding: var(--lc-section-pad) 0;
@@ -980,11 +1073,11 @@
     .lc-rt__header {
       text-align: center;
       max-width: 760px;
-      margin: 0 auto 48px;
+      margin: 0 auto clamp(24px, 4vw, 48px);
     }
 
     .lc-rt__header .lc-section-title {
-      margin-top: 14px;
+      margin-top: 12px;
     }
 
     /* Interactive Chamber View Switcher */
@@ -992,21 +1085,29 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 6px;
       background: var(--lc-white);
       border: 1px solid var(--lc-border);
       border-radius: 50px;
-      padding: 5px;
-      margin: 0 auto 40px;
+      padding: 4px;
+      margin: 0 auto clamp(24px, 4vw, 40px);
       width: fit-content;
+      max-width: 100%;
       box-shadow: var(--lc-shadow-sm);
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .lc-rt-toggle::-webkit-scrollbar {
+      display: none;
     }
 
     .lc-rt-toggle-btn {
-      padding: 9px 20px;
+      padding: 9px clamp(12px, 2.5vw, 20px);
       border: none;
       background: none;
-      font-size: 13px;
+      font-size: clamp(12px, 2.2vw, 13px);
       font-weight: 700;
       color: var(--lc-text-muted);
       border-radius: 50px;
@@ -1015,6 +1116,8 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      white-space: nowrap;
+      min-height: 38px;
     }
 
     .lc-rt-toggle-btn.active {
@@ -1027,7 +1130,7 @@
     .lc-rt-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 32px;
+      gap: clamp(20px, 3.5vw, 32px);
     }
 
     .lc-rt-card {
@@ -1059,7 +1162,7 @@
     }
 
     .lc-rt-card__body {
-      padding: 34px 30px;
+      padding: clamp(22px, 4vw, 34px) clamp(18px, 3.5vw, 30px);
       flex-grow: 1;
       display: flex;
       flex-direction: column;
@@ -1071,13 +1174,13 @@
       justify-content: space-between;
       margin-bottom: 14px;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 8px;
     }
 
     .lc-rt-card__chamber-tag {
-      font-size: 11px;
+      font-size: clamp(10px, 2.2vw, 11px);
       font-weight: 800;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       padding: 4px 12px;
       border-radius: 50px;
@@ -1104,18 +1207,18 @@
 
     .lc-rt-card__title {
       font-family: var(--lc-display);
-      font-size: 24px;
+      font-size: clamp(20px, 3.5vw, 24px);
       font-weight: 700;
       color: var(--lc-text-dark);
       line-height: 1.25;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .lc-rt-card__desc {
-      font-size: 14.5px;
+      font-size: clamp(13.5px, 2.5vw, 14.5px);
       line-height: 1.6;
       color: var(--lc-text-body);
-      margin-bottom: 22px;
+      margin-bottom: 18px;
     }
 
     /* Chamber Deliberation Prompts */
@@ -1123,8 +1226,8 @@
       background: var(--lc-stone-light);
       border: 1px solid var(--lc-border-light);
       border-radius: var(--lc-radius-sm);
-      padding: 18px 20px;
-      margin-bottom: 22px;
+      padding: clamp(14px, 2.5vw, 18px) clamp(14px, 2.5vw, 20px);
+      margin-bottom: 18px;
     }
 
     .lc-rt-prompts__title {
@@ -1133,7 +1236,7 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--lc-text-dark);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       display: flex;
       align-items: center;
       gap: 6px;
@@ -1149,7 +1252,7 @@
       display: flex;
       align-items: flex-start;
       gap: 8px;
-      font-size: 13.5px;
+      font-size: clamp(12.5px, 2.5vw, 13.5px);
       line-height: 1.45;
       color: var(--lc-text-dark);
       font-weight: 500;
@@ -1175,18 +1278,18 @@
     .lc-rt-moderator {
       display: flex;
       align-items: center;
-      gap: 14px;
-      padding: 14px 18px;
+      gap: clamp(10px, 2.5vw, 14px);
+      padding: clamp(12px, 2.5vw, 14px) clamp(14px, 2.5vw, 18px);
       background: var(--lc-ivory);
       border: 1px solid var(--lc-border-light);
       border-radius: var(--lc-radius-sm);
       margin-top: auto;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .lc-rt-mod-avatar {
-      width: 48px;
-      height: 48px;
+      width: clamp(42px, 9vw, 48px);
+      height: clamp(42px, 9vw, 48px);
       border-radius: 50%;
       overflow: hidden;
       flex-shrink: 0;
@@ -1202,6 +1305,7 @@
 
     .lc-rt-mod-details {
       flex-grow: 1;
+      min-width: 0;
     }
 
     .lc-rt-mod-label {
@@ -1221,13 +1325,16 @@
     }
 
     .lc-rt-mod-name {
-      font-size: 14px;
+      font-size: clamp(13.5px, 2.8vw, 14px);
       font-weight: 700;
       color: var(--lc-text-dark);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .lc-rt-mod-affiliation {
-      font-size: 12px;
+      font-size: clamp(11.5px, 2.2vw, 12px);
       color: var(--lc-text-muted);
       line-height: 1.35;
     }
@@ -1241,8 +1348,13 @@
       background: var(--lc-white);
       border: 1px dashed var(--lc-border);
       border-radius: var(--lc-radius-sm);
-      font-size: 12.5px;
+      font-size: clamp(11.5px, 2.4vw, 12.5px);
       color: var(--lc-text-body);
+      line-height: 1.35;
+    }
+
+    .lc-rt-output svg {
+      flex-shrink: 0;
     }
 
     .lc-rt-output strong {
@@ -1250,7 +1362,7 @@
     }
 
     /* ═══════════════════════════════════════════════════════════════
-       SECTION 5: PROGRAMME / AGENDA (Interactive & Scannable)
+       SECTION 5: PROGRAMME / AGENDA
        ═══════════════════════════════════════════════════════════════ */
     .lc-agenda {
       padding: var(--lc-section-pad) 0;
@@ -1260,11 +1372,11 @@
     .lc-agenda__header {
       text-align: center;
       max-width: 740px;
-      margin: 0 auto 44px;
+      margin: 0 auto clamp(24px, 4vw, 44px);
     }
 
     .lc-agenda__header .lc-section-title {
-      margin-top: 14px;
+      margin-top: 12px;
     }
 
     /* Interactive Agenda Filter Tabs */
@@ -1272,21 +1384,22 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      margin-bottom: 40px;
+      gap: 6px;
+      margin-bottom: clamp(24px, 4vw, 40px);
       flex-wrap: wrap;
     }
 
     .lc-ag-btn {
-      padding: 8px 18px;
+      padding: 8px clamp(12px, 2.5vw, 18px);
       background: var(--lc-white);
       border: 1px solid var(--lc-border);
       border-radius: 50px;
-      font-size: 13px;
+      font-size: clamp(12px, 2.2vw, 13px);
       font-weight: 600;
       color: var(--lc-text-muted);
       cursor: pointer;
       transition: var(--lc-transition);
+      min-height: 38px;
     }
 
     .lc-ag-btn:hover {
@@ -1307,14 +1420,14 @@
       margin: 0 auto;
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 14px;
     }
 
     .lc-tl-card {
       background: var(--lc-white);
       border: 1px solid var(--lc-border-light);
       border-radius: var(--lc-radius);
-      padding: 22px 26px;
+      padding: clamp(16px, 3.5vw, 22px) clamp(16px, 4vw, 26px);
       transition: var(--lc-transition);
       box-shadow: 0 2px 10px rgba(12, 27, 42, 0.03);
       position: relative;
@@ -1336,20 +1449,20 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
+      gap: 8px;
       margin-bottom: 8px;
       flex-wrap: wrap;
     }
 
     .lc-tl-time {
       font-family: var(--lc-display);
-      font-size: 18px;
+      font-size: clamp(16px, 3.5vw, 18px);
       font-weight: 700;
       color: var(--lc-text-dark);
     }
 
     .lc-tl-duration {
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
@@ -1357,10 +1470,11 @@
       background: var(--lc-gold-pale);
       padding: 3px 10px;
       border-radius: 50px;
+      white-space: nowrap;
     }
 
     .lc-tl-format {
-      font-size: 11px;
+      font-size: clamp(10.5px, 2.2vw, 11px);
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
@@ -1368,7 +1482,7 @@
     }
 
     .lc-tl-heading {
-      font-size: 17px;
+      font-size: clamp(15px, 3vw, 17px);
       font-weight: 700;
       color: var(--lc-text-dark);
       line-height: 1.35;
@@ -1376,7 +1490,7 @@
     }
 
     .lc-tl-desc {
-      font-size: 14px;
+      font-size: clamp(13px, 2.5vw, 14px);
       line-height: 1.55;
       color: var(--lc-text-muted);
     }
@@ -1384,16 +1498,17 @@
     .lc-tl-tracks-preview {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 14px;
-      padding-top: 14px;
+      gap: 10px;
+      margin-top: 12px;
+      padding-top: 12px;
       border-top: 1px solid var(--lc-border-light);
     }
 
     .lc-tl-tpill {
-      padding: 10px 14px;
+      padding: 10px 12px;
       border-radius: var(--lc-radius-sm);
-      font-size: 12.5px;
+      font-size: clamp(11.5px, 2.4vw, 12.5px);
+      line-height: 1.35;
     }
 
     .lc-tl-tpill--a {
@@ -1408,7 +1523,7 @@
 
     .lc-tl-tpill strong {
       display: block;
-      font-size: 11px;
+      font-size: 10.5px;
       text-transform: uppercase;
       letter-spacing: 0.06em;
       margin-bottom: 2px;
@@ -1423,7 +1538,7 @@
     }
 
     /* ═══════════════════════════════════════════════════════════════
-       SECTION 6: FACULTY & DELEGATION (Leadership & Who Is In The Room)
+       SECTION 6: FACULTY & DELEGATION
        ═══════════════════════════════════════════════════════════════ */
     .lc-leadership {
       padding: var(--lc-section-pad) 0;
@@ -1435,28 +1550,28 @@
     .lc-lead__header {
       text-align: center;
       max-width: 740px;
-      margin: 0 auto 52px;
+      margin: 0 auto clamp(28px, 5vw, 52px);
     }
 
     .lc-lead__header .lc-section-title {
-      margin-top: 14px;
+      margin-top: 12px;
     }
 
     /* Moderator Profile Cards */
     .lc-chairs-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 30px;
-      margin-bottom: 56px;
+      gap: clamp(18px, 4vw, 30px);
+      margin-bottom: clamp(32px, 6vw, 56px);
     }
 
     .lc-chair {
       background: var(--lc-stone-light);
       border: 1px solid var(--lc-border);
       border-radius: var(--lc-radius);
-      padding: 30px 28px;
+      padding: clamp(20px, 4vw, 30px) clamp(16px, 3.5vw, 28px);
       display: flex;
-      gap: 24px;
+      gap: clamp(14px, 3vw, 24px);
       align-items: flex-start;
       transition: var(--lc-transition);
       box-shadow: var(--lc-shadow-sm);
@@ -1470,8 +1585,8 @@
     }
 
     .lc-chair__photo {
-      width: 120px;
-      height: 120px;
+      width: clamp(76px, 16vw, 120px);
+      height: clamp(76px, 16vw, 120px);
       border-radius: var(--lc-radius);
       overflow: hidden;
       flex-shrink: 0;
@@ -1487,6 +1602,7 @@
 
     .lc-chair__body {
       flex-grow: 1;
+      min-width: 0;
     }
 
     .lc-chair__badge {
@@ -1495,11 +1611,11 @@
       gap: 6px;
       padding: 3px 10px;
       border-radius: 50px;
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     .lc-chair--a .lc-chair__badge {
@@ -1514,16 +1630,16 @@
 
     .lc-chair__name {
       font-family: var(--lc-display);
-      font-size: 21px;
+      font-size: clamp(18px, 3.5vw, 21px);
       font-weight: 700;
       color: var(--lc-text-dark);
       margin-bottom: 2px;
     }
 
     .lc-chair__title {
-      font-size: 13.5px;
+      font-size: clamp(12.5px, 2.5vw, 13.5px);
       font-weight: 600;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       line-height: 1.35;
     }
 
@@ -1536,7 +1652,7 @@
     }
 
     .lc-chair__bio {
-      font-size: 13.5px;
+      font-size: clamp(12.5px, 2.5vw, 13.5px);
       line-height: 1.55;
       color: var(--lc-text-body);
     }
@@ -1546,40 +1662,40 @@
       background: var(--lc-ivory);
       border: 1px solid var(--lc-border);
       border-radius: var(--lc-radius);
-      padding: 36px 32px;
+      padding: clamp(20px, 4vw, 36px) clamp(16px, 4vw, 32px);
       box-shadow: var(--lc-shadow-sm);
     }
 
     .lc-del-header {
       text-align: center;
       max-width: 620px;
-      margin: 0 auto 30px;
+      margin: 0 auto clamp(20px, 4vw, 30px);
     }
 
     .lc-del-header h3 {
       font-family: var(--lc-display);
-      font-size: 22px;
+      font-size: clamp(18px, 4vw, 22px);
       font-weight: 700;
       color: var(--lc-text-dark);
       margin-bottom: 6px;
     }
 
     .lc-del-header p {
-      font-size: 14.5px;
+      font-size: clamp(13px, 2.5vw, 14.5px);
       color: var(--lc-text-muted);
     }
 
     .lc-sectors-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
+      gap: clamp(8px, 2vw, 14px);
     }
 
     .lc-sector {
       display: flex;
       align-items: center;
-      gap: 14px;
-      padding: 14px 16px;
+      gap: clamp(10px, 2vw, 14px);
+      padding: clamp(12px, 2vw, 14px) clamp(12px, 2.5vw, 16px);
       background: var(--lc-white);
       border: 1px solid var(--lc-border-light);
       border-radius: var(--lc-radius-sm);
@@ -1593,8 +1709,8 @@
     }
 
     .lc-sector__icon {
-      width: 38px;
-      height: 38px;
+      width: clamp(32px, 7vw, 38px);
+      height: clamp(32px, 7vw, 38px);
       border-radius: 8px;
       background: var(--lc-gold-pale);
       display: flex;
@@ -1604,28 +1720,28 @@
     }
 
     .lc-sector__icon svg {
-      width: 18px;
-      height: 18px;
+      width: clamp(16px, 3.5vw, 18px);
+      height: clamp(16px, 3.5vw, 18px);
       stroke: var(--lc-gold);
       stroke-width: 1.8;
       fill: none;
     }
 
     .lc-sector__name {
-      font-size: 13.5px;
+      font-size: clamp(12.5px, 2.5vw, 13.5px);
       font-weight: 700;
       color: var(--lc-text-dark);
       line-height: 1.3;
     }
 
     .lc-sector__sub {
-      font-size: 12px;
+      font-size: clamp(11px, 2vw, 12px);
       color: var(--lc-text-muted);
       margin-top: 1px;
     }
 
     /* ═══════════════════════════════════════════════════════════════
-       SECTION 7: TANGIBLE DELIVERABLES & OUTCOMES (Accord in Perspective)
+       SECTION 7: TANGIBLE DELIVERABLES & OUTCOMES
        ═══════════════════════════════════════════════════════════════ */
     .lc-deliverables {
       padding: var(--lc-section-pad) 0;
@@ -1637,7 +1753,7 @@
     .lc-deliv__header {
       text-align: center;
       max-width: 740px;
-      margin: 0 auto 50px;
+      margin: 0 auto clamp(28px, 5vw, 50px);
     }
 
     .lc-deliv__header .lc-label {
@@ -1646,21 +1762,21 @@
 
     .lc-deliv__header .lc-section-title {
       color: var(--lc-white);
-      margin-top: 14px;
+      margin-top: 12px;
     }
 
     .lc-deliv__grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-bottom: 40px;
+      gap: clamp(14px, 3vw, 24px);
+      margin-bottom: clamp(24px, 4vw, 40px);
     }
 
     .lc-deliv-card {
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: var(--lc-radius);
-      padding: 30px 24px;
+      padding: clamp(20px, 4vw, 30px) clamp(16px, 3.5vw, 24px);
       transition: var(--lc-transition);
       display: flex;
       flex-direction: column;
@@ -1673,12 +1789,12 @@
     }
 
     .lc-deliv-card__badge {
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 800;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--lc-gold);
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       display: flex;
       align-items: center;
       gap: 6px;
@@ -1686,25 +1802,25 @@
 
     .lc-deliv-card__title {
       font-family: var(--lc-display);
-      font-size: 20px;
+      font-size: clamp(17px, 3.2vw, 20px);
       font-weight: 700;
       color: var(--lc-white);
       line-height: 1.3;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .lc-deliv-card__desc {
-      font-size: 14px;
+      font-size: clamp(13px, 2.5vw, 14px);
       line-height: 1.6;
-      color: rgba(255, 255, 255, 0.7);
-      margin-bottom: 20px;
+      color: rgba(255, 255, 255, 0.72);
+      margin-bottom: 18px;
     }
 
     .lc-deliv-card__footer {
       margin-top: auto;
-      padding-top: 16px;
+      padding-top: 14px;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
-      font-size: 12.5px;
+      font-size: clamp(11.5px, 2.2vw, 12.5px);
       color: var(--lc-gold);
       font-weight: 600;
       display: flex;
@@ -1724,25 +1840,25 @@
     .lc-part__header {
       text-align: center;
       max-width: 680px;
-      margin: 0 auto 44px;
+      margin: 0 auto clamp(24px, 4vw, 44px);
     }
 
     .lc-part__header .lc-section-title {
-      margin-top: 14px;
+      margin-top: 12px;
     }
 
     .lc-partners__grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 28px;
-      margin-bottom: 40px;
+      gap: clamp(16px, 3.5vw, 28px);
+      margin-bottom: clamp(24px, 4vw, 40px);
     }
 
     .lc-partner {
       background: var(--lc-white);
       border: 1px solid var(--lc-border-light);
       border-radius: var(--lc-radius);
-      padding: 32px 28px;
+      padding: clamp(22px, 4vw, 32px) clamp(18px, 3.5vw, 28px);
       transition: var(--lc-transition);
       box-shadow: var(--lc-shadow-sm);
     }
@@ -1754,17 +1870,17 @@
     }
 
     .lc-partner__role {
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--lc-gold);
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
     .lc-partner__logo {
-      height: 28px;
-      margin-bottom: 18px;
+      height: clamp(22px, 4.5vw, 28px);
+      margin-bottom: 16px;
     }
 
     .lc-partner__logo img {
@@ -1776,23 +1892,23 @@
 
     .lc-partner__name {
       font-family: var(--lc-display);
-      font-size: 19px;
+      font-size: clamp(17px, 3.2vw, 19px);
       font-weight: 700;
       color: var(--lc-text-dark);
       margin-bottom: 8px;
     }
 
     .lc-partner__desc {
-      font-size: 14px;
+      font-size: clamp(13px, 2.5vw, 14px);
       line-height: 1.6;
       color: var(--lc-text-body);
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .lc-partner__address {
-      font-size: 12.5px;
+      font-size: clamp(11.5px, 2.2vw, 12.5px);
       color: var(--lc-text-muted);
-      padding-top: 14px;
+      padding-top: 12px;
       border-top: 1px solid var(--lc-border-light);
       line-height: 1.5;
     }
@@ -1808,14 +1924,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 24px;
-      padding: 22px 0;
+      gap: clamp(12px, 3vw, 24px);
+      padding: 20px 0;
       border-top: 1px solid var(--lc-border);
       flex-wrap: wrap;
     }
 
     .lc-series__label {
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -1825,8 +1941,8 @@
     .lc-series__item {
       display: flex;
       align-items: center;
-      gap: 8px;
-      font-size: 13.5px;
+      gap: 6px;
+      font-size: clamp(12.5px, 2.5vw, 13.5px);
       font-weight: 600;
       color: var(--lc-text-body);
     }
@@ -1861,7 +1977,7 @@
     .lc-register__layout {
       display: grid;
       grid-template-columns: 1fr 1.15fr;
-      gap: 52px;
+      gap: clamp(28px, 5vw, 52px);
       align-items: center;
     }
 
@@ -1871,10 +1987,10 @@
 
     .lc-register__title {
       font-family: var(--lc-display);
-      font-size: clamp(28px, 3.5vw, 38px);
+      font-size: clamp(24px, 5vw, 38px);
       font-weight: 700;
       color: var(--lc-white);
-      margin: 14px 0 12px;
+      margin: 12px 0 10px;
       line-height: 1.2;
     }
 
@@ -1884,25 +2000,26 @@
     }
 
     .lc-register__lead {
-      font-size: 15px;
+      font-size: clamp(13.5px, 2.8vw, 15px);
       line-height: 1.6;
-      color: rgba(255, 255, 255, 0.7);
-      margin-bottom: 26px;
+      color: rgba(255, 255, 255, 0.72);
+      margin-bottom: clamp(18px, 4vw, 26px);
     }
 
     .lc-register__perks {
       display: flex;
       flex-direction: column;
       gap: 12px;
-      margin-bottom: 28px;
+      margin-bottom: clamp(20px, 4vw, 28px);
     }
 
     .lc-register__perk {
       display: flex;
       align-items: center;
-      gap: 12px;
-      font-size: 14px;
+      gap: 10px;
+      font-size: clamp(13px, 2.5vw, 14px);
       color: rgba(255, 255, 255, 0.85);
+      line-height: 1.4;
     }
 
     .lc-register__perk-icon {
@@ -1931,40 +2048,41 @@
     .lc-register__cap {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      padding: 10px 18px;
+      gap: 8px;
+      padding: 10px 16px;
       background: rgba(201, 150, 59, 0.12);
       border: 1px solid rgba(201, 150, 59, 0.3);
       border-radius: var(--lc-radius-sm);
-      font-size: 13px;
+      font-size: clamp(12px, 2.2vw, 13px);
       color: var(--lc-gold);
       font-weight: 600;
+      line-height: 1.35;
     }
 
     /* Form Card */
     .lc-register__card {
       background: var(--lc-white);
       border-radius: var(--lc-radius);
-      padding: 34px 30px;
+      padding: clamp(20px, 4.5vw, 34px) clamp(16px, 4vw, 30px);
       box-shadow: 0 16px 44px rgba(0, 0, 0, 0.35);
     }
 
     .lc-register__card-header {
-      margin-bottom: 18px;
-      padding-bottom: 14px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
       border-bottom: 1px solid var(--lc-border-light);
     }
 
     .lc-register__card-title {
       font-family: var(--lc-display);
-      font-size: 22px;
+      font-size: clamp(18px, 3.5vw, 22px);
       font-weight: 700;
       color: var(--lc-text-dark);
       margin-bottom: 4px;
     }
 
     .lc-register__card-desc {
-      font-size: 13px;
+      font-size: clamp(12px, 2.2vw, 13px);
       color: var(--lc-text-muted);
     }
 
@@ -1978,7 +2096,7 @@
 
     .lc-field label {
       display: block;
-      font-size: 11.5px;
+      font-size: 11px;
       font-weight: 700;
       color: var(--lc-text-dark);
       margin-bottom: 5px;
@@ -1998,16 +2116,18 @@
     .lc-register__card .wpcf7 select,
     .lc-register__card .wpcf7 textarea {
       width: 100% !important;
-      height: 42px !important;
-      padding: 9px 12px !important;
+      height: 46px !important;
+      padding: 10px 14px !important;
       background: var(--lc-ivory) !important;
       border: 1px solid var(--lc-border) !important;
       border-radius: var(--lc-radius-sm) !important;
       font-family: var(--lc-body) !important;
-      font-size: 13.5px !important;
+      font-size: 16px !important;
+      /* 16px prevents iOS auto-zoom on input focus */
       color: var(--lc-text-dark) !important;
       outline: none !important;
       transition: var(--lc-transition) !important;
+      -webkit-appearance: none !important;
     }
 
     .lc-field input:focus,
@@ -2017,7 +2137,7 @@
     .lc-register__card .wpcf7 select:focus,
     .lc-register__card .wpcf7 textarea:focus {
       border-color: var(--lc-gold) !important;
-      box-shadow: 0 0 0 3px rgba(201, 150, 59, 0.14) !important;
+      box-shadow: 0 0 0 3px rgba(201, 150, 59, 0.16) !important;
       background: var(--lc-white) !important;
     }
 
@@ -2027,13 +2147,13 @@
       appearance: none !important;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23C9963B' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
       background-repeat: no-repeat !important;
-      background-position: right 12px center !important;
-      padding-right: 32px !important;
+      background-position: right 14px center !important;
+      padding-right: 36px !important;
     }
 
     .lc-field textarea,
     .lc-register__card .wpcf7 textarea {
-      height: 68px !important;
+      height: 72px !important;
       min-height: 60px !important;
       resize: vertical !important;
     }
@@ -2041,24 +2161,27 @@
     .lc-form-submit,
     .lc-register__card .wpcf7 input[type="submit"] {
       width: 100% !important;
-      height: 48px !important;
+      height: 50px !important;
       padding: 12px 24px !important;
       background: var(--lc-gold) !important;
       color: var(--lc-white) !important;
       font-family: var(--lc-body) !important;
-      font-size: 14.5px !important;
+      font-size: 15px !important;
       font-weight: 700 !important;
-      letter-spacing: 0.03em !important;
+      letter-spacing: 0.02em !important;
       border: none !important;
       border-radius: var(--lc-radius-sm) !important;
       cursor: pointer !important;
       transition: var(--lc-transition) !important;
       box-shadow: 0 4px 16px rgba(201, 150, 59, 0.3) !important;
       margin-top: 6px !important;
+      min-height: 48px !important;
     }
 
     .lc-form-submit:hover,
-    .lc-register__card .wpcf7 input[type="submit"]:hover {
+    .lc-form-submit:active,
+    .lc-register__card .wpcf7 input[type="submit"]:hover,
+    .lc-register__card .wpcf7 input[type="submit"]:active {
       background: var(--lc-gold-light) !important;
       transform: translateY(-1px) !important;
     }
@@ -2092,7 +2215,8 @@
     .lc-footer__left {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
+      flex-wrap: wrap;
     }
 
     .lc-footer__dot {
@@ -2110,7 +2234,7 @@
     .lc-footer__right {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
       flex-wrap: wrap;
     }
 
@@ -2137,10 +2261,11 @@
       left: 0;
       right: 0;
       z-index: 990;
-      background: rgba(12, 27, 42, 0.95);
+      background: rgba(12, 27, 42, 0.96);
       backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
       border-top: 1px solid rgba(201, 150, 59, 0.3);
-      padding: 10px 18px;
+      padding: 10px 16px max(10px, env(safe-area-inset-bottom));
       box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.25);
     }
 
@@ -2149,32 +2274,41 @@
       align-items: center;
       justify-content: space-between;
       gap: 12px;
+      max-width: var(--lc-container);
+      margin: 0 auto;
     }
 
     .lc-mobile-bar__info {
       display: flex;
       flex-direction: column;
+      min-width: 0;
     }
 
     .lc-mobile-bar__title {
       font-size: 12px;
       font-weight: 700;
       color: var(--lc-white);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .lc-mobile-bar__subtitle {
       font-size: 10.5px;
       color: var(--lc-gold);
+      white-space: nowrap;
     }
 
     .lc-mobile-bar__btn {
-      padding: 8px 16px;
+      padding: 9px 16px;
       background: var(--lc-gold);
       color: var(--lc-white);
-      font-size: 12px;
+      font-size: 12.5px;
       font-weight: 700;
       border-radius: var(--lc-radius-sm);
       white-space: nowrap;
+      flex-shrink: 0;
+      box-shadow: 0 2px 10px rgba(201, 150, 59, 0.3);
     }
 
     /* ═══════════════════════════════════════════════════════════════
@@ -2199,19 +2333,15 @@
     }
 
     @media (max-width: 991px) {
-      :root {
-        --lc-section-pad: 76px;
-      }
-
       .lc-imperative__grid {
         grid-template-columns: 1fr;
-        gap: 36px;
+        gap: 28px;
       }
 
       .lc-step-detail-card {
         grid-template-columns: 1fr;
-        gap: 24px;
-        padding: 26px 22px;
+        gap: 22px;
+        padding: 24px 20px;
       }
 
       .lc-rt-grid {
@@ -2228,14 +2358,11 @@
 
       .lc-register__layout {
         grid-template-columns: 1fr;
-        gap: 36px;
+        gap: 32px;
       }
     }
 
     @media (max-width: 767px) {
-      :root {
-        --lc-section-pad: 56px;
-      }
 
       .lc-nav__links,
       .lc-nav__cta {
@@ -2251,41 +2378,117 @@
       }
 
       body {
-        padding-bottom: 58px;
+        padding-bottom: calc(58px + env(safe-area-inset-bottom, 0px));
       }
 
       .lc-hero {
-        padding: 96px 18px 50px;
+        padding: 96px 16px 44px;
         min-height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+      }
+
+      .lc-hero__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .lc-hero__hosts {
+        gap: 8px 10px;
+        padding: 6px 14px;
+        margin: 0 auto 18px;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .lc-hero__title {
+        text-align: center;
+        margin: 0 auto 14px;
+        width: 100%;
+      }
+
+      .lc-hero__subtitle {
+        text-align: center;
+        margin: 0 auto 22px;
+        width: 100%;
       }
 
       .lc-hero__meta {
-        flex-direction: column;
-        align-items: stretch;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         width: 100%;
-        max-width: 320px;
+        max-width: 380px;
+        margin: 0 auto 22px;
+        gap: 8px;
+        justify-content: center;
+        align-items: stretch;
+      }
+
+      .lc-hero__meta-card {
+        min-width: unset;
+        width: 100%;
+        padding: 10px 8px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .lc-hero__meta-val {
+        font-size: 16px;
+      }
+
+      .lc-hero__meta-lbl {
+        font-size: 9.5px;
       }
 
       .lc-hero__action-row {
         flex-direction: column;
         width: 100%;
+        max-width: 360px;
+        margin: 0 auto 22px;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
       }
 
       .lc-hero__cta,
       .lc-hero__secondary-cta {
         width: 100%;
         justify-content: center;
+        text-align: center;
       }
 
       .lc-hero__countdown {
         width: 100%;
-        gap: 12px;
-        padding: 10px 16px;
+        max-width: 360px;
+        margin: 0 auto;
+        gap: 8px;
+        padding: 10px 12px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .lc-imperative__header {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 28px;
       }
 
       .lc-imperative__stats {
         grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
+        gap: 10px;
       }
 
       .lc-stepper {
@@ -2301,18 +2504,38 @@
       }
 
       .lc-chair {
-        flex-direction: column;
-        padding: 22px 18px;
-        gap: 16px;
+        flex-direction: row;
+        padding: 18px 16px;
+        gap: 14px;
       }
 
       .lc-chair__photo {
-        width: 90px;
-        height: 90px;
+        width: 80px;
+        height: 80px;
       }
 
       .lc-sectors-grid {
         grid-template-columns: 1fr;
+      }
+
+      .lc-register__info {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .lc-register__perks {
+        align-items: flex-start;
+        text-align: left;
+        width: 100%;
+        max-width: 440px;
+      }
+
+      .lc-register__card {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 520px;
       }
 
       .lc-form-grid {
@@ -2322,6 +2545,33 @@
       .lc-footer__inner {
         flex-direction: column;
         text-align: center;
+        justify-content: center;
+      }
+
+      .lc-footer__left,
+      .lc-footer__right {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .lc-chair {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .lc-chair__photo {
+        width: 70px;
+        height: 70px;
+      }
+
+      .lc-rt-toggle {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .lc-hero__hosts-sep {
+        display: none;
       }
     }
   </style>
@@ -2841,130 +3091,6 @@
       </div>
     </div>
   </section>
-
-  <!-- ═══════════════════════════════════════════════════════════════
-       SECTION 5: PROGRAMME / AFTERNOON AGENDA (Warm Ivory)
-       ═══════════════════════════════════════════════════════════════ -->
-  <section class="lc-agenda" id="agenda">
-    <div class="lc-container">
-      <div class="lc-agenda__header">
-        <span class="lc-label lc-label--center">Afternoon Schedule · 21 October 2026</span>
-        <h2 class="lc-section-title">Forum <em>Programme</em></h2>
-        <p class="lc-section-subtitle" style="margin: 14px auto 0;">
-          A precision-timed afternoon designed for high-density peer discussion, collaborative decision-making, and
-          executive networking.
-        </p>
-      </div>
-
-      <!-- Interactive Agenda Filter -->
-      <div class="lc-agenda-filters">
-        <button class="lc-ag-btn active" data-filter="all">All Sessions (7)</button>
-        <button class="lc-ag-btn" data-filter="plenary">Plenary &amp; Briefings</button>
-        <button class="lc-ag-btn" data-filter="roundtable">The Roundtables</button>
-        <button class="lc-ag-btn" data-filter="social">Networking &amp; Breaks</button>
-      </div>
-
-      <div class="lc-timeline" id="agenda-timeline">
-
-        <!-- 14:00 Arrival -->
-        <div class="lc-tl-card" data-category="social">
-          <div class="lc-tl-top">
-            <span class="lc-tl-time">14:00 – 14:30</span>
-            <span class="lc-tl-duration">30 min</span>
-            <span class="lc-tl-format">☕ Executive Arrival</span>
-          </div>
-          <h3 class="lc-tl-heading">Accreditation, Coffee &amp; Dossier Collection</h3>
-          <p class="lc-tl-desc">Arrival of invited delegations, security clearance, distribution of confidential track
-            briefing dossiers, and initial cross-sector networking.</p>
-        </div>
-
-        <!-- 14:30 Welcome -->
-        <div class="lc-tl-card" data-category="plenary">
-          <div class="lc-tl-top">
-            <span class="lc-tl-time">14:30 – 14:35</span>
-            <span class="lc-tl-duration">5 min</span>
-            <span class="lc-tl-format">🎤 Opening Plenary</span>
-          </div>
-          <h3 class="lc-tl-heading">Host Welcome &amp; Statement of Intent</h3>
-          <p class="lc-tl-desc">Opening address by leadership from MCMCER and Global Advisory Alliance (GAA) outlining
-            the roundtable objectives and outcomes.</p>
-        </div>
-
-        <!-- 14:35 Macro Plenary -->
-        <div class="lc-tl-card" data-category="plenary">
-          <div class="lc-tl-top">
-            <span class="lc-tl-time">14:35 – 15:05</span>
-            <span class="lc-tl-duration">30 min</span>
-            <span class="lc-tl-format">📊 Evidence Plenary</span>
-          </div>
-          <h3 class="lc-tl-heading">London's 40°C Threshold: Physical Exposure &amp; Business Vulnerability</h3>
-          <p class="lc-tl-desc">Data-driven presentation on Greater London heat projections, urban microclimates, asset
-            overheating risk, and regulatory reporting requirements under GRI and CSRD.</p>
-        </div>
-
-        <!-- 15:05 KEYSTONE ROUNDTABLES -->
-        <div class="lc-tl-card lc-tl-card--keystone" data-category="roundtable">
-          <div class="lc-tl-top">
-            <span class="lc-tl-time">15:05 – 16:35</span>
-            <span class="lc-tl-duration" style="background:var(--lc-gold);color:white;">90 min</span>
-            <span class="lc-tl-format" style="color:var(--lc-gold);font-weight:800;">🏛️ Parallel Working
-              Roundtables</span>
-          </div>
-          <h3 class="lc-tl-heading" style="font-size:19px;">Parallel Deliberation Sessions</h3>
-          <p class="lc-tl-desc">Delegates convene in assigned specialist chambers for structured, moderated
-            problem-solving sessions focused on tangible capability solutions.</p>
-          <div class="lc-tl-tracks-preview">
-            <div class="lc-tl-tpill lc-tl-tpill--a">
-              <strong>Chamber A · Real Estate &amp; Infra</strong>
-              <span>Heat-Resilient Buildings, Asset Retrofit &amp; Skills</span>
-            </div>
-            <div class="lc-tl-tpill lc-tl-tpill--b">
-              <strong>Chamber B · Corporate &amp; ESG</strong>
-              <span>Workforce Duty-of-Care &amp; IFRS S2 Disclosure</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 16:35 Coffee -->
-        <div class="lc-tl-card" data-category="social">
-          <div class="lc-tl-top">
-            <span class="lc-tl-time">16:35 – 16:50</span>
-            <span class="lc-tl-duration">15 min</span>
-            <span class="lc-tl-format">☕ Executive Break</span>
-          </div>
-          <h3 class="lc-tl-heading">Inter-Chamber Synthesis &amp; Refreshments</h3>
-          <p class="lc-tl-desc">Informal peer exchanges while chamber lead moderators consolidate drafting points and
-            recommendations.</p>
-        </div>
-
-        <!-- 16:50 Plenary Readouts -->
-        <div class="lc-tl-card" data-category="roundtable">
-          <div class="lc-tl-top">
-            <span class="lc-tl-time">16:50 – 18:20</span>
-            <span class="lc-tl-duration">90 min</span>
-            <span class="lc-tl-format">🤝 All Delegates</span>
-          </div>
-          <h3 class="lc-tl-heading">Joint Chamber Readouts &amp; Strategic Synthesis</h3>
-          <p class="lc-tl-desc">Both chambers reconvene. Lead moderators present key findings, followed by moderated
-            cross-table debate and alignment on key recommendations.</p>
-        </div>
-
-        <!-- 18:30 Reception -->
-        <div class="lc-tl-card" data-category="social">
-          <div class="lc-tl-top">
-            <span class="lc-tl-time">18:30 – 19:30</span>
-            <span class="lc-tl-duration">60 min</span>
-            <span class="lc-tl-format">🍷 Executive Reception</span>
-          </div>
-          <h3 class="lc-tl-heading">Networking Reception &amp; Bilateral Discussions</h3>
-          <p class="lc-tl-desc">Private drinks and canapés reception allowing delegates, moderators, and partners to
-            continue bilateral discussions in an informal heritage setting.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
   <!-- ═══════════════════════════════════════════════════════════════
        SECTION 6: FACULTY & DELEGATION (Crisp White)
        ═══════════════════════════════════════════════════════════════ -->
@@ -3106,83 +3232,6 @@
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════════════════════
-       SECTION 7: TANGIBLE DELIVERABLES (The Accord in Perspective)
-       ═══════════════════════════════════════════════════════════════ -->
-  <section class="lc-deliverables" id="deliverables">
-    <div class="lc-container">
-      <div class="lc-deliv__header">
-        <span class="lc-label lc-label--center">Post-Forum Impact</span>
-        <h2 class="lc-section-title">Tangible <em>Outputs</em></h2>
-        <p class="lc-section-subtitle" style="color:rgba(255,255,255,0.7);margin: 14px auto 0;">
-          The roundtable does not end with dialogue. Deliberations translate directly into three actionable, persistent
-          deliverables.
-        </p>
-      </div>
-
-      <div class="lc-deliv__grid">
-
-        <div class="lc-deliv-card">
-          <span class="lc-deliv-card__badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-              <polyline points="14 2 14 8 20 8" />
-            </svg>
-            Co-Authored Output
-          </span>
-          <h3 class="lc-deliv-card__title">The London ESG &amp; Heat Adaptation Accord</h3>
-          <p class="lc-deliv-card__desc">
-            A consensus recommendations document drafted over 30 days following the session, co-signed by participating
-            institutions and shared with Greater London authorities.
-          </p>
-          <div class="lc-deliv-card__footer">
-            <span>Delivered 30 days post-event</span>
-            <span style="margin-left:auto;">→</span>
-          </div>
-        </div>
-
-        <div class="lc-deliv-card">
-          <span class="lc-deliv-card__badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="3" width="18" height="18" rx="2" />
-              <polyline points="9 11 12 14 22 4" />
-            </svg>
-            Operational Asset
-          </span>
-          <h3 class="lc-deliv-card__title">Enterprise Heat Capability Toolkit</h3>
-          <p class="lc-deliv-card__desc">
-            A pragmatic operational pack featuring building retrofit priority checklists, workplace duty-of-care
-            templates, and quantitative IFRS S2 physical risk reporting metrics.
-          </p>
-          <div class="lc-deliv-card__footer">
-            <span>Exclusive to accredited attendees</span>
-            <span style="margin-left:auto;">→</span>
-          </div>
-        </div>
-
-        <div class="lc-deliv-card">
-          <span class="lc-deliv-card__badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10" />
-              <path d="M16 12l-4-4-4 4M12 16V9" />
-            </svg>
-            Ongoing Alliance
-          </span>
-          <h3 class="lc-deliv-card__title">Cross-Sector Resilience Working Group</h3>
-          <p class="lc-deliv-card__desc">
-            An invitation into the ongoing London resilience exchange, connecting participants across bi-annual working
-            briefings and the 2027 Copenhagen &amp; Delhi forum series.
-          </p>
-          <div class="lc-deliv-card__footer">
-            <span>Bi-annual practitioner briefings</span>
-            <span style="margin-left:auto;">→</span>
-          </div>
-        </div>
-
-      </div>
     </div>
   </section>
 
@@ -3446,7 +3495,7 @@
       handleScroll();
     })();
 
-    // ── 3. Smooth Scrolling ──
+    // ── 3. Smooth Scrolling & Mobile Drawer Auto-Close ──
     document.querySelectorAll('a[href^="#"]').forEach(function (link) {
       link.addEventListener('click', function (e) {
         var targetId = this.getAttribute('href');
@@ -3454,30 +3503,50 @@
           var el = document.querySelector(targetId);
           if (el) {
             e.preventDefault();
-            var offset = 80;
+            var offset = window.innerWidth <= 767 ? 70 : 80;
             var top = el.getBoundingClientRect().top + window.pageYOffset - offset;
             window.scrollTo({ top: top, behavior: 'smooth' });
             var mobileMenu = document.getElementById('lc-mobile-menu');
-            if (mobileMenu) mobileMenu.classList.remove('active');
+            if (mobileMenu) {
+              mobileMenu.classList.remove('active');
+              document.body.classList.remove('menu-open');
+            }
           }
         }
       });
     });
 
-    // ── 4. Mobile Menu Drawer ──
+    // ── 4. Mobile Menu Drawer with Body Scroll Lock ──
     (function () {
       var hamburger = document.getElementById('lc-hamburger');
       var mobileMenu = document.getElementById('lc-mobile-menu');
       var closeBtn = document.getElementById('lc-mobile-close');
 
-      if (hamburger && mobileMenu) {
-        hamburger.addEventListener('click', function () {
+      function openMenu() {
+        if (mobileMenu) {
           mobileMenu.classList.add('active');
-        });
+          document.body.classList.add('menu-open');
+        }
       }
-      if (closeBtn && mobileMenu) {
-        closeBtn.addEventListener('click', function () {
+
+      function closeMenu() {
+        if (mobileMenu) {
           mobileMenu.classList.remove('active');
+          document.body.classList.remove('menu-open');
+        }
+      }
+
+      if (hamburger) {
+        hamburger.addEventListener('click', openMenu);
+      }
+      if (closeBtn) {
+        closeBtn.addEventListener('click', closeMenu);
+      }
+      if (mobileMenu) {
+        mobileMenu.addEventListener('click', function (e) {
+          if (e.target === mobileMenu) {
+            closeMenu();
+          }
         });
       }
     })();
