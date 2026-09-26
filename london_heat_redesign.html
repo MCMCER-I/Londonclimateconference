@@ -2244,14 +2244,31 @@
     }
 
     @keyframes lcShake {
-      0%, 100% { transform: translateX(0); }
-      20%, 60% { transform: translateX(-6px); }
-      40%, 80% { transform: translateX(6px); }
+
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+
+      20%,
+      60% {
+        transform: translateX(-6px);
+      }
+
+      40%,
+      80% {
+        transform: translateX(6px);
+      }
     }
 
     @keyframes lcSpin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
     }
 
     .lc-form-success {
@@ -2756,7 +2773,8 @@
       <h1 class="lc-hero__title">London Climate Resilience<br><em>Roundtable</em> 2026</h1>
 
       <p class="lc-hero__subtitle">
-        A focused, solutions-oriented roundtable bringing together leaders and experts to advance practical approaches to London’s climate resilience and adaptation.
+        A focused, solutions-oriented roundtable bringing together leaders and experts to advance practical approaches
+        to London’s climate resilience and adaptation.
       </p>
 
       <div class="lc-hero__meta">
@@ -2833,18 +2851,20 @@
 
           </div>
           <p class="lc-imperative__p">
-           Extreme heat is no longer a distant climate scenario, it is a growing challenge for London’s buildings, 
-          infrastructure, workplaces and communities.
+            Extreme heat is no longer a distant climate scenario, it is a growing challenge for London’s buildings,
+            infrastructure, workplaces and communities.
 
           </p>
           <p class="lc-imperative__p">
-            With around <strong>one million</strong> London homes potentially at high risk of overheating, 
-            and heat-related impacts already affecting productivity, public services and infrastructure, the need for practical adaptation is
+            With around <strong>one million</strong> London homes potentially at high risk of overheating,
+            and heat-related impacts already affecting productivity, public services and infrastructure, the need for
+            practical adaptation is
             becoming increasingly important.
           </p>
           <p class="lc-imperative__p">
-            <strong>The London Climate Resilience Roundtable 2026</strong> brings together perspectives from business, the built environment,
-            infrastructure, academia and sustainability to examine how London can prepare for rising 
+            <strong>The London Climate Resilience Roundtable 2026</strong> brings together perspectives from business,
+            the built environment,
+            infrastructure, academia and sustainability to examine how London can prepare for rising
             temperatures and strengthen resilience through practical, collaborative approaches.
           </p>
         </div>
@@ -2882,9 +2902,10 @@
     <div class="lc-container">
       <div class="lc-wh__header">
         <span class="lc-label lc-label--center">Executive Experience</span>
-        <h2 class="lc-section-title">What to <em>>Expect</em on the Day</h2>
+        <h2 class="lc-section-title"> What to <em> Expect</em> on the Day </h2>
         <p class="lc-section-subtitle" style="margin: 14px auto 0;">
-         The experience is designed to move beyond presentations, giving participants the opportunity to engage with practical challenges,
+          The experience is designed to move beyond presentations, giving participants the opportunity to engage with
+          practical challenges,
           share perspectives and explore solutions for strengthening London’s climate resilience.
         </p>
       </div>
@@ -3466,7 +3487,8 @@
           <!-- Web3Forms Powered Accreditation Form -->
           <form id="lc-static-form" action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="ad7dd0ba-7c79-4abc-bc07-c1a0b8d6ff51">
-            <input type="hidden" name="subject" value="New Delegate Application — London Climate Resilience Roundtable 2026">
+            <input type="hidden" name="subject"
+              value="New Delegate Application — London Climate Resilience Roundtable 2026">
             <input type="hidden" name="from_name" value="London Roundtable Secretariat">
             <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
@@ -3507,8 +3529,10 @@
               <label>Preferred Working Chamber <span>*</span></label>
               <select name="preferred_chamber" required>
                 <option value="">Select chamber alignment...</option>
-                <option value="Chamber A: Built Environment, Infrastructure & Skills">Chamber A: Built Environment, Infrastructure &amp; Skills</option>
-                <option value="Chamber B: Corporate ESG, Workforce & Disclosure">Chamber B: Corporate ESG, Workforce &amp; Disclosure</option>
+                <option value="Chamber A: Built Environment, Infrastructure & Skills">Chamber A: Built Environment,
+                  Infrastructure &amp; Skills</option>
+                <option value="Chamber B: Corporate ESG, Workforce & Disclosure">Chamber B: Corporate ESG, Workforce
+                  &amp; Disclosure</option>
                 <option value="Either Chamber / Conveners' Discretion">Either Chamber / Conveners' Discretion</option>
               </select>
             </div>
@@ -3535,7 +3559,8 @@
             </div>
           </div>
 
-          <p class="lc-form-footnote" id="lc-form-footnote">🔒 Information managed under strict confidentiality (GDPR). Central London
+          <p class="lc-form-footnote" id="lc-form-footnote">🔒 Information managed under strict confidentiality (GDPR).
+            Central London
             heritage venue confirmed upon clearance.</p>
         </div>
 
@@ -4002,68 +4027,68 @@
             body: json,
             signal: controller.signal
           })
-          .then(async function (response) {
-            clearTimeout(timeoutId);
-            var res = {};
-            try {
-              res = await response.json();
-            } catch (e) {
-              res = {};
-            }
-
-            if (response.ok && res.success) {
-              // Trigger Analytics / GTM conversion event
-              if (window.dataLayer) {
-                window.dataLayer.push({
-                  'event': 'london_heat_accreditation_submit',
-                  'form_name': 'london_heat_roundtable',
-                  'chamber': object.preferred_chamber || 'unspecified'
-                });
+            .then(async function (response) {
+              clearTimeout(timeoutId);
+              var res = {};
+              try {
+                res = await response.json();
+              } catch (e) {
+                res = {};
               }
 
-              // Display Executive Success Card
-              staticForm.style.display = 'none';
-              if (successCard) {
-                if (object.first_name && successMsg) {
-                  successMsg.innerHTML = 'Thank you, <strong>' + object.first_name + '</strong>. Your expression of interest for <strong>' + (object.preferred_chamber || 'the Roundtable') + '</strong> has been received by the London Secretariat.';
+              if (response.ok && res.success) {
+                // Trigger Analytics / GTM conversion event
+                if (window.dataLayer) {
+                  window.dataLayer.push({
+                    'event': 'london_heat_accreditation_submit',
+                    'form_name': 'london_heat_roundtable',
+                    'chamber': object.preferred_chamber || 'unspecified'
+                  });
                 }
-                successCard.style.display = 'block';
-                successCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-              }
-            } else {
-              var customMsg = 'Submission failed. Please try again or email info@mcmcer.com directly.';
-              if (response.status === 429) {
-                customMsg = 'Monthly submission capacity reached. Please send your details directly to <a href="mailto:info@mcmcer.com">info@mcmcer.com</a>.';
-              } else if (response.status === 403) {
-                customMsg = 'Access key verification error. Please email <a href="mailto:info@mcmcer.com">info@mcmcer.com</a> to apply.';
-              } else if (res && res.message) {
-                customMsg = res.message;
-              }
-              throw new Error(customMsg);
-            }
-          })
-          .catch(function (err) {
-            clearTimeout(timeoutId);
-            var userErrMsg = err.message || 'An error occurred while submitting your application.';
-            if (err.name === 'AbortError') {
-              userErrMsg = 'The request timed out due to slow network. Please check your connection and try again.';
-            } else if (!window.navigator.onLine) {
-              userErrMsg = 'You appear to be offline. Please reconnect to the internet and retry.';
-            }
 
-            if (statusBox) {
-              statusBox.innerHTML = '<span>⚠️ <strong>Submission Notice:</strong> ' + userErrMsg + '</span>' +
-                '<span style="font-size:12px;font-weight:400;margin-top:2px;">Need assistance? Contact <a href="mailto:info@mcmcer.com">info@mcmcer.com</a></span>';
-              statusBox.className = 'lc-form-status lc-form-status--error';
-              statusBox.style.display = 'flex';
-            }
-          })
-          .finally(function () {
-            if (submitBtn) {
-              submitBtn.disabled = false;
-              submitBtn.innerHTML = 'Submit Accreditation Request →';
-            }
-          });
+                // Display Executive Success Card
+                staticForm.style.display = 'none';
+                if (successCard) {
+                  if (object.first_name && successMsg) {
+                    successMsg.innerHTML = 'Thank you, <strong>' + object.first_name + '</strong>. Your expression of interest for <strong>' + (object.preferred_chamber || 'the Roundtable') + '</strong> has been received by the London Secretariat.';
+                  }
+                  successCard.style.display = 'block';
+                  successCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+              } else {
+                var customMsg = 'Submission failed. Please try again or email info@mcmcer.com directly.';
+                if (response.status === 429) {
+                  customMsg = 'Monthly submission capacity reached. Please send your details directly to <a href="mailto:info@mcmcer.com">info@mcmcer.com</a>.';
+                } else if (response.status === 403) {
+                  customMsg = 'Access key verification error. Please email <a href="mailto:info@mcmcer.com">info@mcmcer.com</a> to apply.';
+                } else if (res && res.message) {
+                  customMsg = res.message;
+                }
+                throw new Error(customMsg);
+              }
+            })
+            .catch(function (err) {
+              clearTimeout(timeoutId);
+              var userErrMsg = err.message || 'An error occurred while submitting your application.';
+              if (err.name === 'AbortError') {
+                userErrMsg = 'The request timed out due to slow network. Please check your connection and try again.';
+              } else if (!window.navigator.onLine) {
+                userErrMsg = 'You appear to be offline. Please reconnect to the internet and retry.';
+              }
+
+              if (statusBox) {
+                statusBox.innerHTML = '<span>⚠️ <strong>Submission Notice:</strong> ' + userErrMsg + '</span>' +
+                  '<span style="font-size:12px;font-weight:400;margin-top:2px;">Need assistance? Contact <a href="mailto:info@mcmcer.com">info@mcmcer.com</a></span>';
+                statusBox.className = 'lc-form-status lc-form-status--error';
+                statusBox.style.display = 'flex';
+              }
+            })
+            .finally(function () {
+              if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Submit Accreditation Request →';
+              }
+            });
         });
       }
     })();
