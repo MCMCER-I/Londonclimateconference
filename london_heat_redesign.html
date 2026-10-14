@@ -2757,20 +2757,37 @@
     <div class="lc-hero__overlay"></div>
 
     <div class="lc-hero__content">
-      <div class="lc-hero__hosts">
-        <span class="lc-hero__hosts-label">Hosted By</span>
-        <div class="lc-hero__hosts-logos">
-          <img src="https://globalnexconferences.com/wp-content/uploads/2026/09/White-2636X600-scaled.png" alt="MCMCER">
-        </div>
-        <span class="lc-hero__hosts-sep"></span>
-        <span class="lc-hero__hosts-label" style="color:rgba(255,255,255,0.7);font-size:10px;">In Partnership
-          With</span>
-        <div class="lc-hero__hosts-logos">
-          <img
-            src="https://cdn.prod.website-files.com/6a6f3f188c009ce091d63ad6/6a99726fde26a0acd0fad705_GAA%20Logo%20Simple.svg"
-            alt="GAA" class="lc-logo-gaa">
-        </div>
-      </div>
+  <div class="lc-hero__hosts">
+
+    <span class="lc-hero__hosts-label">Hosted By</span>
+
+    <div class="lc-hero__hosts-logos">
+      <a href="https://mcmcer.com/" target="_blank" rel="noopener noreferrer">
+        <img
+          src="https://globalnexconferences.com/wp-content/uploads/2026/09/White-2636X600-scaled.png"
+          alt="MCMCER">
+      </a>
+    </div>
+
+    <span class="lc-hero__hosts-sep"></span>
+
+    <span
+      class="lc-hero__hosts-label"
+      style="color:rgba(255,255,255,0.7);font-size:10px;">
+      In Partnership With
+    </span>
+
+    <div class="lc-hero__hosts-logos">
+      <a href="https://www.globaladvisoryalliance.com/" target="_blank" rel="noopener noreferrer">
+        <img
+          src="https://mcmcer.com/wp-content/uploads/2026/10/Global-Advisory-Logo-png-08.png"
+          alt="GAA"
+          class="lc-logo-gaa">
+      </a>
+    </div>
+
+  </div>
+</div>
 
       <h1 class="lc-hero__title">London Climate Resilience<br><em>Roundtable</em> 2026</h1>
 
@@ -3113,10 +3130,6 @@
       <div class="lc-lead__header">
         <span class="lc-label lc-label--center">Deliberation Leadership</span>
         <h2 class="lc-section-title">Chamber Moderators &amp; <em>Delegation</em></h2>
-        <p class="lc-section-subtitle" style="margin: 14px auto 0;">
-          Recognised European sustainability and environmental law authorities guide the discussions alongside senior
-          decision-makers across six core sectors.
-        </p>
       </div>
 
       <!-- Moderators Side-by-Side -->
@@ -3141,7 +3154,7 @@
               alt="Alessandra Vignola" loading="lazy">
           </div>
           <div class="lc-chair__body">
-            <span class="lc-chair__badge">Moderator · Roundtable A</span>
+            <span class="lc-chair__badge">Moderator · Roundtable B</span>
             <h3 class="lc-chair__name">Alessandra Vignola</h3>
             <div class="lc-chair__title">GRI Certified Sustainability Consultant, 20+ Years of International Experience,
               Sustainability Management Professional, Doctorate in business administration</div>
@@ -3370,7 +3383,7 @@
   <script>
     // ── 1. Live Countdown Timer ──
     (function () {
-      var target = new Date('2026-11-19T14:00:00+00:00').getTime();
+      var target = new Date('2026-11-19T14:00:00Z').getTime();
       function updateCD() {
         var now = new Date().getTime();
         var diff = target - now;
