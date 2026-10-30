@@ -1,0 +1,2105 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy & Data Protection Notice | London Climate Resilience Roundtable 2026</title>
+  <meta name="description"
+    content="Official UK GDPR and Data Protection Act 2018 Privacy Policy for the London Climate Resilience & Infrastructure Experience Survey, Roundtable, and Research Report by MCMCER.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Privacy Policy & Data Protection Notice | London Climate Resilience Roundtable 2026">
+  <meta property="og:description"
+    content="UK GDPR and Data Protection Act 2018 notice for participants in the London Climate Resilience & Infrastructure Experience Survey and Roundtable.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://roundtable.mcmcer.com/privacy-policy">
+  <meta property="og:image" content="hero_london_skyline.jpg">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    /* ═══════════════════════════════════════════════════════════════
+       DESIGN SYSTEM & TOKENS (Matching roundtable.mcmcer.com)
+       ═══════════════════════════════════════════════════════════════ */
+    :root {
+      --lc-display: 'Playfair Display', Georgia, serif;
+      --lc-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+      --lc-navy: #0C1B2A;
+      --lc-navy-deep: #071018;
+      --lc-charcoal: #152232;
+      --lc-ivory: #FAF8F5;
+      --lc-stone: #F2EFE9;
+      --lc-stone-light: #F9F7F4;
+      --lc-gold: #C9963B;
+      --lc-gold-light: #D9A94E;
+      --lc-gold-pale: #F8F2E4;
+      --lc-gold-glow: rgba(201, 150, 59, 0.16);
+      --lc-teal: #1B7A6E;
+      --lc-teal-light: #E7F6F3;
+      --lc-teal-dark: #12544C;
+      --lc-crimson: #B91C1C;
+      --lc-white: #FFFFFF;
+      --lc-text-dark: #0C1B2A;
+      --lc-text-body: #334155;
+      --lc-text-muted: #64748B;
+      --lc-border: #DFDBD3;
+      --lc-border-light: #EAE6DF;
+
+      --lc-container: 1240px;
+      --lc-radius: 12px;
+      --lc-radius-sm: 8px;
+      --lc-shadow-sm: 0 2px 8px rgba(12, 27, 42, 0.04);
+      --lc-shadow: 0 8px 28px rgba(12, 27, 42, 0.07);
+      --lc-shadow-lg: 0 16px 44px rgba(12, 27, 42, 0.12);
+      --lc-transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--lc-body);
+      font-size: 15.5px;
+      line-height: 1.7;
+      color: var(--lc-text-body);
+      background: var(--lc-ivory);
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    .lc-container {
+      max-width: var(--lc-container);
+      margin: 0 auto;
+      width: 100%;
+      padding: 0 clamp(16px, 4vw, 40px);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       NAVIGATION BAR
+       ═══════════════════════════════════════════════════════════════ */
+    .lc-nav {
+      position: sticky;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(250, 248, 245, 0.97);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--lc-border-light);
+      box-shadow: 0 4px 18px rgba(12, 27, 42, 0.04);
+      padding: 0 clamp(16px, 4vw, 40px);
+      transition: var(--lc-transition);
+    }
+
+    .lc-nav__inner {
+      max-width: var(--lc-container);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 78px;
+    }
+
+    .lc-nav__logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .lc-nav__logo img {
+      height: clamp(40px, 5vw, 54px);
+      width: auto;
+      object-fit: contain;
+    }
+
+    .lc-nav__links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .lc-nav__links a {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--lc-text-muted);
+      transition: color 0.2s ease;
+      padding: 6px 0;
+    }
+
+    .lc-nav__links a:hover {
+      color: var(--lc-gold);
+    }
+
+    .lc-nav__actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .lc-btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 18px;
+      background: transparent;
+      border: 1px solid var(--lc-gold);
+      color: var(--lc-gold);
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: var(--lc-radius-sm);
+      transition: var(--lc-transition);
+      white-space: nowrap;
+    }
+
+    .lc-btn-outline:hover {
+      background: var(--lc-gold-pale);
+      color: var(--lc-navy);
+      border-color: var(--lc-gold-light);
+      transform: translateY(-1px);
+    }
+
+    .lc-btn-gold {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      background: var(--lc-gold);
+      color: var(--lc-white);
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: var(--lc-radius-sm);
+      transition: var(--lc-transition);
+      box-shadow: 0 4px 14px rgba(201, 150, 59, 0.25);
+      white-space: nowrap;
+      border: none;
+    }
+
+    .lc-btn-gold:hover {
+      background: var(--lc-gold-light);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(201, 150, 59, 0.35);
+    }
+
+    .lc-nav__hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      width: 44px;
+      height: 44px;
+      position: relative;
+      padding: 0;
+      border-radius: 8px;
+    }
+
+    .lc-nav__hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--lc-text-dark);
+      position: absolute;
+      left: 11px;
+      transition: var(--lc-transition);
+      border-radius: 2px;
+    }
+
+    .lc-nav__hamburger span:nth-child(1) { top: 14px; }
+    .lc-nav__hamburger span:nth-child(2) { top: 21px; }
+    .lc-nav__hamburger span:nth-child(3) { top: 28px; }
+
+    /* Mobile Drawer */
+    .lc-mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 1100;
+      background: rgba(7, 16, 24, 0.98);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      padding: 30px 24px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      overflow-y: auto;
+    }
+
+    .lc-mobile-menu.is-active {
+      display: flex;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .lc-mobile-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 28px;
+      padding: 8px;
+    }
+
+    .lc-mobile-link {
+      font-size: 17px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.9);
+      transition: color 0.2s;
+    }
+
+    .lc-mobile-link:hover {
+      color: var(--lc-gold);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       HERO HEADER SECTION
+       ═══════════════════════════════════════════════════════════════ */
+    .pp-hero {
+      background: linear-gradient(135deg, var(--lc-navy-deep) 0%, var(--lc-navy) 60%, var(--lc-charcoal) 100%);
+      color: var(--lc-white);
+      padding: clamp(48px, 6vw, 76px) 0 clamp(40px, 5vw, 60px);
+      position: relative;
+      overflow: hidden;
+      border-bottom: 3px solid var(--lc-gold);
+    }
+
+    .pp-hero::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 550px;
+      height: 550px;
+      background: radial-gradient(circle, var(--lc-gold-glow) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .pp-hero__inner {
+      position: relative;
+      z-index: 2;
+    }
+
+    .pp-breadcrumbs {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.65);
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .pp-breadcrumbs a {
+      color: var(--lc-gold-light);
+      transition: color 0.2s;
+    }
+
+    .pp-breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+
+    .pp-breadcrumbs span.sep {
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    .pp-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+      align-items: center;
+    }
+
+    .pp-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      background: rgba(201, 150, 59, 0.18);
+      color: var(--lc-gold-light);
+      border: 1px solid rgba(201, 150, 59, 0.4);
+    }
+
+    .pp-badge--teal {
+      background: rgba(27, 122, 110, 0.25);
+      color: #7BE4D5;
+      border-color: rgba(27, 122, 110, 0.5);
+    }
+
+    .pp-badge--white {
+      background: rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.9);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .pp-hero__title {
+      font-family: var(--lc-display);
+      font-size: clamp(30px, 4.8vw, 48px);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--lc-white);
+      margin-bottom: 14px;
+      letter-spacing: -0.01em;
+    }
+
+    .pp-hero__title em {
+      font-style: italic;
+      color: var(--lc-gold-light);
+    }
+
+    .pp-hero__subtitle {
+      font-size: clamp(15.5px, 2.2vw, 19px);
+      line-height: 1.55;
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 820px;
+      margin-bottom: 28px;
+      font-weight: 400;
+    }
+
+    .pp-hero__meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      padding: 20px;
+      background: rgba(7, 16, 24, 0.65);
+      border: 1px solid rgba(201, 150, 59, 0.25);
+      border-radius: var(--lc-radius);
+      backdrop-filter: blur(12px);
+      margin-bottom: 24px;
+    }
+
+    .pp-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .pp-meta-item__label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--lc-gold);
+      font-weight: 700;
+    }
+
+    .pp-meta-item__val {
+      font-size: 13.5px;
+      color: var(--lc-white);
+      font-weight: 600;
+    }
+
+    .pp-meta-item__val a {
+      color: var(--lc-gold-light);
+      text-decoration: underline;
+    }
+
+    .pp-hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       EXECUTIVE SUMMARY HIGHLIGHTS (6 KEY PILLARS)
+       ═══════════════════════════════════════════════════════════════ */
+    .pp-pillars-sec {
+      padding: 44px 0 20px;
+      background: var(--lc-stone-light);
+      border-bottom: 1px solid var(--lc-border-light);
+    }
+
+    .pp-pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .pp-pillar-card {
+      background: var(--lc-white);
+      border: 1px solid var(--lc-border);
+      border-radius: var(--lc-radius);
+      padding: 20px;
+      box-shadow: var(--lc-shadow-sm);
+      transition: var(--lc-transition);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .pp-pillar-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--lc-shadow);
+      border-color: var(--lc-gold);
+    }
+
+    .pp-pillar-card__icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: var(--lc-gold-pale);
+      color: var(--lc-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .pp-pillar-card__title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--lc-navy);
+      line-height: 1.35;
+    }
+
+    .pp-pillar-card__desc {
+      font-size: 13px;
+      color: var(--lc-text-muted);
+      line-height: 1.55;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       MAIN TWO-COLUMN LAYOUT (SIDEBAR + CONTENT)
+       ═══════════════════════════════════════════════════════════════ */
+    .pp-main-layout {
+      padding: clamp(40px, 5vw, 64px) 0;
+    }
+
+    .pp-grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: clamp(24px, 4vw, 48px);
+      align-items: start;
+    }
+
+    /* Sticky Sidebar */
+    .pp-sidebar {
+      position: sticky;
+      top: 96px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+      padding-right: 6px;
+    }
+
+    /* Scrollbar styling for sidebar */
+    .pp-sidebar::-webkit-scrollbar {
+      width: 5px;
+    }
+    .pp-sidebar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .pp-sidebar::-webkit-scrollbar-thumb {
+      background: var(--lc-border);
+      border-radius: 4px;
+    }
+
+    .pp-toc-card {
+      background: var(--lc-white);
+      border: 1px solid var(--lc-border);
+      border-radius: var(--lc-radius);
+      padding: 20px;
+      box-shadow: var(--lc-shadow-sm);
+    }
+
+    .pp-toc-card__head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--lc-border-light);
+    }
+
+    .pp-toc-card__title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--lc-navy);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .pp-toc-search {
+      width: 100%;
+      padding: 8px 12px;
+      font-size: 12.5px;
+      border: 1px solid var(--lc-border);
+      border-radius: var(--lc-radius-sm);
+      margin-bottom: 12px;
+      background: var(--lc-ivory);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .pp-toc-search:focus {
+      border-color: var(--lc-gold);
+      background: var(--lc-white);
+    }
+
+    .pp-toc-list {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      max-height: 380px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+
+    .pp-toc-item a {
+      display: block;
+      padding: 6px 10px;
+      font-size: 12.5px;
+      color: var(--lc-text-body);
+      border-radius: 6px;
+      line-height: 1.4;
+      transition: all 0.18s ease;
+      text-decoration: none;
+    }
+
+    .pp-toc-item a:hover {
+      background: var(--lc-stone-light);
+      color: var(--lc-gold);
+      padding-left: 14px;
+    }
+
+    .pp-toc-item a.is-active {
+      background: var(--lc-gold-pale);
+      color: var(--lc-navy);
+      font-weight: 700;
+      border-left: 3px solid var(--lc-gold);
+    }
+
+    .pp-sidebar-action-card {
+      background: linear-gradient(145deg, var(--lc-navy) 0%, var(--lc-charcoal) 100%);
+      color: var(--lc-white);
+      border-radius: var(--lc-radius);
+      padding: 20px;
+      box-shadow: var(--lc-shadow);
+      border: 1px solid rgba(201, 150, 59, 0.3);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .pp-sidebar-action-card h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--lc-gold-light);
+    }
+
+    .pp-sidebar-action-card p {
+      font-size: 12.5px;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       POLICY CONTENT BODY
+       ═══════════════════════════════════════════════════════════════ */
+    .pp-content {
+      background: var(--lc-white);
+      border: 1px solid var(--lc-border);
+      border-radius: var(--lc-radius);
+      padding: clamp(24px, 4.5vw, 48px);
+      box-shadow: var(--lc-shadow);
+    }
+
+    .pp-section {
+      padding-bottom: 40px;
+      margin-bottom: 40px;
+      border-bottom: 1px solid var(--lc-border-light);
+      scroll-margin-top: 110px;
+    }
+
+    .pp-section:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .pp-sec-header {
+      margin-bottom: 18px;
+    }
+
+    .pp-sec-num {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--lc-gold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .pp-sec-title {
+      font-family: var(--lc-display);
+      font-size: clamp(22px, 3.2vw, 28px);
+      font-weight: 700;
+      color: var(--lc-navy);
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+    }
+
+    .pp-content p {
+      margin-bottom: 16px;
+      color: var(--lc-text-body);
+      font-size: 15.5px;
+      line-height: 1.75;
+    }
+
+    .pp-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .pp-content strong {
+      color: var(--lc-navy);
+      font-weight: 700;
+    }
+
+    .pp-content ul.pp-list {
+      margin: 16px 0 20px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .pp-content ul.pp-list li {
+      position: relative;
+      padding-left: 24px;
+      line-height: 1.65;
+      font-size: 15px;
+      color: var(--lc-text-body);
+    }
+
+    .pp-content ul.pp-list li::before {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--lc-gold);
+    }
+
+    /* Highlight & Notice Boxes */
+    .pp-callout {
+      border-radius: var(--lc-radius-sm);
+      padding: 20px 22px;
+      margin: 22px 0;
+      border-left: 4px solid var(--lc-gold);
+      background: var(--lc-gold-pale);
+    }
+
+    .pp-callout--teal {
+      border-left-color: var(--lc-teal);
+      background: var(--lc-teal-light);
+    }
+
+    .pp-callout--navy {
+      border-left-color: var(--lc-navy);
+      background: var(--lc-stone-light);
+    }
+
+    .pp-callout__title {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--lc-navy);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .pp-callout p {
+      font-size: 14.5px;
+      line-height: 1.65;
+      margin-bottom: 0;
+      color: var(--lc-text-body);
+    }
+
+    /* Subsections */
+    .pp-subsection {
+      margin-top: 24px;
+      padding: 18px 20px;
+      background: var(--lc-stone-light);
+      border: 1px solid var(--lc-border-light);
+      border-radius: var(--lc-radius-sm);
+    }
+
+    .pp-subsection__title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--lc-navy);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .pp-subsection p {
+      font-size: 14.5px;
+      line-height: 1.65;
+      margin-bottom: 0;
+    }
+
+    /* Data Retention Schedule Table */
+    .pp-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin: 22px 0;
+      border: 1px solid var(--lc-border);
+      border-radius: var(--lc-radius-sm);
+      box-shadow: var(--lc-shadow-sm);
+    }
+
+    .pp-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .pp-table th {
+      background: var(--lc-navy);
+      color: var(--lc-white);
+      padding: 14px 18px;
+      font-weight: 700;
+      font-size: 12.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-bottom: 2px solid var(--lc-gold);
+    }
+
+    .pp-table td {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--lc-border-light);
+      color: var(--lc-text-body);
+      vertical-align: top;
+    }
+
+    .pp-table tr:nth-child(even) td {
+      background: var(--lc-stone-light);
+    }
+
+    .pp-table tr:hover td {
+      background: var(--lc-gold-pale);
+    }
+
+    .pp-table td strong {
+      color: var(--lc-navy);
+    }
+
+    /* Rights Grid */
+    .pp-rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
+    }
+
+    .pp-right-card {
+      border: 1px solid var(--lc-border);
+      border-radius: var(--lc-radius-sm);
+      padding: 16px;
+      background: var(--lc-stone-light);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: var(--lc-transition);
+    }
+
+    .pp-right-card:hover {
+      border-color: var(--lc-gold);
+      background: var(--lc-white);
+      transform: translateY(-2px);
+      box-shadow: var(--lc-shadow-sm);
+    }
+
+    .pp-right-card__name {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--lc-navy);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .pp-right-card__desc {
+      font-size: 13.5px;
+      color: var(--lc-text-body);
+      line-height: 1.5;
+    }
+
+    /* Contact Details Block */
+    .pp-contact-card {
+      background: linear-gradient(135deg, var(--lc-navy-deep) 0%, var(--lc-navy) 100%);
+      color: var(--lc-white);
+      border-radius: var(--lc-radius);
+      padding: 28px;
+      border: 1px solid var(--lc-gold);
+      box-shadow: var(--lc-shadow);
+      margin-top: 24px;
+    }
+
+    .pp-contact-card__title {
+      font-family: var(--lc-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--lc-gold-light);
+      margin-bottom: 8px;
+    }
+
+    .pp-contact-card__org {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--lc-white);
+      margin-bottom: 18px;
+    }
+
+    .pp-contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+
+    .pp-contact-point {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .pp-contact-point__lbl {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--lc-gold);
+      font-weight: 700;
+    }
+
+    .pp-contact-point__val {
+      font-size: 14.5px;
+      color: var(--lc-white);
+    }
+
+    .pp-contact-point__val a {
+      color: var(--lc-gold-light);
+      text-decoration: underline;
+    }
+
+    .pp-contact-point__val a:hover {
+      color: var(--lc-white);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════════════ */
+    .lc-footer {
+      background: var(--lc-navy-deep);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 34px 0;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 13.5px;
+    }
+
+    .lc-footer__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .lc-footer__left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .lc-footer__dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--lc-gold);
+      display: inline-block;
+      box-shadow: 0 0 8px rgba(201, 150, 59, 0.6);
+    }
+
+    .lc-footer__left strong {
+      color: var(--lc-white);
+    }
+
+    .lc-footer__sep {
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    .lc-footer__right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      font-size: 13px;
+    }
+
+    .lc-footer__right a {
+      color: var(--lc-gold-light);
+      transition: color 0.2s;
+    }
+
+    .lc-footer__right a:hover {
+      color: var(--lc-white);
+      text-decoration: underline;
+    }
+
+    /* Copy Feedback Toast */
+    .pp-toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--lc-navy);
+      color: var(--lc-white);
+      padding: 12px 20px;
+      border-radius: var(--lc-radius-sm);
+      border-left: 4px solid var(--lc-gold);
+      box-shadow: var(--lc-shadow-lg);
+      font-size: 13.5px;
+      font-weight: 600;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(12px);
+      transition: all 0.3s ease;
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .pp-toast.is-show {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       RESPONSIVE BREAKPOINTS
+       ═══════════════════════════════════════════════════════════════ */
+    @media (max-width: 992px) {
+      .pp-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pp-sidebar {
+        position: relative;
+        top: 0;
+        max-height: none;
+        overflow-y: visible;
+        margin-bottom: 28px;
+      }
+
+      .lc-nav__links {
+        display: none;
+      }
+
+      .lc-nav__hamburger {
+        display: block;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .pp-hero__meta-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pp-hero__actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .pp-hero__actions a, .pp-hero__actions button {
+        text-align: center;
+        justify-content: center;
+      }
+
+      .lc-footer__inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       PRINT STYLESHEET
+       ═══════════════════════════════════════════════════════════════ */
+    @media print {
+      .lc-nav,
+      .pp-sidebar,
+      .lc-footer,
+      .pp-hero__actions,
+      .pp-toast,
+      .lc-mobile-menu {
+        display: none !important;
+      }
+
+      body {
+        background: #FFFFFF !important;
+        color: #000000 !important;
+        font-size: 11pt !important;
+        line-height: 1.5 !important;
+      }
+
+      .pp-hero {
+        background: #FFFFFF !important;
+        color: #000000 !important;
+        border-bottom: 2pt solid #000000 !important;
+        padding: 0 0 20pt 0 !important;
+      }
+
+      .pp-hero__title {
+        color: #000000 !important;
+        font-size: 20pt !important;
+      }
+
+      .pp-hero__subtitle, .pp-breadcrumbs, .pp-meta-item__val {
+        color: #333333 !important;
+      }
+
+      .pp-hero__meta-grid {
+        border: 1pt solid #CCCCCC !important;
+        background: #F9F9F9 !important;
+        color: #000000 !important;
+      }
+
+      .pp-content {
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+      }
+
+      .pp-section {
+        page-break-inside: avoid;
+        border-bottom: 1pt solid #E0E0E0 !important;
+        margin-bottom: 18pt !important;
+        padding-bottom: 18pt !important;
+      }
+
+      .pp-callout, .pp-subsection, .pp-right-card {
+        background: #F8F8F8 !important;
+        border: 1pt solid #CCCCCC !important;
+        color: #000000 !important;
+      }
+
+      .pp-contact-card {
+        background: #F8F8F8 !important;
+        color: #000000 !important;
+        border: 1pt solid #000000 !important;
+      }
+
+      .pp-contact-card__title, .pp-contact-point__lbl {
+        color: #000000 !important;
+      }
+
+      .pp-table th {
+        background: #EEEEEE !important;
+        color: #000000 !important;
+        border-bottom: 1pt solid #000000 !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       NAVIGATION
+       ═══════════════════════════════════════════════════════════════ -->
+  <nav class="lc-nav" id="lc-nav">
+    <div class="lc-nav__inner">
+      <a href="/" class="lc-nav__logo" title="London Climate Resilience Roundtable 2026">
+        <img src="conference_logo_clean.png" alt="MCMCER — London Climate Resilience Roundtable">
+      </a>
+
+      <div class="lc-nav__links">
+        <a href="/#challenge">The Challenge</a>
+        <a href="/#what-happens">What Happens</a>
+        <a href="/#roundtables">The Roundtables</a>
+        <a href="/#agenda">Programme</a>
+        <a href="/#leadership">Faculty</a>
+        <a href="/#partners">Partners</a>
+      </div>
+
+      <div class="lc-nav__actions">
+        <a href="MCMCER_London_Climate_Resilience_Privacy_Policy.pdf" download class="lc-btn-outline" title="Download Official PDF Version 1.1">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          Download PDF (v1.1)
+        </a>
+        <a href="/#register" class="lc-btn-gold">Request Invitation →</a>
+        <button class="lc-nav__hamburger" id="lc-hamburger" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="lc-mobile-menu" id="lc-mobile-menu">
+    <button class="lc-mobile-close" id="lc-mobile-close" aria-label="Close menu">✕</button>
+    <a href="/" class="lc-mobile-link">Home</a>
+    <a href="/#challenge" class="lc-mobile-link">The Challenge</a>
+    <a href="/#what-happens" class="lc-mobile-link">What Happens</a>
+    <a href="/#roundtables" class="lc-mobile-link">The Roundtables</a>
+    <a href="/#agenda" class="lc-mobile-link">Programme</a>
+    <a href="/#leadership" class="lc-mobile-link">Faculty & Delegation</a>
+    <a href="/#partners" class="lc-mobile-link">Partners</a>
+    <a href="MCMCER_London_Climate_Resilience_Privacy_Policy.pdf" download class="lc-mobile-link" style="color:var(--lc-gold-light);">Download Official PDF (v1.1)</a>
+    <a href="/#register" class="lc-mobile-link" style="color:var(--lc-gold); font-weight:700;">Request Invitation →</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       HERO HEADER SECTION
+       ═══════════════════════════════════════════════════════════════ -->
+  <header class="pp-hero">
+    <div class="lc-container">
+      <div class="pp-hero__inner">
+        <!-- Breadcrumbs -->
+        <nav class="pp-breadcrumbs" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span class="sep">/</span>
+          <span>Legal &amp; Compliance</span>
+          <span class="sep">/</span>
+          <span style="color:white; font-weight:600;">Privacy Policy &amp; Data Protection Notice</span>
+        </nav>
+
+        <!-- Compliance Badges -->
+        <div class="pp-badges">
+          <span class="pp-badge">UK GDPR &amp; DPA 2018 Compliant</span>
+          <span class="pp-badge pp-badge--teal">Version 1.1</span>
+          <span class="pp-badge pp-badge--white">Effective: 29 October 2026</span>
+          <span class="pp-badge pp-badge--white">ICO Regulatory Framework</span>
+        </div>
+
+        <h1 class="pp-hero__title">
+          Privacy Policy and <em>Data Protection Notice</em>
+        </h1>
+        <p class="pp-hero__subtitle">
+          London Climate Resilience &amp; Infrastructure Experience Survey, the London Climate Resilience Roundtable (19 November 2026), and Subsequent Research Report.
+        </p>
+
+        <!-- Executive Metadata Strip -->
+        <div class="pp-hero__meta-grid">
+          <div class="pp-meta-item">
+            <span class="pp-meta-item__label">Data Controller</span>
+            <span class="pp-meta-item__val">M.C. Mehta Centre for Education and Research (MCMCER)</span>
+          </div>
+          <div class="pp-meta-item">
+            <span class="pp-meta-item__label">Registered Address</span>
+            <span class="pp-meta-item__val">Mappin House, 4 Winsley Street, London, W1W 8HF</span>
+          </div>
+          <div class="pp-meta-item">
+            <span class="pp-meta-item__label">Data Protection Officer</span>
+            <span class="pp-meta-item__val"><a href="mailto:info@mcmcer.co.uk">info@mcmcer.co.uk</a></span>
+          </div>
+          <div class="pp-meta-item">
+            <span class="pp-meta-item__label">Research Secretariat</span>
+            <span class="pp-meta-item__val"><a href="mailto:roundtable@mcmcer.com">roundtable@mcmcer.com</a></span>
+          </div>
+        </div>
+
+        <!-- Quick Hero Action Buttons -->
+        <div class="pp-hero__actions">
+          <a href="MCMCER_London_Climate_Resilience_Privacy_Policy.pdf" download class="lc-btn-gold">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Download Official PDF Document (v1.1)
+          </a>
+          <button onclick="window.print()" class="lc-btn-outline" style="border-color:rgba(255,255,255,0.4); color:white;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 6 2 18 2 18 9"></polyline>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+              <rect x="6" y="14" width="12" height="8"></rect>
+            </svg>
+            Print Notice
+          </button>
+          <button onclick="copyContactEmail()" class="lc-btn-outline" style="border-color:rgba(201,150,59,0.7); color:var(--lc-gold-light);">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            Copy DPO Email
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       EXECUTIVE SUMMARY PILLARS (AT A GLANCE)
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="pp-pillars-sec">
+    <div class="lc-container">
+      <div class="pp-pillars-grid">
+        <div class="pp-pillar-card">
+          <div class="pp-pillar-card__icon">🛡️</div>
+          <h3 class="pp-pillar-card__title">100% Voluntary Participation</h3>
+          <p class="pp-pillar-card__desc">Participation in the survey is entirely optional. You may skip questions, decline sensitive inputs, or withdraw at any stage prior to submission.</p>
+        </div>
+
+        <div class="pp-pillar-card">
+          <div class="pp-pillar-card__icon">🔒</div>
+          <h3 class="pp-pillar-card__title">Special Category Safeguards</h3>
+          <p class="pp-pillar-card__desc">Ethnicity or health information is classified under UK GDPR Article 9 and processed strictly on the basis of separate, affirmative explicit consent.</p>
+        </div>
+
+        <div class="pp-pillar-card">
+          <div class="pp-pillar-card__icon">⚖️</div>
+          <h3 class="pp-pillar-card__title">Legitimate Research Basis</h3>
+          <p class="pp-pillar-card__desc">Core analytical processing operates under Article 6(1)(f) Legitimate Interests, supported by a formal Legitimate Interests Assessment (LIA).</p>
+        </div>
+
+        <div class="pp-pillar-card">
+          <div class="pp-pillar-card__icon">🚫</div>
+          <h3 class="pp-pillar-card__title">Zero Commercial Sale</h3>
+          <p class="pp-pillar-card__desc">Your personal data will never be sold, leased, or commercialised. Data will never be used to make decisions regarding employment, finance, or public assistance.</p>
+        </div>
+
+        <div class="pp-pillar-card">
+          <div class="pp-pillar-card__icon">📊</div>
+          <h3 class="pp-pillar-card__title">Aggregated Public Output</h3>
+          <p class="pp-pillar-card__desc">Findings presented at the 19 November Roundtable and published in the post-event research report will be aggregated and anonymised to eliminate identification risk.</p>
+        </div>
+
+        <div class="pp-pillar-card">
+          <div class="pp-pillar-card__icon">⏱️</div>
+          <h3 class="pp-pillar-card__title">1-Month Response Window</h3>
+          <p class="pp-pillar-card__desc">Exercise your rights of access, correction, erasure, or withdrawal anytime by contacting info@mcmcer.co.uk. Requests are fulfilled within 1 calendar month.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       MAIN TWO-COLUMN LAYOUT
+       ═══════════════════════════════════════════════════════════════ -->
+  <main class="pp-main-layout">
+    <div class="lc-container">
+      <div class="pp-grid">
+
+        <!-- ── STICKY LEFT SIDEBAR (TABLE OF CONTENTS) ── -->
+        <aside class="pp-sidebar" id="pp-sidebar">
+          <div class="pp-toc-card">
+            <div class="pp-toc-card__head">
+              <span class="pp-toc-card__title">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <line x1="8" y1="6" x2="21" y2="6"></line>
+                  <line x1="8" y1="12" x2="21" y2="12"></line>
+                  <line x1="8" y1="18" x2="21" y2="18"></line>
+                  <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                  <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                  <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                </svg>
+                Table of Contents
+              </span>
+              <span style="font-size:11px; font-weight:700; color:var(--lc-gold);">17 Sections</span>
+            </div>
+
+            <!-- Fast Filter Search -->
+            <input type="text" id="pp-toc-search-input" class="pp-toc-search" placeholder="Filter policy sections..." aria-label="Filter policy sections">
+
+            <nav>
+              <ul class="pp-toc-list" id="pp-toc-list">
+                <li class="pp-toc-item"><a href="#sec-1" class="is-active">1. Introduction</a></li>
+                <li class="pp-toc-item"><a href="#sec-2">2. Purpose of the Research</a></li>
+                <li class="pp-toc-item"><a href="#sec-3">3. Information We Collect</a></li>
+                <li class="pp-toc-item"><a href="#sec-4">4. Sensitive Personal Information</a></li>
+                <li class="pp-toc-item"><a href="#sec-5">5. Lawful Basis for Processing</a></li>
+                <li class="pp-toc-item"><a href="#sec-6">6. How Information Is Used</a></li>
+                <li class="pp-toc-item"><a href="#sec-7">7. Confidentiality &amp; Publication</a></li>
+                <li class="pp-toc-item"><a href="#sec-8">8. Research Personnel &amp; Responsibility</a></li>
+                <li class="pp-toc-item"><a href="#sec-9">9. Data Storage and Security</a></li>
+                <li class="pp-toc-item"><a href="#sec-10">10. Sharing of Information</a></li>
+                <li class="pp-toc-item"><a href="#sec-11">11. Data Retention Schedule</a></li>
+                <li class="pp-toc-item"><a href="#sec-12">12. Participation &amp; Withdrawal</a></li>
+                <li class="pp-toc-item"><a href="#sec-13">13. Data Protection Rights (UK GDPR)</a></li>
+                <li class="pp-toc-item"><a href="#sec-14">14. Email Communications &amp; Marketing</a></li>
+                <li class="pp-toc-item"><a href="#sec-15">15. Automated Decision-Making</a></li>
+                <li class="pp-toc-item"><a href="#sec-16">16. Changes to This Policy</a></li>
+                <li class="pp-toc-item"><a href="#sec-17">17. Contact Details &amp; Complaints</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Quick DPO Contact Widget -->
+          <div class="pp-sidebar-action-card">
+            <h4>Data Protection Officer</h4>
+            <p>For questions concerning the survey, withdrawal requests, or exercising statutory rights:</p>
+            <a href="mailto:info@mcmcer.co.uk" style="color:var(--lc-white); font-weight:700; text-decoration:underline; font-size:13.5px;">
+              info@mcmcer.co.uk
+            </a>
+            <p style="font-size:11.5px; color:rgba(255,255,255,0.65); margin-top:4px;">
+              M.C. Mehta Centre for Education and Research Ltd<br>
+              Mappin House, 4 Winsley Street, London, W1W 8HF
+            </p>
+          </div>
+        </aside>
+
+        <!-- ── MAIN CONTENT AREA ── -->
+        <article class="pp-content" id="pp-content">
+
+          <!-- ═══════════════════════════════════════════════════════════
+               SECTION 1: INTRODUCTION
+               ═══════════════════════════════════════════════════════════ -->
+          <section class="pp-section" id="sec-1">
+            <header class="pp-sec-header">
+              <span class="pp-sec-num">Section 01</span>
+              <h2 class="pp-sec-title">1. Introduction</h2>
+            </header>
+            <p>
+              <strong>M.C. Mehta Centre for Education and Research (MCMCER)</strong> is committed to protecting the privacy, confidentiality and personal information of individuals participating in the <strong>London Climate Resilience &amp; Infrastructure Experience Survey</strong>. This Privacy Policy explains how MCMCER collects, processes, stores, uses, shares and protects information provided through the survey.
+            </p>
+            <p>
+              MCMCER is the <strong>Data Controller</strong> and is responsible for ensuring that personal information is handled in accordance with the <strong>UK General Data Protection Regulation (UK GDPR)</strong>, the <strong>Data Protection Act 2018 (DPA 2018)</strong>, and other applicable data protection legislation.
+            </p>
+            <div class="pp-callout pp-callout--navy">
+              <div class="pp-callout__title">
+                <span>📋</span> Voluntary Participation Standard
+              </div>
+              <p>
+                Participation in the survey is entirely voluntary. Respondents may decline to answer questions they consider sensitive, personal, or irrelevant.
+              </p>
+            </div>
+            <p>
+              This policy applies specifically to the survey, associated research activities, the <strong>London Climate Resilience Roundtable</strong>, and the subsequent research report.
+            </p>
+          </section>
+
+          <!-- ═══════════════════════════════════════════════════════════
+               SECTION 2: PURPOSE OF THE RESEARCH
+               ═══════════════════════════════════════════════════════════ -->
+          <section class="pp-section" id="sec-2">
+            <header class="pp-sec-header">
+              <span class="pp-sec-num">Section 02</span>
+              <h2 class="pp-sec-title">2. Purpose of the Research</h2>
+            </header>
+            <p>
+              The survey aims to understand how climate change, extreme weather, and related infrastructure challenges affect individuals, households, and communities across London. The research examines:
+            </p>
+            <ul class="pp-list">
+              <li><strong>Personal and household circumstances</strong> across London boroughs.</li>
+              <li><strong>Housing conditions and climate resilience</strong> (including insulation, cooling, and structural exposure).</li>
+              <li><strong>Exposure to extreme weather</strong>, including flooding, overheating, storms, and drought.</li>
+              <li><strong>Household income, financial pressures, and living costs</strong> linked to seasonal climate extremes.</li>
+              <li><strong>Transport accessibility, mobility, and infrastructure disruption</strong> during climate incidents.</li>
+              <li><strong>Physical and mental health impacts</strong> resulting from prolonged environmental stress.</li>
+              <li><strong>Access to public services, financial assistance, and community support</strong> mechanisms.</li>
+              <li><strong>Experiences of fairness, discrimination, and community participation</strong> in climate planning.</li>
+              <li><strong>Opportunities to improve London’s climate resilience</strong> and systemic adaptation readiness.</li>
+            </ul>
+            <div class="pp-callout pp-callout--teal">
+              <div class="pp-callout__title">
+                <span>🏛️</span> Application to Policy &amp; Roundtable Deliberations
+              </div>
+              <p>
+                The information collected will help shape discussions at the <strong>London Climate Resilience Roundtable on 19 November 2026</strong>. Findings will also contribute to a post-event research report intended for policymakers, government bodies, industry leaders, academic stakeholders, and other relevant organisations. The research aims to identify challenges, highlight inequalities, and support the development of practical recommendations.
+              </p>
+            </div>
+          </section>
+
+          <!-- ═══════════════════════════════════════════════════════════
+               SECTION 3: INFORMATION WE COLLECT
+               ═══════════════════════════════════════════════════════════ -->
+          <section class="pp-section" id="sec-3">
+            <header class="pp-sec-header">
+              <span class="pp-sec-num">Section 03</span>
+              <h2 class="pp-sec-title">3. Information We Collect</h2>
+            </header>
+            <p>
+              MCMCER may collect the following categories of information, depending on which questions respondents choose to answer:
+            </p>
+
+            <div class="pp-subsection">
+              <h3 class="pp-subsection__title">3.1 Personal and Demographic Information</h3>
+              <p>Borough of residence, gender, ethnicity, educational attainment, employment status, occupation, industry sector, relationship status, dependants, and household composition.</p>
+            </div>
+
+            <div class="pp-subsection">
+              <h3 class="pp-subsection__title">3.2 Financial and Housing Information</h3>
+              <p>Household income ranges, housing tenure, property type, living costs, energy affordability, housing conditions, climate-related damage, and financial difficulties.</p>
+            </div>
+
+            <div class="pp-subsection">
+              <h3 class="pp-subsection__title">3.3 Health and Wellbeing Information</h3>
+              <p>Existing health conditions, disabilities, physical or mental health impacts, injuries, medical treatment, and vulnerability to extreme weather. Some responses may concern other household members. Respondents are asked not to include identifying details about those individuals.</p>
+            </div>
+
+            <div class="pp-subsection">
+              <h3 class="pp-subsection__title">3.4 Climate and Infrastructure Experiences</h3>
+              <p>Experiences of flooding, overheating, extreme storms, drought, transport disruption, housing resilience, and access to climate-related infrastructure.</p>
+            </div>
+
+            <div class="pp-subsection">
+              <h3 class="pp-subsection__title">3.5 Community and Public Service Experiences</h3>
+              <p>Access to local authority or government support, barriers to assistance, experiences of discrimination, community resilience, and participation in local decision-making.</p>
+            </div>
+
+            <div class="pp-subsection">
+              <h3 class="pp-subsection__title">3.6 Contact Information</h3>
+              <p>Where voluntarily provided, MCMCER may collect email addresses to communicate research updates or other information specifically requested by respondents.</p>
+            </div>
+
+            <div class="pp-subsection">
+              <h3 class="pp-subsection__title">3.7 Additional Comments</h3>
+              <p>Respondents may provide written comments about their experiences. They are encouraged not to include names, addresses, medical record numbers, or identifying details about themselves or others.</p>
+            </div>
+          </section>
+
+          <!-- ═══════════════════════════════════════════════════════════
+               SECTION 4: SENSITIVE PERSONAL INFORMATION
+               ═══════════════════════════════════════════════════════════ -->
+          <section class="pp-section" id="sec-4">
+            <header class="pp-sec-header">
+              <span class="pp-sec-num">Section 04</span>
+              <h2 class="pp-sec-title">4. Sensitive Personal Information</h2>
+            </header>
+            <p>
+              Some information requested through the survey is classified as <strong>special category personal data under Article 9 of UK GDPR</strong>. This includes:
+            </p>
+            <ul class="pp-list">
+              <li>Racial or ethnic origin.</li>
+              <li>Physical or mental health information.</li>
+              <li>Information about disabilities or medical treatment where it reveals health status.</li>
+              <li>Other information that may reveal protected special category characteristics.</li>
+            </ul>
+            <p>
+              Financial circumstances and experiences of discrimination may also be sensitive, although they are not automatically special category data. MCMCER recognises that such information requires additional protection.
+            </p>
+            <div class="pp-callout pp-callout--teal">
+              <div class="pp-callout__title">
+                <span>🛡️</span> Lawful Condition: UK GDPR Article 9(2)(a) Explicit Consent
+              </div>
+              <p>
+                For special category information collected on the basis of explicit consent, MCMCER relies on <strong>Article 9(2)(a) UK GDPR</strong>, which permits processing where an individual has given explicit consent for specified purposes. Explicit consent will be requested separately through the survey.
+              </p>
+            </div>
+            <p>
+              Providing sensitive information is voluntary. Respondents who do not provide explicit consent may still participate in other sections of the survey. MCMCER will limit access to sensitive information, apply appropriate security measures, and avoid publishing information that could identify individuals. Where consent is withdrawn, MCMCER will stop the relevant processing and delete or anonymise identifiable information where required by law.
+            </p>
+          </section>
+
+          <!-- ═══════════════════════════════════════════════════════════
+               SECTION 5: LAWFUL BASIS FOR PROCESSING
+               ═══════════════════════════════════════════════════════════ -->
+          <section class="pp-section" id="sec-5">
+            <header class="pp-sec-header">
+              <span class="pp-sec-num">Section 05</span>
+              <h2 class="pp-sec-title">5. Lawful Basis for Processing</h2>
+            </header>
+            <p>
+              MCMCER processes personal information for legitimate research purposes and will maintain an appropriate lawful basis for each processing activity.
+            </p>
+
+            <div class="pp-subsection">
+              <h3 class="pp-subsection__title">5.1 Core Research Activities — Article 6(1)(f) Legitimate Interests</h3>
+              <p>
+                The intended lawful basis is <strong>Article 6(1)(f) UK GDPR: Legitimate Interests</strong>. MCMCER has a legitimate interest in conducting research to understand climate resilience challenges, identify community needs, and contribute to evidence-based policy and industry discussions.
+              </p>
+              <p style="margin-top:8px;">
+                This basis will be used only where the processing is necessary for those purposes and MCMCER has assessed that its interests are not overridden by the rights and freedoms of respondents. MCMCER will document this assessment through a <strong>Legitimate Interests Assessment (LIA)</strong> before commencing processing.
+              </p>
+            </div>
+
+            <div class="pp-subsection">
+              <h3 class="pp-subsection__title">5.2 Special Category Information — Article 9(2)(a) Explicit Consent</h3>
+              <p>
+                Where MCMCER relies on explicit consent to process ethnicity or health information, the additional condition is <strong>Article 9(2)(a) UK GDPR</strong>. This operates alongside the Article 6 lawful basis and does not replace it.
+              </p>
+            </div>
+
+            <div class="pp-subsection">
+              <h3 class="pp-subsection__title">5.3 Optional Communications — Separate Marketing Consent</h3>
+              <p>
+                Where respondents voluntarily request research updates, their contact information will be processed for that stated purpose under an appropriate lawful basis. Promotional communications about unrelated MCMCER events, training programmes, or services will be treated separately and sent only where permitted under applicable data protection and electronic marketing law (including the Privacy and Electronic Communications Regulations — PECR).
+              </p>
+            </div>
+          </section>
+
+          <!-- ═══════════════════════════════════════════════════════════
+               SECTION 6: HOW INFORMATION IS USED
+               ═══════════════════════════════════════════════════════════ -->
+          <section class="pp-section" id="sec-6">
+            <header class="pp-sec-header">
+              <span class="pp-sec-num">Section 06</span>
+              <h2 class="pp-sec-title">6. How Information Is Used</h2>
+            </header>
+            <p>MCMCER will use survey information to:</p>
+            <ul class="pp-list">
+              <li>Analyse experiences of climate-related risks.</li>
+              <li>Identify patterns across demographic and household groups.</li>
+              <li>Examine the relationship between climate exposure, health, housing, and financial pressures.</li>
+              <li>Understand barriers to accessing public services and assistance.</li>
+              <li>Identify infrastructure and community resilience challenges.</li>
+              <li>Develop statistical findings, research summaries, and recommendations.</li>
+              <li>Inform discussions at the London Climate Resilience Roundtable.</li>
+              <li>Prepare and publish the subsequent research report.</li>
+            </ul>
+
+            <div class="pp-callout pp-callout--navy">
+              <div class="pp-callout__title">
+                <span>🚫</span> Explicit Data Protection Prohibitions
+              </div>
+              <p>
+                Survey responses will <strong>not</strong> be used to assess an individual’s eligibility for employment, financial assistance, healthcare, or public services. MCMCER will <strong>never sell</strong> respondents’ personal information. Personal information will not be repurposed for unrelated commercial activities without an appropriate lawful basis and any required additional privacy information.
+              </p>
+            </div>
+          </section>
+
+          <!-- ═══════════════════════════════════════════════════════════
+               SECTION 7: CONFIDENTIALITY, ANONYMITY AND PUBLICATION
+               ═══════════════════════════════════════════════════════════ -->
+          <section class="pp-section" id="sec-7">
+            <header class="pp-sec-header">
+              <span class="pp-sec-num">Section 07</span>
+              <h2 class="pp-sec-title">7. Confidentiality, Anonymity and Publication</h2>
+            </header>
+            <p>
+              MCMCER will treat identifiable survey responses confidentially. Access to identifiable information will be restricted to authorised individuals involved in the research. The final report will present findings in aggregated or appropriately anonymised form.
+            </p>
+            <p>
+              MCMCER will take reasonable measures to prevent identification, including:
+            </p>
+            <ul class="pp-list">
+              <li>Combining responses into broader statistical groups.</li>
+              <li>Avoiding publication of unnecessarily detailed demographic combinations.</li>
+              <li>Suppressing or combining small sample groups where identification risks arise.</li>
+              <li>Reviewing written comments before publication.</li>
+              <li>Removing or paraphrasing identifying information.</li>
+              <li>Avoiding disclosure of identifiable medical, financial, or discrimination-related experiences.</li>
+            </ul>
+            <p>
+              Survey responses may remain personal data while held internally, even where names have not been collected, because combinations of answers may potentially identify an individual. MCMCER will not describe identifiable raw responses as anonymous. Once information has been irreversibly anonymised, it may be retained and used for statistical reporting and research purposes without identifying respondents.
+            </p>
+          </section>
+
+          <!-- ═══════════════════════════════════════════════════════════
+               SECTION 8: RESEARCH PERSONNEL AND RESPONSIBILITY
+               ═══════════════════════════════════════════════════════════ -->
+          <section class="pp-section" id="sec-8">
+            <header class="pp-sec-header">
+              <span class="pp-sec-num">Section 08</span>
+              <h2 class="pp-sec-title">8. Research Personnel and Responsibility</h2>
+            </header>
+            <p>
+              MCMCER may appoint staff, research assistants, volunteers, and research interns to support the survey. Their responsibilities may include:
+            </p>
+            <ul class="pp-list">
+              <li>Distributing survey invitations.</li>
+              <li>Circulating questionnaires.</li>
+              <li>Collecting responses through approved systems.</li>
+              <li>Supporting data organisation and research administration.</li>
+              <li>Assisting with statistical analysis and report preparation.</li>
+            </ul>
+            <p>
+              These individuals act solely on behalf of MCMCER and under its instructions. MCMCER retains responsibility for determining the purposes and methods of processing personal information. Authorised research personnel must follow confidentiality requirements, data protection procedures, and information security instructions. They are not permitted to use collected information for their own independent purposes or disclose it to unauthorised parties. MCMCER remains accountable for its obligations as Data Controller.
+            </p>
+          </section>
+
+          <!-- ═══════════════════════════════════════════════════════════
+               SECTION 9: DATA STORAGE AND SECURITY
+               ═══════════════════════════════════════════════════════════ -->
+          <section class="pp-section" id="sec-9">
+            <header class="pp-sec-header">
+              <span class="pp-sec-num">Section 09</span>
+              <h2 class="pp-sec-title">9. Data Storage and Security</h2>
+            </header>
+            <p>
+              Survey responses will be collected using Google Forms and may be stored or processed using associated Google services, including Google Drive or Google Sheets, where approved by MCMCER.
+            </p>
+            <p>
+              MCMCER will apply appropriate technical and organisational security measures, including:
+            </p>
+            <ul class="pp-list">
+              <li>Restricting access to authorised personnel.</li>
+              <li>Using approved organisational accounts.</li>
+              <li>Applying suitable authentication and access controls.</li>
+              <li>Limiting access to sensitive information.</li>
+              <li>Separating contact information from research responses where practicable.</li>
+              <li>Preventing unauthorised downloading, copying, or sharing.</li>
+              <li>Reviewing access permissions when individuals leave the research project.</li>
+              <li>Securely deleting or anonymising information when no longer required.</li>
+            </ul>
+
+            <div class="pp-callout pp-callout--teal">
+              <div class="pp-callout__title">
+                <span>🌐</span> International Data Transfers &amp; Safeguards
+              </div>
+              <p>
+                Google may process data using infrastructure outside the United Kingdom, depending on the applicable service arrangements. Where personal information is transferred internationally, MCMCER will ensure that an appropriate transfer mechanism applies, such as UK adequacy regulations or approved contractual safeguards (e.g. Standard Contractual Clauses or the UK International Data Transfer Addendum), where required. Details of applicable transfer safeguards may be requested from <a href="mailto:info@mcmcer.co.uk" style="color:var(--lc-teal-dark); font-weight:700; text-decoration:underline;">info@mcmcer.co.uk</a>. MCMCER will review its Google service arrangements and data processing terms to ensure they are appropriate for the survey.
+              </p>
+            </div>
+          </section>
+
+          <!-- ═══════════════════════════════════════════════════════════
+               SECTION 10: SHARING OF INFORMATION
+               ═══════════════════════════════════════════════════════════ -->
+          <section class="pp-section" id="sec-10">
+            <header class="pp-sec-header">
+              <span class="pp-sec-num">Section 10</span>
+              <h2 class="pp-sec-title">10. Sharing of Information</h2>
+            </header>
+            <p>
+              MCMCER may share <strong>aggregated or appropriately anonymised</strong> findings with:
+            </p>
+            <ul class="pp-list">
+              <li>London Climate Resilience Roundtable participants.</li>
+              <li>Government departments and public authorities.</li>
+              <li>Industry leaders and professional organisations.</li>
+              <li>Academic and research institutions.</li>
+              <li>Relevant policymakers.</li>
+              <li>Other recipients of the final research report.</li>
+            </ul>
+            <p>
+              MCMCER does not intend to share identifiable individual survey responses with these audiences. Identifiable information may be accessible to authorised personnel and service providers where necessary for approved research operations, subject to appropriate contractual, confidentiality, and security safeguards. Information may also be disclosed where required by applicable law. MCMCER will not sell personal information or provide identifiable survey responses to third parties for their independent marketing purposes.
+            </p>
+          </section>
+
+          <!-- ═══════════════════════════════════════════════════════════
+               SECTION 11: DATA RETENTION SCHEDULE
+               ═══════════════════════════════════════════════════════════ -->
+          <section class="pp-section" id="sec-11">
+            <header class="pp-sec-header">
+              <span class="pp-sec-num">Section 11</span>
+              <h2 class="pp-sec-title">11. Data Retention</h2>
+            </header>
+            <p>
+              MCMCER will retain identifiable personal information only for as long as reasonably necessary to complete the research, produce the report, manage data protection requests, and meet applicable legal obligations. The proposed retention schedule for this project is:
+            </p>
+
+            <!-- Structured Retention Table -->
+            <div class="pp-table-wrap">
+              <table class="pp-table">
+                <thead>
+                  <tr>
+                    <th>Data Category</th>
+                    <th>Proposed Retention Schedule</th>
+                    <th>Post-Retention Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Survey Responses</strong></td>
+                    <td>Up to 12 months following publication of the final research report, unless a longer period is lawfully required.</td>
+                    <td>Securely deleted or irreversibly anonymised.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Special Category Information</strong></td>
+                    <td>Up to 12 months following publication of the final report, subject to review of whether earlier deletion or anonymisation is possible.</td>
+                    <td>Earlier deletion or irreversible anonymisation.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Email Addresses for Research Updates</strong></td>
+                    <td>Until the research communication programme concludes, or until the respondent withdraws their request to receive updates, whichever occurs first.</td>
+                    <td>Removed from research mailing lists immediately upon withdrawal.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Marketing Contact Details</strong></td>
+                    <td>Until the individual withdraws consent or the information is no longer required for the stated purpose, subject to periodic review.</td>
+                    <td>Deleted from active marketing databases.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Consent &amp; Compliance Records</strong></td>
+                    <td>For as long as reasonably necessary to demonstrate compliance with applicable data protection requirements and manage potential legal claims.</td>
+                    <td>Retained under secure compliance archive.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>
+              At the end of the applicable retention period, identifiable information will be securely deleted or anonymised. Anonymised statistical findings and published research outputs may be retained for historical, educational, and research purposes. MCMCER will review the retention schedule periodically and document any justified extensions.
+            </p>
+          </section>
+
+          <!-- ═══════════════════════════════════════════════════════════
+               SECTION 12: VOLUNTARY PARTICIPATION AND WITHDRAWAL
+               ═══════════════════════════════════════════════════════════ -->
+          <section class="pp-section" id="sec-12">
+            <header class="pp-sec-header">
+              <span class="pp-sec-num">Section 12</span>
+              <h2 class="pp-sec-title">12. Voluntary Participation and Withdrawal</h2>
+            </header>
+            <p>
+              Participation in the survey is entirely voluntary. Respondents may decline to participate, skip individual questions, or stop completing the survey before submission. Where processing relies on consent, individuals may withdraw that consent at any time. Requests to withdraw consent or exercise data protection rights may be submitted to: <a href="mailto:info@mcmcer.co.uk" style="color:var(--lc-gold); font-weight:700; text-decoration:underline;">info@mcmcer.co.uk</a>.
+            </p>
+            <p>
+              Respondents should provide sufficient information to enable MCMCER to identify the relevant survey response, where possible. MCMCER will not require individuals to disclose unnecessary additional sensitive information when making a request. Where a response can be identified, MCMCER will assess the request and take appropriate action in accordance with applicable law.
+            </p>
+            <div class="pp-callout pp-callout--navy">
+              <div class="pp-callout__title">
+                <span>ℹ️</span> Effect of Irreversible Anonymisation
+              </div>
+              <p>
+                If responses have already been irreversibly anonymised, it may no longer be possible to identify or remove an individual submission. Withdrawal of consent does not affect processing lawfully undertaken before the withdrawal. Where a request concerns processing based on legitimate interests, MCMCER will assess any objection in accordance with the applicable UK GDPR requirements.
+              </p>
+            </div>
+          </section>
+
+          <!-- ═══════════════════════════════════════════════════════════
+               SECTION 13: DATA PROTECTION RIGHTS
+               ═══════════════════════════════════════════════════════════ -->
+          <section class="pp-section" id="sec-13">
+            <header class="pp-sec-header">
+              <span class="pp-sec-num">Section 13</span>
+              <h2 class="pp-sec-title">13. Data Protection Rights</h2>
+            </header>
+            <p>
+              Under UK GDPR, respondents may have the following statutory rights, subject to applicable conditions and exemptions:
+            </p>
+
+            <div class="pp-rights-grid">
+              <div class="pp-right-card">
+                <span class="pp-right-card__name">🔍 Right of Access</span>
+                <span class="pp-right-card__desc">To request confirmation of processing and access to personal information held about you.</span>
+              </div>
+              <div class="pp-right-card">
+                <span class="pp-right-card__name">✏️ Right to Rectification</span>
+                <span class="pp-right-card__desc">To request correction of inaccurate, incomplete, or out-of-date personal information.</span>
+              </div>
+              <div class="pp-right-card">
+                <span class="pp-right-card__name">🗑️ Right to Erasure</span>
+                <span class="pp-right-card__desc">To request deletion of your personal data where retention is no longer necessary or lawful.</span>
+              </div>
+              <div class="pp-right-card">
+                <span class="pp-right-card__name">⏸️ Right to Restriction</span>
+                <span class="pp-right-card__desc">To request that processing of your personal information be restricted in certain circumstances.</span>
+              </div>
+              <div class="pp-right-card">
+                <span class="pp-right-card__name">🛑 Right to Object</span>
+                <span class="pp-right-card__desc">To object to processing based on legitimate interests, including relevant research processing.</span>
+              </div>
+              <div class="pp-right-card">
+                <span class="pp-right-card__name">📦 Right to Data Portability</span>
+                <span class="pp-right-card__desc">To request transfer of eligible personal information where statutory legal requirements apply.</span>
+              </div>
+              <div class="pp-right-card">
+                <span class="pp-right-card__name">↩️ Right to Withdraw Consent</span>
+                <span class="pp-right-card__desc">To withdraw previously provided consent at any time for processing activities that rely upon it.</span>
+              </div>
+            </div>
+
+            <p>
+              MCMCER will respond to valid requests within the timescales required by law, <strong>normally within one calendar month</strong>, subject to permitted extensions under UK GDPR. Requests should be sent to <a href="mailto:info@mcmcer.co.uk" style="color:var(--lc-gold); font-weight:700; text-decoration:underline;">info@mcmcer.co.uk</a>.
+            </p>
+
+            <div class="pp-callout pp-callout--teal">
+              <div class="pp-callout__title">
+                <span>⚖️</span> Supervisory Authority Escalation (ICO)
+              </div>
+              <p>
+                Individuals who are dissatisfied with how their personal information has been handled may complain to the <strong>Information Commissioner’s Office (ICO)</strong>, the UK independent supervisory authority for data protection:<br>
+                Website: <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" style="color:var(--lc-teal-dark); font-weight:700; text-decoration:underline;">https://ico.org.uk</a> · Helpline: 0303 123 1113
+              </p>
+            </div>
+          </section>
+
+          <!-- ═══════════════════════════════════════════════════════════
+               SECTION 14: EMAIL COMMUNICATIONS AND MARKETING
+               ═══════════════════════════════════════════════════════════ -->
+          <section class="pp-section" id="sec-14">
+            <header class="pp-sec-header">
+              <span class="pp-sec-num">Section 14</span>
+              <h2 class="pp-sec-title">14. Email Communications and Marketing</h2>
+            </header>
+            <p>
+              Providing an email address is optional and is not a requirement for participating in the survey. Where respondents request updates about the London Climate Resilience research project, MCMCER may use their email address to provide relevant information about the research, its progress, and the final report.
+            </p>
+            <p>
+              MCMCER will treat promotional communications as a separate purpose. This may include information about future events, educational programmes, professional training, or other MCMCER activities. Where required, MCMCER will obtain separate, affirmative marketing consent. Refusing marketing communications will not affect survey participation.
+            </p>
+            <p>
+              Recipients may withdraw consent or unsubscribe from promotional communications at any time. Contact information collected solely for research updates will not automatically be added to MCMCER’s general marketing database.
+            </p>
+          </section>
+
+          <!-- ═══════════════════════════════════════════════════════════
+               SECTION 15: AUTOMATED DECISION-MAKING
+               ═══════════════════════════════════════════════════════════ -->
+          <section class="pp-section" id="sec-15">
+            <header class="pp-sec-header">
+              <span class="pp-sec-num">Section 15</span>
+              <h2 class="pp-sec-title">15. Automated Decision-Making</h2>
+            </header>
+            <p>
+              MCMCER does not intend to use survey responses to make solely automated decisions that produce legal or similarly significant effects on individual respondents.
+            </p>
+            <p>
+              Survey information may be analysed using statistical or digital research tools to identify trends and patterns. Such analysis is intended to support research findings rather than make decisions about individual participants.
+            </p>
+          </section>
+
+          <!-- ═══════════════════════════════════════════════════════════
+               SECTION 16: CHANGES TO THIS PRIVACY POLICY
+               ═══════════════════════════════════════════════════════════ -->
+          <section class="pp-section" id="sec-16">
+            <header class="pp-sec-header">
+              <span class="pp-sec-num">Section 16</span>
+              <h2 class="pp-sec-title">16. Changes to This Privacy Policy</h2>
+            </header>
+            <p>
+              MCMCER may update this Privacy Policy to reflect changes in the research project, data processing arrangements, or applicable legal requirements. Where material changes affect how personal information is used, MCMCER will provide additional information or seek further consent where required. The latest version of the policy will be made available to survey participants on this page.
+            </p>
+          </section>
+
+          <!-- ═══════════════════════════════════════════════════════════
+               SECTION 17: CONTACT DETAILS
+               ═══════════════════════════════════════════════════════════ -->
+          <section class="pp-section" id="sec-17">
+            <header class="pp-sec-header">
+              <span class="pp-sec-num">Section 17</span>
+              <h2 class="pp-sec-title">17. Contact Details</h2>
+            </header>
+            <p>
+              For questions concerning the survey, personal information, data protection rights, or withdrawal requests, please contact our data governance secretariat:
+            </p>
+
+            <div class="pp-contact-card">
+              <h3 class="pp-contact-card__title">M.C. Mehta Centre for Education and Research</h3>
+              <p class="pp-contact-card__org">London Secretariat &amp; Data Governance Directorate</p>
+
+              <div class="pp-contact-grid">
+                <div class="pp-contact-point">
+                  <span class="pp-contact-point__lbl">Research Inquiries</span>
+                  <span class="pp-contact-point__val"><a href="mailto:roundtable@mcmcer.com">roundtable@mcmcer.com</a></span>
+                </div>
+                <div class="pp-contact-point">
+                  <span class="pp-contact-point__lbl">General Enquiries</span>
+                  <span class="pp-contact-point__val"><a href="mailto:info@mcmcer.co.uk">info@mcmcer.co.uk</a></span>
+                </div>
+                <div class="pp-contact-point">
+                  <span class="pp-contact-point__lbl">Data Protection Officer</span>
+                  <span class="pp-contact-point__val"><a href="mailto:info@mcmcer.co.uk">info@mcmcer.co.uk</a></span>
+                </div>
+                <div class="pp-contact-point">
+                  <span class="pp-contact-point__lbl">Correspondence Address</span>
+                  <span class="pp-contact-point__val">Mappin House, 4 Winsley Street, London, W1W 8HF, United Kingdom</span>
+                </div>
+              </div>
+
+              <div style="border-top:1px solid rgba(255,255,255,0.15); padding-top:16px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:12.5px; color:rgba(255,255,255,0.75);">
+                <span>Policy Version: <strong>1.1</strong></span>
+                <span>Last Updated: <strong>29 October 2026</strong></span>
+                <span>Scope: <strong>London Climate Resilience &amp; Infrastructure Experience Survey &amp; Roundtable</strong></span>
+              </div>
+            </div>
+          </section>
+
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       FOOTER (Matching roundtable.mcmcer.com)
+       ═══════════════════════════════════════════════════════════════ -->
+  <footer class="lc-footer">
+    <div class="lc-container">
+      <div class="lc-footer__inner">
+        <div class="lc-footer__left">
+          <span class="lc-footer__dot"></span>
+          <strong>London Climate Resilience Roundtable 2026</strong>
+          <span class="lc-footer__sep">·</span>
+          <span>19 November 2026, Central London</span>
+        </div>
+        <div class="lc-footer__right">
+          <a href="/privacy-policy" style="color:var(--lc-white); font-weight:700;">Privacy Policy</a>
+          <span class="lc-footer__sep">·</span>
+          <a href="mailto:info@mcmcer.com">info@mcmcer.com</a>
+          <span class="lc-footer__sep">·</span>
+          <a href="https://mcmcer.com" target="_blank" rel="noopener">mcmcer.com</a>
+          <span class="lc-footer__sep">·</span>
+          <span>© 2026 MCMCER Ltd. All Rights Reserved.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Copy Toast Notification -->
+  <div class="pp-toast" id="pp-toast">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9963B" stroke-width="2.5">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+    <span id="pp-toast-text">Email copied to clipboard!</span>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       INTERACTIVE CLIENT LOGIC (ScrollSpy, Search, Mobile Menu, Copy)
+       ═══════════════════════════════════════════════════════════════ -->
+  <script>
+    // ── 1. Mobile Menu Toggle ──
+    (function () {
+      var hamburger = document.getElementById('lc-hamburger');
+      var closeBtn = document.getElementById('lc-mobile-close');
+      var drawer = document.getElementById('lc-mobile-menu');
+
+      if (hamburger && drawer) {
+        hamburger.addEventListener('click', function () {
+          drawer.classList.add('is-active');
+        });
+      }
+      if (closeBtn && drawer) {
+        closeBtn.addEventListener('click', function () {
+          drawer.classList.remove('is-active');
+        });
+      }
+    })();
+
+    // ── 2. Table of Contents Scroll-Spy ──
+    (function () {
+      var sections = document.querySelectorAll('.pp-section');
+      var tocLinks = document.querySelectorAll('.pp-toc-item a');
+
+      function onScroll() {
+        var scrollPos = window.scrollY + 140;
+
+        sections.forEach(function (sec) {
+          var top = sec.offsetTop;
+          var height = sec.offsetHeight;
+          var id = sec.getAttribute('id');
+
+          if (scrollPos >= top && scrollPos < top + height) {
+            tocLinks.forEach(function (link) {
+              if (link.getAttribute('href') === '#' + id) {
+                link.classList.add('is-active');
+              } else {
+                link.classList.remove('is-active');
+              }
+            });
+          }
+        });
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+
+    // ── 3. Table of Contents Search Filter ──
+    (function () {
+      var searchInput = document.getElementById('pp-toc-search-input');
+      var items = document.querySelectorAll('.pp-toc-item');
+
+      if (searchInput) {
+        searchInput.addEventListener('input', function (e) {
+          var query = e.target.value.toLowerCase().trim();
+
+          items.forEach(function (item) {
+            var text = item.textContent.toLowerCase();
+            if (text.indexOf(query) !== -1) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      }
+    })();
+
+    // ── 4. Copy Email & Toast Feedback ──
+    function copyContactEmail() {
+      var email = 'info@mcmcer.co.uk';
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(email).then(function () {
+          showToast('Copied ' + email + ' to clipboard!');
+        });
+      } else {
+        showToast('Contact: ' + email);
+      }
+    }
+
+    function showToast(msg) {
+      var toast = document.getElementById('pp-toast');
+      var toastText = document.getElementById('pp-toast-text');
+      if (toast && toastText) {
+        toastText.textContent = msg;
+        toast.classList.add('is-show');
+        setTimeout(function () {
+          toast.classList.remove('is-show');
+        }, 3200);
+      }
+    }
+  </script>
+
+</body>
+
+</html>
+
