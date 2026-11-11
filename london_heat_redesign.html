@@ -15,7 +15,7 @@
   <meta property="og:description"
     content="An invitation-only working roundtable convening senior cross-sector leaders in Central London.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="hero_london_skyline.jpg">
+  <meta property="og:image" content="hero_london_skyline.webp">
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -1540,123 +1540,595 @@
     }
 
     /* ═══════════════════════════════════════════════════════════════
-       SECTION 6: FACULTY & DELEGATION
+       SECTION 6: SPEAKERS (Deep Navy — portrait grid + bio modal)
        ═══════════════════════════════════════════════════════════════ */
-    .lc-leadership {
+    .lc-speakers {
       padding: var(--lc-section-pad) 0;
-      background: var(--lc-white);
-      border-top: 1px solid var(--lc-border-light);
-      border-bottom: 1px solid var(--lc-border-light);
+      background: var(--lc-navy);
+      color: rgba(255, 255, 255, 0.72);
+      position: relative;
+      overflow: hidden;
     }
 
-    .lc-lead__header {
-      text-align: center;
-      max-width: 740px;
-      margin: 0 auto clamp(28px, 5vw, 52px);
+    .lc-speakers::before {
+      content: '';
+      position: absolute;
+      top: -240px;
+      right: -200px;
+      width: 640px;
+      height: 640px;
+      background: radial-gradient(circle, rgba(201, 150, 59, 0.10), transparent 65%);
+      pointer-events: none;
     }
 
-    .lc-lead__header .lc-section-title {
-      margin-top: 12px;
+    .lc-speakers .lc-container {
+      position: relative;
+      z-index: 1;
     }
 
-    /* Moderator Profile Cards */
-    .lc-chairs-grid {
+    .lc-spk__header {
+      margin-bottom: clamp(28px, 4vw, 40px);
+    }
+
+    .lc-spk__header .lc-section-title {
+      color: var(--lc-white);
+      margin-top: 10px;
+    }
+
+    /* Roundtable tabs — two large editorial switches */
+    .lc-spk-tabs {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: clamp(18px, 4vw, 30px);
-      margin-bottom: clamp(32px, 6vw, 56px);
+      align-items: start;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      margin-bottom: clamp(32px, 4.5vw, 48px);
     }
 
-    .lc-chair {
-      background: var(--lc-stone-light);
-      border: 1px solid var(--lc-border);
-      border-radius: var(--lc-radius);
-      padding: clamp(20px, 4vw, 30px) clamp(16px, 3.5vw, 28px);
+    .lc-spk-tab {
+      background: none;
+      border: none;
+      border-top: 2px solid transparent;
+      margin-top: -1px;
+      padding: 20px 24px 4px 0;
+      text-align: left;
+      cursor: pointer;
+      font-family: var(--lc-body);
+      transition: border-color 0.25s ease;
       display: flex;
-      gap: clamp(14px, 3vw, 24px);
+      flex-direction: column;
       align-items: flex-start;
-      transition: var(--lc-transition);
-      box-shadow: var(--lc-shadow-sm);
+      justify-content: flex-start;
     }
 
-    .lc-chair:hover {
-      background: var(--lc-white);
-      transform: translateY(-3px);
-      box-shadow: var(--lc-shadow);
-      border-color: var(--lc-gold);
+    .lc-spk-tab__label {
+      display: block;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.45);
+      margin-bottom: 6px;
+      transition: color 0.25s ease;
     }
 
-    .lc-chair__photo {
-      width: clamp(76px, 16vw, 120px);
-      height: clamp(76px, 16vw, 120px);
-      border-radius: var(--lc-radius);
+    .lc-spk-tab__theme {
+      display: block;
+      font-family: var(--lc-display);
+      font-size: clamp(17px, 2vw, 22px);
+      font-weight: 600;
+      line-height: 1.3;
+      color: rgba(255, 255, 255, 0.45);
+      transition: color 0.25s ease;
+    }
+
+    .lc-spk-tab:hover .lc-spk-tab__theme {
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .lc-spk-tab.is-active {
+      border-top-color: var(--lc-gold);
+    }
+
+    .lc-spk-tab.is-active .lc-spk-tab__label {
+      color: var(--lc-gold);
+    }
+
+    .lc-spk-tab.is-active .lc-spk-tab__theme {
+      color: var(--lc-white);
+    }
+
+    .lc-spk-tab:focus-visible,
+    .lc-spk-card:focus-visible,
+    .lc-spk-modal__btn:focus-visible {
+      outline: 2px solid var(--lc-gold);
+      outline-offset: 4px;
+    }
+
+    /* Moderator feature */
+    .lc-spk-mod {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: clamp(24px, 4vw, 48px);
+      align-items: center;
+      padding-bottom: clamp(32px, 4.5vw, 48px);
+      margin-bottom: clamp(32px, 4.5vw, 48px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .lc-spk-mod__photo {
+      aspect-ratio: 1 / 1;
+      border-radius: 14px;
       overflow: hidden;
-      flex-shrink: 0;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-      border: 2px solid var(--lc-white);
+      background: var(--lc-charcoal);
+      box-shadow: 0 20px 44px rgba(0, 0, 0, 0.35);
     }
 
-    .lc-chair__photo img {
+    .lc-spk-mod__photo img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center top;
+      display: block;
     }
 
-    .lc-chair__body {
-      flex-grow: 1;
+    .lc-spk-mod__label {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--lc-gold);
+      margin-bottom: 10px;
+    }
+
+    .lc-spk-mod__name {
+      font-family: var(--lc-display);
+      font-size: clamp(28px, 3.6vw, 40px);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--lc-white);
+      margin-bottom: 8px;
+    }
+
+    .lc-spk-mod__role {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--lc-gold-light);
+      margin-bottom: 16px;
+    }
+
+    .lc-spk-mod__bio {
+      font-size: 15.5px;
+      line-height: 1.75;
+      color: rgba(255, 255, 255, 0.72);
+      max-width: 680px;
+    }
+
+    /* Participant portrait grid */
+    .lc-spk-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      align-items: start;
+      gap: clamp(28px, 3vw, 40px) clamp(16px, 2vw, 24px);
+    }
+
+    .lc-spk-card {
+      background: none;
+      border: none;
+      padding: 0;
+      text-align: left;
+      cursor: pointer;
+      font-family: var(--lc-body);
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+      width: 100%;
+    }
+
+    .lc-spk-card__photo {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--lc-charcoal);
+      margin-bottom: 14px;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .lc-spk-card__photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .lc-spk-card__photo::after {
+      content: 'Read bio';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 40px 14px 12px;
+      background: linear-gradient(180deg, transparent, rgba(7, 16, 24, 0.85));
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--lc-white);
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .lc-spk-card:hover .lc-spk-card__photo,
+    .lc-spk-card:focus-visible .lc-spk-card__photo {
+      box-shadow: 0 0 0 2px var(--lc-gold), 0 18px 36px rgba(0, 0, 0, 0.35);
+    }
+
+    .lc-spk-card:hover .lc-spk-card__photo img {
+      transform: scale(1.04);
+    }
+
+    .lc-spk-card:hover .lc-spk-card__photo::after,
+    .lc-spk-card:focus-visible .lc-spk-card__photo::after {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .lc-spk-card__name {
+      font-family: var(--lc-display);
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--lc-white);
+      margin-bottom: 4px;
+    }
+
+    .lc-spk-card__role {
+      font-size: 13px;
+      line-height: 1.45;
+      color: rgba(255, 255, 255, 0.62);
+    }
+
+    .lc-spk-card__org {
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.45;
+      color: var(--lc-gold-light);
+      margin-top: 2px;
+    }
+
+    .lc-spk-panel[hidden] {
+      display: none;
+    }
+
+    .lc-spk-panel {
+      animation: lcSpkFade 0.4s ease;
+    }
+
+    @keyframes lcSpkFade {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Bio modal */
+    body.lc-modal-open {
+      overflow: hidden;
+    }
+
+    .lc-spk-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(5, 12, 19, 0.78);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+
+    .lc-spk-modal.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .lc-spk-modal__dialog {
+      position: relative;
+      width: 100%;
+      max-width: 880px;
+      max-height: calc(100vh - 48px);
+      display: grid;
+      grid-template-columns: 310px 1fr;
+      gap: clamp(28px, 4vw, 40px);
+      align-items: center;
+      padding: clamp(28px, 3.8vw, 40px);
+      background: var(--lc-ivory);
+      border-radius: 20px;
+      overflow-y: auto;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+      transform: translateY(12px) scale(0.98);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .lc-spk-modal.is-open .lc-spk-modal__dialog {
+      transform: none;
+    }
+
+    .lc-spk-modal__photo {
+      width: 310px;
+      height: 330px;
+      border-radius: 16px;
+      overflow: hidden;
+      background: var(--lc-charcoal);
+      box-shadow: 0 16px 36px rgba(12, 27, 42, 0.16);
+      border: 1px solid var(--lc-border);
+      flex-shrink: 0;
+    }
+
+    .lc-spk-modal__photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .lc-spk-modal__body {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
       min-width: 0;
     }
 
-    .lc-chair__badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 3px 10px;
-      border-radius: 50px;
-      font-size: 10.5px;
+    .lc-spk-modal__tag {
+      font-size: 11.5px;
       font-weight: 700;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      margin-bottom: 6px;
-    }
-
-    .lc-chair--a .lc-chair__badge {
-      background: var(--lc-gold-pale);
       color: var(--lc-gold);
-    }
-
-    .lc-chair--b .lc-chair__badge {
-      background: var(--lc-teal-light);
-      color: var(--lc-teal);
-    }
-
-    .lc-chair__name {
-      font-family: var(--lc-display);
-      font-size: clamp(18px, 3.5vw, 21px);
-      font-weight: 700;
-      color: var(--lc-text-dark);
-      margin-bottom: 2px;
-    }
-
-    .lc-chair__title {
-      font-size: clamp(12.5px, 2.5vw, 13.5px);
-      font-weight: 600;
       margin-bottom: 10px;
-      line-height: 1.35;
     }
 
-    .lc-chair--a .lc-chair__title {
-      color: var(--lc-gold);
+    .lc-spk-modal__name {
+      font-family: var(--lc-display);
+      font-size: clamp(26px, 3vw, 34px);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--lc-navy);
+      margin-bottom: 6px;
+      padding-right: 40px;
     }
 
-    .lc-chair--b .lc-chair__title {
-      color: var(--lc-teal);
-    }
-
-    .lc-chair__bio {
-      font-size: clamp(12.5px, 2.5vw, 13.5px);
-      line-height: 1.55;
+    .lc-spk-modal__role {
+      font-size: 15px;
+      font-weight: 600;
       color: var(--lc-text-body);
+    }
+
+    .lc-spk-modal__org {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--lc-gold);
+      padding-bottom: 18px;
+      margin-bottom: 18px;
+      border-bottom: 1px solid var(--lc-border);
+    }
+
+    .lc-spk-modal__bio {
+      font-size: 15.5px;
+      line-height: 1.78;
+      color: var(--lc-text-body);
+      flex-grow: 1;
+    }
+
+    .lc-spk-modal__bio p + p {
+      margin-top: 12px;
+    }
+
+    .lc-spk-modal__nav {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 28px;
+      padding-top: 18px;
+      border-top: 1px solid var(--lc-border);
+    }
+
+    .lc-spk-modal__btn {
+      background: none;
+      border: 1px solid var(--lc-border);
+      border-radius: 999px;
+      padding: 10px 18px;
+      font-family: var(--lc-body);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--lc-navy);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .lc-spk-modal__btn:hover {
+      background: var(--lc-navy);
+      border-color: var(--lc-navy);
+      color: var(--lc-white);
+    }
+
+    .lc-spk-modal__close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      border-radius: 50%;
+      background: var(--lc-white);
+      font-size: 18px;
+      line-height: 1;
+      z-index: 2;
+    }
+
+    @media (max-width: 1024px) {
+      .lc-spk-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 760px) {
+      .lc-spk-tabs {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .lc-spk-tab {
+        padding: 16px 8px 4px 0;
+      }
+      .lc-spk-tab__theme {
+        font-size: 14px;
+        line-height: 1.35;
+      }
+      .lc-spk-mod {
+        grid-template-columns: 112px 1fr;
+        gap: 18px 16px;
+        align-items: center;
+      }
+      .lc-spk-mod__photo {
+        width: 112px;
+        height: 112px;
+        max-width: none;
+        border-radius: 14px;
+      }
+      .lc-spk-mod__body {
+        display: contents;
+      }
+      .lc-spk-mod__head {
+        min-width: 0;
+      }
+      .lc-spk-mod__label {
+        font-size: 10.5px;
+        margin-bottom: 6px;
+      }
+      .lc-spk-mod__name {
+        font-size: 22px;
+        line-height: 1.2;
+        margin-bottom: 4px;
+      }
+      .lc-spk-mod__role {
+        font-size: 13.5px;
+        line-height: 1.35;
+        margin-bottom: 0;
+      }
+      .lc-spk-mod__bio {
+        grid-column: 1 / -1;
+        padding-top: 16px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 14.5px;
+        line-height: 1.72;
+      }
+      .lc-spk-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px 14px;
+      }
+      .lc-spk-card__name {
+        font-size: 15.5px;
+      }
+      .lc-spk-card__role,
+      .lc-spk-card__org {
+        font-size: 12px;
+      }
+      .lc-spk-card__photo::after {
+        content: 'Bio →';
+        padding: 24px 10px 8px;
+        font-size: 10.5px;
+        text-align: right;
+        opacity: 0.92;
+        transform: none;
+      }
+      .lc-spk-modal {
+        padding: 0;
+        align-items: flex-end;
+      }
+      .lc-spk-modal__dialog {
+        grid-template-columns: 112px 1fr;
+        gap: 18px 16px;
+        align-items: center;
+        max-height: 90vh;
+        padding: 24px 20px calc(28px + env(safe-area-inset-bottom, 0px));
+        border-radius: 20px 20px 0 0;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      .lc-spk-modal__close {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+        box-shadow: 0 2px 8px rgba(12, 27, 42, 0.1);
+      }
+      .lc-spk-modal__photo {
+        width: 112px;
+        height: 112px;
+        border-radius: 14px;
+      }
+      .lc-spk-modal__body {
+        display: contents;
+      }
+      .lc-spk-modal__head {
+        min-width: 0;
+        padding-right: 34px;
+      }
+      .lc-spk-modal__tag {
+        font-size: 10.5px;
+        margin-bottom: 6px;
+      }
+      .lc-spk-modal__name {
+        font-size: 20px;
+        line-height: 1.2;
+        margin-bottom: 4px;
+        padding-right: 0;
+      }
+      .lc-spk-modal__role {
+        font-size: 13.5px;
+        line-height: 1.35;
+      }
+      .lc-spk-modal__org {
+        font-size: 13.5px;
+        line-height: 1.35;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border-bottom: none;
+      }
+      .lc-spk-modal__bio {
+        grid-column: 1 / -1;
+        padding-top: 16px;
+        border-top: 1px solid var(--lc-border);
+        font-size: 14.5px;
+        line-height: 1.72;
+      }
+      .lc-spk-modal__nav {
+        grid-column: 1 / -1;
+        margin-top: 8px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .lc-spk-panel,
+      .lc-spk-card__photo img,
+      .lc-spk-modal,
+      .lc-spk-modal__dialog {
+        animation: none;
+        transition: none;
+      }
     }
 
     /* Delegation Matrix (6 Sectors) */
@@ -2627,7 +3099,7 @@
       }
 
       .lc-wh-features {
-        grid-template-columns: 1fr;
+        display: none;
       }
 
       .lc-tl-tracks-preview {
@@ -2723,7 +3195,7 @@
         <a href="#what-happens">What Happens</a>
         <a href="#roundtables">The Roundtables</a>
         <a href="#agenda">Programme</a>
-        <a href="#leadership">Faculty</a>
+        <a href="#leadership">Speakers</a>
         <a href="#partners">Partners</a>
       </div>
       <a href="#register" class="lc-nav__cta">Request Invitation →</a>
@@ -2740,7 +3212,7 @@
     <a href="#what-happens" class="lc-mobile-link">What Happens</a>
     <a href="#roundtables" class="lc-mobile-link">The Roundtables</a>
     <a href="#agenda" class="lc-mobile-link">Programme</a>
-    <a href="#leadership" class="lc-mobile-link">Faculty &amp; Delegation</a>
+    <a href="#leadership" class="lc-mobile-link">Speakers</a>
     <a href="#deliverables" class="lc-mobile-link">Deliverables</a>
     <a href="#partners" class="lc-mobile-link">Partners</a>
     <a href="#register" class="lc-mobile-link" style="color:var(--lc-gold);">Request Invitation →</a>
@@ -2751,7 +3223,7 @@
        ═══════════════════════════════════════════════════════════════ -->
   <section class="lc-hero" id="hero">
     <div class="lc-hero__bg">
-      <img src="hero_london_skyline.jpg" alt="London skyline at golden hour — Climate Resilience Roundtable 2026"
+      <img src="hero_london_skyline.webp" alt="London skyline at golden hour — Climate Resilience Roundtable 2026"
         loading="eager">
     </div>
     <div class="lc-hero__overlay"></div>
@@ -2787,7 +3259,6 @@
     </div>
 
   </div>
-</div>
 
       <h1 class="lc-hero__title">London Climate Resilience<br><em>Roundtable</em> 2026</h1>
 
@@ -3123,48 +3594,55 @@
     </div>
   </section>
   <!-- ═══════════════════════════════════════════════════════════════
-       SECTION 6: FACULTY & DELEGATION (Crisp White)
+       SECTION 6: SPEAKERS (Deep Navy)
        ═══════════════════════════════════════════════════════════════ -->
-  <section class="lc-leadership" id="leadership">
+  <section class="lc-speakers" id="leadership">
     <div class="lc-container">
-      <div class="lc-lead__header">
-        <span class="lc-label lc-label--center">Deliberation Leadership</span>
-        <h2 class="lc-section-title">Chamber Moderators &amp; <em>Delegation</em></h2>
+      <div class="lc-spk__header">
+        <span class="lc-label">Speakers</span>
+        <h2 class="lc-section-title">Moderators &amp; <em>Participants</em></h2>
       </div>
 
-      <!-- Moderators Side-by-Side -->
-      <div class="lc-chairs-grid">
-        <div class="lc-chair lc-chair--a">
-          <div class="lc-chair__photo">
-            <img src="https://mcmcer.com/wp-content/uploads/2026/03/Tarini-Mehta.png" alt="dr. tarini Mehta"
-              loading="lazy">
-          </div>
-          <div class="lc-chair__body">
-            <span class="lc-chair__badge">Moderator · Roundtable A</span>
-            <h3 class="lc-chair__name">Dr. Tarini Mehta</h3>
-            <div class="lc-chair__title">GARP-SCR Certified Sustainability and Climate Risk Specialist; Academician and
-              Advocate; Global expertise in Sustainability, ESG
-              Strategy, Reporting and Assurance; AA1000 Certified Sustainability Assurance Practitioner</div>
-          </div>
-        </div>
+      <div class="lc-spk-tabs" role="tablist" aria-label="Roundtables">
+        <button type="button" class="lc-spk-tab is-active" role="tab" id="lc-tab-a" aria-selected="true"
+          aria-controls="lc-panel-a" data-chamber="A">
+          <span class="lc-spk-tab__label">Roundtable A</span>
+          <span class="lc-spk-tab__theme">Climate-Resilient Buildings, Infrastructure and Skills</span>
+        </button>
+        <button type="button" class="lc-spk-tab" role="tab" id="lc-tab-b" aria-selected="false"
+          aria-controls="lc-panel-b" data-chamber="B" tabindex="-1">
+          <span class="lc-spk-tab__label">Roundtable B</span>
+          <span class="lc-spk-tab__theme">Corporate Adaptation, Workforce Resilience and ESG Reporting</span>
+        </button>
+      </div>
 
-        <div class="lc-chair lc-chair--b">
-          <div class="lc-chair__photo">
-            <img src="https://mcmcer.com/wp-content/uploads/2026/08/PHOTO-2026-08-17-11-08-24.jpg"
-              alt="Alessandra Vignola" loading="lazy">
-          </div>
-          <div class="lc-chair__body">
-            <span class="lc-chair__badge">Moderator · Roundtable B</span>
-            <h3 class="lc-chair__name">Alessandra Vignola</h3>
-            <div class="lc-chair__title">GRI Certified Sustainability Consultant, 20+ Years of International Experience,
-              Sustainability Management Professional, Doctorate in business administration</div>
-
-          </div>
-        </div>
-
-
-
+      <div class="lc-spk-panel" id="lc-panel-a" role="tabpanel" aria-labelledby="lc-tab-a"></div>
+      <div class="lc-spk-panel" id="lc-panel-b" role="tabpanel" aria-labelledby="lc-tab-b" hidden></div>
+    </div>
   </section>
+
+  <!-- Speaker Bio Modal -->
+  <div class="lc-spk-modal" id="lc-spk-modal" role="dialog" aria-modal="true" aria-labelledby="lc-spk-modal-name"
+    aria-hidden="true">
+    <div class="lc-spk-modal__dialog">
+      <button type="button" class="lc-spk-modal__btn lc-spk-modal__close" id="lc-spk-close"
+        aria-label="Close">✕</button>
+      <div class="lc-spk-modal__photo"><img id="lc-spk-modal-img" src="" alt=""></div>
+      <div class="lc-spk-modal__body">
+        <div class="lc-spk-modal__head">
+          <div class="lc-spk-modal__tag" id="lc-spk-modal-tag"></div>
+          <h3 class="lc-spk-modal__name" id="lc-spk-modal-name"></h3>
+          <div class="lc-spk-modal__role" id="lc-spk-modal-role"></div>
+          <div class="lc-spk-modal__org" id="lc-spk-modal-org"></div>
+        </div>
+        <div class="lc-spk-modal__bio" id="lc-spk-modal-bio"></div>
+        <div class="lc-spk-modal__nav">
+          <button type="button" class="lc-spk-modal__btn" id="lc-spk-prev">← Previous</button>
+          <button type="button" class="lc-spk-modal__btn" id="lc-spk-next">Next →</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ═══════════════════════════════════════════════════════════════
        SECTION 8: HOST & STRATEGIC PARTNERS (Warm Stone)
@@ -3334,9 +3812,8 @@
             </div>
           </div>
 
-          <p class="lc-form-footnote" id="lc-form-footnote">🔒 Information managed under strict confidentiality (GDPR).
-            Central London
-            heritage venue confirmed upon clearance.</p>
+          <p class="lc-form-footnote" id="lc-form-footnote">🔒 Information managed under strict confidentiality (UK GDPR).
+            Central London heritage venue confirmed upon clearance. View our <a href="/privacy-policy" style="color:var(--lc-gold); text-decoration:underline;">Privacy Policy</a>.</p>
         </div>
 
       </div>
@@ -3356,7 +3833,9 @@
           <span>19 November 2026, Central London</span>
         </div>
         <div class="lc-footer__right">
-          <a href="mailto:london@mcmcer.org">info@mcmcer.com</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <span class="lc-footer__sep">·</span>
+          <a href="mailto:info@mcmcer.com">info@mcmcer.com</a>
           <span class="lc-footer__sep">·</span>
           <a href="https://mcmcer.com" target="_blank" rel="noopener">mcmcer.com</a>
           <span class="lc-footer__sep">·</span>
@@ -3365,17 +3844,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- Sticky Mobile Quick-Action Bar -->
-  <div class="lc-mobile-bar" id="lc-mobile-bar">
-    <div class="lc-mobile-bar__inner">
-      <div class="lc-mobile-bar__info">
-        <span class="lc-mobile-bar__title">London Climate Roundtable</span>
-        <span class="lc-mobile-bar__subtitle">19 Nov 2026 · Central London</span>
-      </div>
-      <a href="#register" class="lc-mobile-bar__btn">Request Invite →</a>
-    </div>
-  </div>
 
   <!-- ═══════════════════════════════════════════════════════════════
        INTERACTIVE SCRIPTS & FUNCTIONS
@@ -3407,22 +3875,19 @@
       setInterval(updateCD, 1000);
     })();
 
-    // ── 2. Sticky Navigation & Mobile Bar ──
+    // ── 2. Sticky Navigation ──
     (function () {
       var nav = document.getElementById('lc-nav');
       var hero = document.getElementById('hero');
-      var mobileBar = document.getElementById('lc-mobile-bar');
 
       function handleScroll() {
         var heroBottom = hero.offsetHeight - 80;
         if (window.scrollY > heroBottom) {
           nav.classList.remove('lc-nav--transparent');
           nav.classList.add('lc-nav--solid');
-          if (mobileBar) mobileBar.style.display = 'block';
         } else {
           nav.classList.remove('lc-nav--solid');
           nav.classList.add('lc-nav--transparent');
-          if (mobileBar) mobileBar.style.display = 'none';
         }
       }
       window.addEventListener('scroll', handleScroll, { passive: true });
@@ -3830,6 +4295,198 @@
             });
         });
       }
+    })();
+
+    /* ── Speakers: portrait grid + bio modal ── */
+    (function () {
+      var PEOPLE = [
+        { chamber: "A", moderator: true, name: "Pierre Maré", role: "Director", org: "Pierre Maré Architects", photo: "participants/image1.webp",
+          bio: ["Pierre Maré is an architect and Director of Pierre Maré Architects, a London-based practice he has led since 2007. With over two decades of architectural experience, he focuses on designing thoughtfully considered homes that prioritise simplicity, quality and enduring design. His approach emphasises creating functional, well-crafted spaces built to stand the test of time."] },
+        { chamber: "A", name: "Dr. Tarini Mehta", role: "Managing Director", org: "The M.C. Mehta Institute", photo: "participants/image2.webp",
+          bio: ["Dr. Tarini Mehta is the Managing Director of M.C. Mehta Centre for Education and Research. A GARP-Certified ESG and Climate Risk Specialist, Dr. Mehta brings extensive expertise in environmental and climate law, ESG, sustainability strategy, public policy, regulatory compliance and research, with knowledge of global and national frameworks and a focus on translating complex legal, regulatory, and sustainability requirements into practical strategies and solutions.",
+                "She holds a Doctorate in International Environmental Law from Pace University (US), an LLM from University of Cambridge and an LLB from University of Warwick, UK. Dr. Mehta is also an AA1000 Certified Sustainability Assurance Practitioner. Her specialised certification in Sustainability and Climate Risk from the Global Association of Risk Professionals, as well as on Sustainable Finance from Deloitte Singapore, and ESG Risks and Opportunities from the Wharton School, University of Pennsylvania, further reinforce her leadership in sustainability and compliance initiatives."] },
+        { chamber: "A", name: "Emma Weaver", role: "Climate Action Manager", org: "Business in the Community", photo: "participants/image3.webp",
+          bio: ["Emma Weaver is an environmental sustainability professional specialising in climate action strategy and programme development. She currently serves as Climate Action Manager at Business in the Community, where she designs and delivers sustainability programmes across the public and private sectors. Holding a Master’s degree in Emerging Economies and Inclusive Development from King’s College London, she brings expertise in evidence-based strategy, stakeholder engagement and scalable green skills initiatives. She has also contributed as a judge for the edie Awards."] },
+        { chamber: "A", name: "Alex Jahanshahi-Edlin", role: "Associate Director – Sustainability", org: "Mace", photo: "participants/image4.webp",
+          bio: ["Alex Jahanshahi-Edlin is a sustainability professional specialising in the built environment, decarbonisation and social value. At Mace Consult, he leads sustainability initiatives for local government, supporting organisations in managing sustainability risks and advancing decarbonisation. His expertise includes building retrofit, BREEAM and WELL compliance, and sustainable planning and policy development. He holds an MSc in International Politics from SOAS, University of London."] },
+        { chamber: "A", name: "Dr. Emma Fromberg", role: "Research Fellow", org: "King’s College London Centre for Sustainable Business", photo: "participants/image5.webp",
+          bio: ["Dr. Emma Fromberg is a Research Fellow at King’s College London’s Centre for Sustainable Business, specialising in circular economy innovation and sustainable value chains. She leads academic–industry partnerships and developed Nature’s Playbook, a research-based tool for applying ecological principles to circular economy innovation. Previously, she served as Course Director in Sustainable Business at the University of Cambridge Institute for Sustainability Leadership and led open education programmes at the Ellen MacArthur Foundation."] },
+        { chamber: "A", name: "Laura Fenimore", role: "Senior Sustainability Manager", org: "Transport for London", photo: "participants/image6.webp",
+          bio: ["Laura Fenimore is a sustainability professional at Transport for London, with extensive experience in stakeholder engagement, strategic communications and government relations. She has held several leadership roles at TfL, including Head of Government and EU Relations, and holds a Master of Studies in Sustainability Leadership from the University of Cambridge and an MPA from New York University."] },
+        { chamber: "A", name: "Aditi Thorat", role: "Director of Development and Executive Team member", org: "International Budget Partnership", photo: "participants/image7.webp",
+          bio: ["Aditi Thorat is a development and strategy professional with over 20 years of experience mobilising philanthropic funding for climate action, governance, human rights and social development. She has a strong track record of building international partnerships across the UK, Europe, the US, Africa and India, securing significant funding and advancing systemic change. She is also a trusted advisor to senior leadership and a nominator for the Earthshot Prize."] },
+        { chamber: "A", name: "Sarah Baynard, MBA, PMP", role: "Senior Project Manager", org: "SSC Services for Education", photo: "participants/image8.webp",
+          bio: ["Sarah Baynard is an experienced facilities and project management professional with expertise in large-scale project execution and multi-site portfolio management. Her experience spans operations, compliance, project planning, procurement and cross-functional leadership. She holds an MBA and is a certified Project Management Professional (PMP), with formal training in finance and architectural design."] },
+        { chamber: "A", name: "Richard Ellis", role: "Director of Sustainability", org: "Peabody", photo: "participants/image9.webp",
+          bio: ["Richard Ellis is a sustainability leader at Peabody, where he helps shape the organisation’s journey towards net zero. He brings extensive experience in sustainability strategy, long-term investment planning, asset management and delivering large-scale investment programmes. His expertise also spans project and contract management, cost control and strategic asset planning."] },
+        { chamber: "A", name: "Karl Mallon", role: "CEO, The Climate Risk Group; Climate Valuation Director", org: "XDI", photo: "participants/image10.webp",
+          bio: ["Karl Mallon is a climate risk specialist with expertise in quantitative modelling, climate risk assessment and adaptation. He focuses on developing data-driven solutions to help businesses and governments understand physical climate risks, strengthen infrastructure resilience and address climate-related challenges."] },
+        { chamber: "A", name: "Oliver Maennicke", role: "Founding Advisor", org: "Global Advisory Alliance", photo: "participants/image11.webp",
+          bio: ["Oliver Maennicke is an infrastructure and sustainability professional with over 15 years of international experience across Europe and Asia-Pacific. His expertise spans climate resilience, decarbonisation, circular economy and water stewardship. He specialises in translating ESG strategies and climate risks into practical, commercially viable solutions for infrastructure and engineering organisations."] },
+        { chamber: "A", name: "Utkarsh Akhouri", role: "Vice President", org: "MSCI Inc.", photo: "participants/image12.webp",
+          bio: ["Utkarsh Akhouri is a climate and sustainability professional specialising in carbon market forecasting, climate finance and critical minerals. At MSCI, he leads the Climate & Sustainability product team for carbon-market forecasting. His previous experience includes leading forecasting at Trove Research and advising the European Union on critical minerals policy, including its Critical Raw Materials Act. He holds a Master’s degree in Climate Change Management & Finance from Imperial College London and degrees from IIT Kharagpur."] },
+        { chamber: "A", name: "Dr Sophie Taysom", role: "Founder and CEO", org: "Keyah", photo: "participants/image13.webp",
+          bio: ["Dr Sophie Taysom is a climate risk specialist focusing on physical climate risks, real assets and insurance market dynamics. She advises investors, businesses and financial institutions on translating climate risk insights into strategic and investment decisions. She is a contributor to the Financial Times’ Sustainable Views, an editorial board member and a member of the EU Mission on Adaptation’s Community Roster of Experts."] },
+        { chamber: "A", name: "Richard Williamson", role: "COO", org: "Considerate Group", photo: "participants/image14.webp",
+          bio: ["Richard Williamson is a senior business and finance professional with over 25 years of experience across corporate finance, strategy, mergers and acquisitions, and business leadership. He currently serves as COO of a technology-led sustainability consultancy focused on the international hospitality and tourism sectors. His expertise spans ESG, sustainability advisory, investment strategy and business development, with extensive experience across the GCC region."] },
+        { chamber: "A", name: "Illana Adamson", role: "Founder", org: "Be Better", photo: "participants/image15.webp",
+          bio: ["Illana Adamson is a sustainability strategist with over 20 years of experience, specialising in sustainability governance, ESG strategy and board-level advisory. As Founder and Principal Advisor at Be Better, she works with boards and senior leadership teams to integrate sustainability into corporate strategy, risk management and long-term value creation. Her expertise includes double materiality assessment, sustainability maturity and organisational resilience."] },
+        { chamber: "A", name: "Julie Futcher", role: "Chartered Architect, Researcher", org: "Independent Consultant", photo: "participants/image16.webp",
+          bio: ["Julie Futcher is a chartered architect and researcher specialising in climate-responsive urbanism and sustainable environmental design. Her work examines how urban form and density influence heat, airflow, daylight and climate resilience. Through research, consultancy and initiatives such as the Urban Climate Walks, she helps organisations understand and address the environmental impacts of urban development."] },
+        { chamber: "A", name: "Gwilym Still", role: "Director, Passivhaus", org: "Max Fordham LLP", photo: "participants/image17.webp",
+          bio: ["Gwilym is an experienced building services engineer specialising in Passivhaus design, energy efficiency and sustainable building performance. As Director of Passivhaus at Max Fordham LLP, he leads work focused on delivering high-performance, low-energy buildings. He also serves as a Trustee of the Association for Environment Conscious Building (AECB) and the Cambridge Forum for the Construction Industry."] },
+        { chamber: "A", name: "Nigel Brook", role: "Consultant", org: "Clyde & Co LLP", photo: "participants/image18.webp",
+          bio: ["Nigel Brook brings 38 years of experience as a partner at Clyde & Co, specialising in reinsurance and climate risk. He co-founded the firm’s Resilience and Climate Risk practice in 2017. His work focuses on the intersection of insurance and planetary risks, including climate change, biodiversity loss, chemical pollution and freshwater scarcity. He advises on emerging legal liabilities and the role of insurance, innovative risk transfer and parametric solutions in strengthening global resilience."] },
+
+        { chamber: "B", moderator: true, name: "Alessandra Vignola", role: "GRI Certified Sustainability Consultant", org: "Sustainability Management Professional", photo: "https://mcmcer.com/wp-content/uploads/2026/08/PHOTO-2026-08-17-11-08-24.jpg",
+          bio: ["GRI Certified Sustainability Consultant with 20+ years of international experience. Sustainability Management Professional and Doctorate in Business Administration."] },
+        { chamber: "B", name: "Helen Fisher", role: "Managing Director", org: "Context Europe", photo: "participants/image19.webp",
+          bio: ["Helen Fisher is a sustainability strategist with over 20 years of experience in sustainability strategy, reporting and communications. As Managing Director of Context Europe, she works with organisations across sectors to develop impact-led strategies, deliver sustainability research and analysis, and communicate complex sustainability issues effectively. Her experience includes working with organisations such as Unilever, IKEA, BT, GSK and the Environment Agency."] },
+        { chamber: "B", name: "Sarah Walkley, PhD, FICRS", role: "Senior Sustainability Writer", org: "Context Sustainability", photo: "participants/image20.webp",
+          bio: ["Sarah Walkley is a sustainability adviser with 25 years of business experience, specialising in sustainability strategy, reporting and communications. She supports organisations in developing credible sustainability narratives, aligning disclosures with frameworks such as CSRD and ISSB, and integrating sustainability into business strategy through research, training and advisory services."] },
+        { chamber: "B", name: "Nat Weaver", role: "Sustainability Manager", org: "Porterbrook", photo: "participants/image21.webp",
+          bio: ["Nat Weaver is a sustainability professional with experience in sustainability strategy, consultancy and programme management. At Porterbrook, Nat focuses on advancing sustainability initiatives within the rail sector. Previously, Nat worked as a Senior Sustainability Consultant at CGI and contributed to regional sustainability programmes at Sustainability West Midlands. Nat also has a background in hydrology and water resource modelling."] },
+        { chamber: "B", name: "Joanna Dahlgren", role: "Head of Social Value and SROI", org: "London Borough of Waltham Forest", photo: "participants/image22.webp",
+          bio: ["Joanna Dahlgren is a strategic sustainability and social impact leader, currently serving as Head of Social Value & SROI at the London Borough of Waltham Forest. She brings extensive experience in embedding sustainability, responsible procurement and social value into organisational strategy and operations. Her expertise spans social return on investment, sustainable investment, policy development and place-based regeneration, with a focus on delivering lasting social, economic and environmental impact."] },
+        { chamber: "B", name: "Gian Andrea Pacchiarotti", role: "Managing Consultant, Strategic Risk Consulting", org: "Marsh", photo: "participants/image23.webp",
+          bio: ["Gian Andrea is a climate and decarbonisation professional with extensive consulting experience. At Marsh, he advises leading global clients on emerging climate-related risks, develops net-zero transition strategies and leads the delivery of tailored climate and sustainability advisory solutions. His expertise spans climate risk management, scenario analysis, climate adaptation, ESG and stakeholder engagement."] },
+        { chamber: "B", name: "Yael Nevo", role: "Founder and Director", org: "Gender Rise", photo: "participants/image24.webp",
+          bio: ["Yael Nevo is an award-winning inclusion and sustainability strategist with over 20 years of experience advancing gender equity, social impact and organisational transformation. She is a Listed External Expert with the European Institute for Gender Equality (EIGE), specialising in gender mainstreaming. She has worked with organisations including UNDP, GIZ, Amnesty International and the ASEAN Secretariat, helping embed gender equality into organisational strategy, governance, policy and decision-making."] },
+        { chamber: "B", name: "Alexandra Ranft", role: "Climate Lead", org: "UN Global Compact Network UK", photo: "participants/image25.webp",
+          bio: ["Alexandra leads the climate workstream at the UN Global Compact Network UK, driving initiatives focused on climate action, peer learning, climate advocacy and sustainability. She has extensive experience in managing environmental and climate programmes, including engagement at London Climate Action Week and European climate collaboration platforms. Her earlier experience includes environmental health and safety, sustainability and zero-waste initiatives at Thermo Fisher Scientific."] },
+        { chamber: "B", name: "Lucia Graham Wood", role: "Senior Engagement Specialist, Banks and Physical Climate Risk", org: "Institutional Investors Group on Climate Change (IIGCC)", photo: "participants/image26.webp",
+          bio: ["Lucia specialises in investor engagement with the banking sector, with a focus on deforestation, physical climate risk, adaptation and resilience. At IIGCC, she works to advance climate action and strengthen engagement between institutional investors and the banking sector. She brings extensive experience in ESG programme management, climate change research and stakeholder engagement, including her previous work at ERM."] },
+        { chamber: "B", name: "Colin Grevers", role: "Director", org: "Oury Clark", photo: "participants/image27.webp",
+          bio: ["Colin specialises in sustainability, responsible investing and climate resilience, helping organisations embed sustainability into business strategy to mitigate risks, drive value creation and improve profitability. At Imperial College London, he works with the Grantham Institute on climate adaptation and resilience. His expertise includes climate change resilience, sustainable finance, renewable energy and quantifying the financial returns of sustainability initiatives."] }
+      ];
+
+      function esc(s) {
+        return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+      }
+
+      function inChamber(c) {
+        return PEOPLE.filter(function (p) { return p.chamber === c; });
+      }
+
+      function renderPanel(c) {
+        var panel = document.getElementById('lc-panel-' + c.toLowerCase());
+        if (!panel) return;
+        var list = inChamber(c);
+        var mod = list.filter(function (p) { return p.moderator; })[0];
+        var rest = list.filter(function (p) { return !p.moderator; });
+        var html = '';
+
+        if (mod) {
+          html += '<div class="lc-spk-mod">' +
+            '<div class="lc-spk-mod__photo"><img src="' + esc(mod.photo) + '" alt="' + esc(mod.name) + '" loading="lazy"></div>' +
+            '<div class="lc-spk-mod__body">' +
+              '<div class="lc-spk-mod__head">' +
+                '<span class="lc-spk-mod__label">Moderator · Roundtable ' + c + '</span>' +
+                '<h3 class="lc-spk-mod__name">' + esc(mod.name) + '</h3>' +
+                '<div class="lc-spk-mod__role">' + esc(mod.role) + ' — ' + esc(mod.org) + '</div>' +
+              '</div>' +
+              '<div class="lc-spk-mod__bio">' + mod.bio.map(function (b) { return '<p>' + esc(b) + '</p>'; }).join('') + '</div>' +
+            '</div>' +
+          '</div>';
+        }
+
+        html += '<div class="lc-spk-grid">' + rest.map(function (p) {
+          var idx = PEOPLE.indexOf(p);
+          return '<button type="button" class="lc-spk-card" data-idx="' + idx + '" aria-label="Read biography of ' + esc(p.name) + '">' +
+            '<div class="lc-spk-card__photo"><img src="' + esc(p.photo) + '" alt="" loading="lazy"></div>' +
+            '<div class="lc-spk-card__name">' + esc(p.name) + '</div>' +
+            '<div class="lc-spk-card__role">' + esc(p.role) + '</div>' +
+            '<div class="lc-spk-card__org">' + esc(p.org) + '</div>' +
+          '</button>';
+        }).join('') + '</div>';
+
+        panel.innerHTML = html;
+      }
+
+      renderPanel('A');
+      renderPanel('B');
+
+      /* Tabs */
+      var tabs = Array.prototype.slice.call(document.querySelectorAll('.lc-spk-tab'));
+      function activate(tab) {
+        tabs.forEach(function (t) {
+          var on = t === tab;
+          t.classList.toggle('is-active', on);
+          t.setAttribute('aria-selected', on ? 'true' : 'false');
+          t.setAttribute('tabindex', on ? '0' : '-1');
+          var panel = document.getElementById(t.getAttribute('aria-controls'));
+          if (panel) panel.hidden = !on;
+        });
+      }
+      tabs.forEach(function (t, i) {
+        t.addEventListener('click', function () { activate(t); });
+        t.addEventListener('keydown', function (e) {
+          if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+            var next = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+            activate(next);
+            next.focus();
+          }
+        });
+      });
+
+      /* Modal */
+      var modal = document.getElementById('lc-spk-modal');
+      var current = null;
+      var lastFocus = null;
+      var sequence = [];
+
+      function fill(idx) {
+        var p = PEOPLE[idx];
+        current = idx;
+        document.getElementById('lc-spk-modal-img').src = p.photo;
+        document.getElementById('lc-spk-modal-img').alt = p.name;
+        document.getElementById('lc-spk-modal-tag').textContent = (p.moderator ? 'Moderator · ' : '') + 'Roundtable ' + p.chamber;
+        document.getElementById('lc-spk-modal-name').textContent = p.name;
+        document.getElementById('lc-spk-modal-role').textContent = p.role;
+        document.getElementById('lc-spk-modal-org').textContent = p.org;
+        document.getElementById('lc-spk-modal-bio').innerHTML = p.bio.map(function (b) { return '<p>' + esc(b) + '</p>'; }).join('');
+      }
+
+      function openModal(idx) {
+        var p = PEOPLE[idx];
+        sequence = inChamber(p.chamber).filter(function (x) { return !x.moderator; }).map(function (x) { return PEOPLE.indexOf(x); });
+        lastFocus = document.activeElement;
+        fill(idx);
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('lc-modal-open');
+        document.getElementById('lc-spk-close').focus();
+      }
+
+      function closeModal() {
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('lc-modal-open');
+        if (lastFocus) lastFocus.focus();
+      }
+
+      function step(dir) {
+        var pos = sequence.indexOf(current);
+        if (pos === -1) return;
+        fill(sequence[(pos + dir + sequence.length) % sequence.length]);
+      }
+
+      document.querySelectorAll('.lc-spk-card').forEach(function (card) {
+        card.addEventListener('click', function () {
+          openModal(parseInt(card.getAttribute('data-idx'), 10));
+        });
+      });
+
+      document.getElementById('lc-spk-close').addEventListener('click', closeModal);
+      document.getElementById('lc-spk-prev').addEventListener('click', function () { step(-1); });
+      document.getElementById('lc-spk-next').addEventListener('click', function () { step(1); });
+      modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+      document.addEventListener('keydown', function (e) {
+        if (!modal.classList.contains('is-open')) return;
+        if (e.key === 'Escape') closeModal();
+        if (e.key === 'ArrowRight') step(1);
+        if (e.key === 'ArrowLeft') step(-1);
+      });
     })();
   </script>
 
